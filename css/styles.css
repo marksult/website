@@ -216,7 +216,7 @@ body {
   }
 }
 
-/* ─── DESCRIPTION ────────────────────────────────────────────────────────── */
+/* ─── DESCRIPTION ─────────────────────────────────────────────────────── */
 
 .main__description {
   color: #FFF;
@@ -274,9 +274,12 @@ body {
   color: #333;
   font-family: 'Helvetica Neue LT Pro', sans-serif;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.2;
   letter-spacing: -0.02em;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   transition: transform 0.3s ease;
   will-change: transform;
   width: auto;
