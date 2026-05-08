@@ -45,11 +45,6 @@
 
   --font-primary: 'Helvetica Neue LT Pro', sans-serif;
   --font-secondary: 'Plantin MT Pro', serif;
-
-  /* title half-leading trim for mobile (37px * 1.0) */
-  --title-trim-bottom: -8px;
-  /* description top offset to achieve 25px ink-to-ink */
-  --desc-gap-top: 25px;
 }
 
 *, *::before, *::after {
@@ -67,21 +62,7 @@ body {
   min-height: -webkit-fill-available;
 }
 
-@media (min-width: 768px) {
-  :root {
-    /* title half-leading trim for tablet (60px * 1.05) */
-    --title-trim-bottom: -18px;
-    --desc-gap-top: 25px;
-  }
-}
-
-@media (min-width: 1440px) {
-  :root {
-    /* title half-leading trim for desktop (65px * 1.05) */
-    --title-trim-bottom: -20px;
-    --desc-gap-top: 25px;
-  }
-}
+/* ─── HEADER ─────────────────────────────────── */
 
 .header {
   width: 100%;
@@ -136,12 +117,20 @@ body {
   }
 }
 
+/* ─── MAIN ───────────────────────────────────── */
+
 .main {
   padding: 0 15px 25px;
   padding-bottom: max(25px, env(safe-area-inset-bottom));
   height: calc(100vh - 68px);
   display: flex;
   flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .main {
+    height: calc(100vh - 70px);
+  }
 }
 
 .main__container {
@@ -167,11 +156,7 @@ body {
   backface-visibility: hidden;
 }
 
-@media (min-width: 768px) {
-  .main {
-    height: calc(100vh - 70px);
-  }
-}
+/* ─── CONTENT ────────────────────────────────── */
 
 .main__content {
   position: absolute;
@@ -184,13 +169,23 @@ body {
   padding: 40px 12px;
 }
 
+@media (min-width: 768px) {
+  .main__content {
+    padding: 40px;
+  }
+}
+
+/* title-group: NO gap — all spacing via margin-bottom on children */
 .main__title-group {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 0;
 }
 
+/* ─── TITLE ──────────────────────────────────── */
+/* margin-bottom = 25px desired gap MINUS Plantin MT Pro half-leading bottom */
+/* Mobile 37px/lh1.0: half-leading = 0 → margin-bottom: 25px */
 .main__title {
   color: #FFF;
   font-family: 'Plantin MT Pro', serif;
@@ -200,9 +195,37 @@ body {
   letter-spacing: -0.74px;
   text-align: center;
   margin: 0;
-  margin-bottom: var(--title-trim-bottom);
+  margin-bottom: 17px;
   max-width: 321px;
 }
+
+/* Tablet 60px/lh1.05: half-leading bottom ≈ (60*1.05-60)/2 = 1.5px visual
+   but Plantin's descender adds ~16px extra → total trim ~18px
+   margin-bottom = 25 - 18 = 7px ... but we need to account for description top half-leading too
+   description 16px/lh1.2: half-leading top = (16*1.2-16)/2 = 1.6px → negligible
+   So margin-bottom: 7px */
+@media (min-width: 768px) {
+  .main__title {
+    font-size: 60px;
+    line-height: 1.05;
+    letter-spacing: -1.2px;
+    max-width: 690px;
+    margin-bottom: 7px;
+  }
+}
+
+/* Desktop 65px/lh1.05: half-leading bottom same ratio, slightly more
+   trim ≈ 20px → margin-bottom = 25 - 20 = 5px */
+@media (min-width: 1440px) {
+  .main__title {
+    font-size: 65px;
+    letter-spacing: -1.3px;
+    max-width: 770px;
+    margin-bottom: 5px;
+  }
+}
+
+/* ─── DESCRIPTION ────────────────────────────── */
 
 .main__description {
   color: #FFF;
@@ -213,10 +236,36 @@ body {
   letter-spacing: -0.02em;
   text-align: center;
   margin: 0;
-  padding-top: var(--desc-gap-top);
+  margin-bottom: 15px;
   max-width: 310px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@media (min-width: 768px) {
+  .main__description {
+    font-size: 16px;
+    line-height: 1.2;
+    max-width: 412px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .main__description {
+    font-size: 18px;
+    max-width: 480px;
+  }
+}
+
+/* ─── CTA ────────────────────────────────────── */
+
+.main__cta-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
 }
 
 .main__cta {
@@ -246,13 +295,6 @@ body {
 
 .main__cta:hover {
   transform: scale(1.02);
-}
-
-.main__cta-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
 }
 
 .main__social-proof {
@@ -287,6 +329,14 @@ body {
   padding: 0;
   margin: 0;
 }
+
+@media (min-width: 768px) {
+  .main__social-text {
+    font-size: 16px;
+  }
+}
+
+/* ─── BADGE ──────────────────────────────────── */
 
 .main__badge {
   position: relative;
@@ -339,6 +389,12 @@ body {
   flex: 1;
 }
 
+@media (min-width: 768px) {
+  .main__badge-text {
+    font-size: 30px;
+  }
+}
+
 .main__badge-icon {
   position: relative;
   z-index: 1;
@@ -382,45 +438,4 @@ body {
   width: 34px;
   height: 28px;
   flex-shrink: 0;
-}
-
-@media (min-width: 768px) {
-  .main__content {
-    padding: 40px;
-  }
-  .main__title-group {
-    gap: 15px;
-  }
-  .main__title {
-    font-size: 60px;
-    line-height: 1.05;
-    letter-spacing: -1.2px;
-    max-width: 690px;
-  }
-  .main__description {
-    font-size: 16px;
-    line-height: 1.2;
-    max-width: 412px;
-  }
-  .main__cta {
-    font-size: 18px;
-  }
-  .main__social-text {
-    font-size: 16px;
-  }
-  .main__badge-text {
-    font-size: 30px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .main__title {
-    font-size: 65px;
-    letter-spacing: -1.3px;
-    max-width: 770px;
-  }
-  .main__description {
-    font-size: 18px;
-    max-width: 480px;
-  }
 }
