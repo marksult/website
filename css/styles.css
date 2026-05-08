@@ -356,8 +356,6 @@ body {
   min-height: 66px;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
   box-shadow:
     2px 1px 0 -1.586px rgba(255, 255, 255, 0.50) inset,
     -2px -1px 0 -1.586px rgba(255, 255, 255, 0.42) inset,
