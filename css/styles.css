@@ -313,23 +313,22 @@ body {
 }
 
 .main__badge {
-  display: inline-flex;
+  display: flex;
+  width: 373px;
+  height: 76px;
+  padding: 5px 5px 5px 20px;
   align-items: center;
   gap: 15px;
-  padding: 5px 5px 5px 20px;
   border-radius: 15px;
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(40px) brightness(1.1);
-  -webkit-backdrop-filter: blur(40px) brightness(1.1);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.08);
   box-shadow:
-    0 0 0 0.5px rgba(255, 255, 255, 0.2) inset,
-    0 2px 0 rgba(255, 255, 255, 0.25) inset,
-    0 -1px 0 rgba(0, 0, 0, 0.2) inset,
-    2px 0 0 rgba(255, 255, 255, 0.1) inset,
-    -2px 0 0 rgba(0, 0, 0, 0.1) inset;
+    2px 1px 0 -1.586px rgba(255, 255, 255, 0.50) inset,
+    -2px -1px 0 -1.586px rgba(255, 255, 255, 0.42) inset,
+    2.2px 4px 0 -3.172px rgba(255, 255, 255, 0.37) inset,
+    -2.2px -4px 0 -3.172px rgba(255, 255, 255, 0.25) inset,
+    0 0 9.517px 0 rgba(255, 255, 255, 0.50) inset,
+    0 0 50.755px 0 #F2F2F2 inset;
   flex-shrink: 0;
-  min-width: max-content;
 }
 
 .main__badge-text {
@@ -342,35 +341,34 @@ body {
   margin: 0;
   white-space: nowrap;
   -webkit-font-smoothing: antialiased;
-  flex-shrink: 0;
+  flex: 1;
 }
 
 .main__badge-icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 56px;
-  height: 56px;
-  min-width: 56px;
-  min-height: 56px;
+  width: 66px;
+  height: 66px;
+  min-width: 66px;
+  min-height: 66px;
   border-radius: 10px;
-  background: transparent;
-  backdrop-filter: blur(40px) brightness(1.1);
-  -webkit-backdrop-filter: blur(40px) brightness(1.1);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.08);
   box-shadow:
-    0 0 0 0.5px rgba(255, 255, 255, 0.2) inset,
-    0 2px 0 rgba(255, 255, 255, 0.25) inset,
-    0 -1px 0 rgba(0, 0, 0, 0.2) inset,
-    2px 0 0 rgba(255, 255, 255, 0.1) inset,
-    -2px 0 0 rgba(0, 0, 0, 0.1) inset;
+    2px 1px 0 -1.586px rgba(255, 255, 255, 0.50) inset,
+    -2px -1px 0 -1.586px rgba(255, 255, 255, 0.42) inset,
+    2.2px 4px 0 -3.172px rgba(255, 255, 255, 0.37) inset,
+    -2.2px -4px 0 -3.172px rgba(255, 255, 255, 0.25) inset,
+    0 0 9.517px 0 rgba(255, 255, 255, 0.50) inset,
+    0 0 50.755px 0 #F2F2F2 inset;
   flex-shrink: 0;
-  isolation: isolate;
+  overflow: hidden;
 }
 
 .main__badge-icon img {
-  width: 29px;
-  height: 24px;
+  width: 34px;
+  height: 28px;
+  flex-shrink: 0;
 }
 
 @media (min-width: 768px) {
