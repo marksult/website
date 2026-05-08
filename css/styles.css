@@ -379,6 +379,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.12);
   flex-shrink: 0;
   overflow: hidden;
+  margin-top: 25px;
 }
 
 .main__badge::before {
