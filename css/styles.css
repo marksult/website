@@ -278,6 +278,8 @@ body {
   line-height: 1.2;
   letter-spacing: -0.02em;
   font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   transition: transform 0.3s ease;
   will-change: transform;
   width: auto;
