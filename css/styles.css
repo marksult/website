@@ -268,7 +268,7 @@ body {
 .main__cta {
   display: inline-flex;
   height: 50px;
-  padding: 11px 28px 9px;
+  padding: 12px 28px 8px;
   justify-content: center;
   align-items: center;
   gap: 10px;
