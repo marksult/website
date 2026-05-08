@@ -46,29 +46,10 @@
   --font-primary: 'Helvetica Neue LT Pro', sans-serif;
   --font-secondary: 'Plantin MT Pro', serif;
 
-  --h1-size: 37px;
-  --h1-font: var(--font-secondary);
-  --h1-weight: 300;
-  --h1-line-height: 1.0;
-  --h1-letter-spacing: -0.02em;
-
-  --body-lg-size: 15px;
-  --body-lg-font: var(--font-primary);
-  --body-lg-weight: 400;
-  --body-lg-line-height: 1.15;
-  --body-lg-letter-spacing: -0.02em;
-
-  --button-size: 18px;
-  --button-font: var(--font-primary);
-  --button-weight: 700;
-  --button-line-height: 1.15;
-  --button-letter-spacing: 0.02em;
-
-  --badge-size: 25px;
-  --badge-font: var(--font-secondary);
-  --badge-weight: 300;
-  --badge-line-height: 1.05;
-  --badge-letter-spacing: -0.03em;
+  /* title half-leading trim for mobile (37px * 1.0) */
+  --title-trim-bottom: -8px;
+  /* description top offset to achieve 25px ink-to-ink */
+  --desc-gap-top: 25px;
 }
 
 *, *::before, *::after {
@@ -88,23 +69,17 @@ body {
 
 @media (min-width: 768px) {
   :root {
-    --h1-size: 60px;
-    --h1-line-height: 1.05;
-    --body-lg-size: 16px;
-    --body-lg-line-height: 1.2;
-    --button-size: 18px;
-    --badge-size: 30px;
+    /* title half-leading trim for tablet (60px * 1.05) */
+    --title-trim-bottom: -18px;
+    --desc-gap-top: 25px;
   }
 }
 
 @media (min-width: 1440px) {
   :root {
-    --h1-size: 65px;
-    --h1-line-height: 1.05;
-    --body-lg-size: 18px;
-    --body-lg-line-height: 1.2;
-    --button-size: 18px;
-    --badge-size: 30px;
+    /* title half-leading trim for desktop (65px * 1.05) */
+    --title-trim-bottom: -20px;
+    --desc-gap-top: 25px;
   }
 }
 
@@ -225,6 +200,7 @@ body {
   letter-spacing: -0.74px;
   text-align: center;
   margin: 0;
+  margin-bottom: var(--title-trim-bottom);
   max-width: 321px;
 }
 
@@ -237,6 +213,7 @@ body {
   letter-spacing: -0.02em;
   text-align: center;
   margin: 0;
+  padding-top: var(--desc-gap-top);
   max-width: 310px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -412,7 +389,7 @@ body {
     padding: 40px;
   }
   .main__title-group {
-    gap: 20px;
+    gap: 15px;
   }
   .main__title {
     font-size: 60px;
