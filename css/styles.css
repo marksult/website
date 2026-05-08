@@ -410,12 +410,15 @@ body {
   font-family: 'Plantin MT Pro', serif;
   font-size: 25px;
   font-weight: 300;
-  line-height: 1.05;
+  line-height: 1.0;
   letter-spacing: -0.03em;
   margin: 0;
+  padding-top: 3px;
   white-space: nowrap;
   -webkit-font-smoothing: antialiased;
   flex: 1;
+  display: flex;
+  align-items: center;
 }
 
 @media (min-width: 768px) {
