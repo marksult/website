@@ -290,13 +290,11 @@ body {
 
 /* ─── SOCIAL PROOF ────────────────────────────────────────────────────── */
 
-/* align-items: baseline — dot aligns to text baseline.
-   Then dot uses position: relative + top to shift up to cap-height center.
-   Formula: top = -(font-size * cap-height-ratio / 2)
-   Helvetica Neue cap-height ≈ 0.72em
-   15px: cap-height = 10.8px, center = 5.4px above baseline → top: -5px (dot h=7, center=3.5) diff=1.9 → top:-2px
-   16px: same ratio → top: -2px
-   18px: cap-height = 12.96px, center = 6.5px above baseline → top:-3px */
+@keyframes dot-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.15; }
+}
+
 .main__social-proof {
   display: inline-flex;
   justify-content: center;
@@ -304,7 +302,6 @@ body {
   gap: 5px;
 }
 
-/* Mobile + tablet: 7x7 dot, top -2px */
 .main__dot {
   width: 7px;
   height: 7px;
@@ -315,6 +312,7 @@ body {
   flex-shrink: 0;
   position: relative;
   top: -2px;
+  animation: dot-pulse 1.4s ease-in-out infinite;
 }
 
 .main__social-text {
@@ -336,10 +334,8 @@ body {
   .main__social-text {
     font-size: 16px;
   }
-  /* dot stays 7x7, top -2px — unchanged */
 }
 
-/* Desktop: 8x8 dot, top -3px to account for larger cap-height */
 @media (min-width: 1440px) {
   .main__social-text {
     font-size: 18px;
@@ -350,6 +346,12 @@ body {
     min-width: 8px;
     min-height: 8px;
     top: -3px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .main__dot {
+    animation: none;
   }
 }
 
