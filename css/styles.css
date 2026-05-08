@@ -320,7 +320,7 @@ body {
   background: #F43F5E;
   flex-shrink: 0;
   position: relative;
-  top: -2px;
+  top: -1px;
   animation: dot-pulse 2.4s ease-in-out infinite;
 }
 
@@ -354,7 +354,7 @@ body {
     height: 8px;
     min-width: 8px;
     min-height: 8px;
-    top: -3px;
+    top: -2px;
   }
 }
 
