@@ -62,7 +62,7 @@ body {
   min-height: -webkit-fill-available;
 }
 
-/* ─── HEADER ─────────────────────────────────── */
+/* ─── HEADER ─────────────────────────────────────────── */
 
 .header {
   width: 100%;
@@ -117,7 +117,7 @@ body {
   }
 }
 
-/* ─── MAIN ───────────────────────────────────── */
+/* ─── MAIN ───────────────────────────────────────────── */
 
 .main {
   padding: 0 15px 25px;
@@ -156,7 +156,7 @@ body {
   backface-visibility: hidden;
 }
 
-/* ─── CONTENT ────────────────────────────────── */
+/* ─── CONTENT ────────────────────────────────────────── */
 
 .main__content {
   position: absolute;
@@ -183,9 +183,8 @@ body {
   gap: 0;
 }
 
-/* ─── TITLE ──────────────────────────────────── */
-/* margin-bottom = 25px desired gap MINUS Plantin MT Pro half-leading bottom */
-/* Mobile 37px/lh1.0: half-leading = 0 → margin-bottom: 25px */
+/* ─── TITLE ──────────────────────────────────────────── */
+
 .main__title {
   color: #FFF;
   font-family: 'Plantin MT Pro', serif;
@@ -199,11 +198,6 @@ body {
   max-width: 321px;
 }
 
-/* Tablet 60px/lh1.05: half-leading bottom ≈ (60*1.05-60)/2 = 1.5px visual
-   but Plantin's descender adds ~16px extra → total trim ~18px
-   margin-bottom = 25 - 18 = 7px ... but we need to account for description top half-leading too
-   description 16px/lh1.2: half-leading top = (16*1.2-16)/2 = 1.6px → negligible
-   So margin-bottom: 7px */
 @media (min-width: 768px) {
   .main__title {
     font-size: 60px;
@@ -214,8 +208,6 @@ body {
   }
 }
 
-/* Desktop 65px/lh1.05: half-leading bottom same ratio, slightly more
-   trim ≈ 20px → margin-bottom = 25 - 20 = 5px */
 @media (min-width: 1440px) {
   .main__title {
     font-size: 65px;
@@ -225,7 +217,7 @@ body {
   }
 }
 
-/* ─── DESCRIPTION ────────────────────────────── */
+/* ─── DESCRIPTION ────────────────────────────────────── */
 
 .main__description {
   color: #FFF;
@@ -258,7 +250,7 @@ body {
   }
 }
 
-/* ─── CTA ────────────────────────────────────── */
+/* ─── CTA ────────────────────────────────────────────── */
 
 .main__cta-group {
   display: flex;
@@ -297,13 +289,16 @@ body {
   transform: scale(1.02);
 }
 
+/* ─── SOCIAL PROOF ───────────────────────────────────── */
+
 .main__social-proof {
   display: inline-flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
   gap: 5px;
 }
 
+/* Mobile: 7×7 dot */
 .main__dot {
   width: 7px;
   height: 7px;
@@ -312,10 +307,9 @@ body {
   border-radius: 50%;
   background: #F43F5E;
   flex-shrink: 0;
-  position: relative;
-  top: -2px;
 }
 
+/* Mobile: 15px text */
 .main__social-text {
   color: #FFF;
   font-family: 'Helvetica Neue LT Pro', sans-serif;
@@ -328,15 +322,30 @@ body {
   display: block;
   padding: 0;
   margin: 0;
+  white-space: nowrap;
 }
 
+/* Tablet: 16px text, dot 7×7 (unchanged) */
 @media (min-width: 768px) {
   .main__social-text {
     font-size: 16px;
   }
 }
 
-/* ─── BADGE ──────────────────────────────────── */
+/* Desktop: 18px text, dot 8×8 */
+@media (min-width: 1440px) {
+  .main__social-text {
+    font-size: 18px;
+  }
+  .main__dot {
+    width: 8px;
+    height: 8px;
+    min-width: 8px;
+    min-height: 8px;
+  }
+}
+
+/* ─── BADGE ──────────────────────────────────────────── */
 
 .main__badge {
   position: relative;
