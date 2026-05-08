@@ -62,7 +62,7 @@ body {
   min-height: -webkit-fill-available;
 }
 
-/* ─── HEADER ─────────────────────────────────────────────────────────────── */
+/* ─── HEADER ─────────────────────────────────────────────────────────── */
 
 .header {
   width: 100%;
@@ -292,7 +292,7 @@ body {
 
 @keyframes dot-pulse {
   0%, 100% { opacity: 1; }
-  50%       { opacity: 0.45; }
+  50%       { opacity: 0.3; }
 }
 
 .main__social-proof {
