@@ -166,14 +166,22 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 40px 12px;
-  gap: 35px;
+  padding: 84px 12px;
 }
 
 @media (min-width: 768px) {
   .main__content {
-    padding: 40px;
+    padding: 84px 40px;
   }
+}
+
+/* ─── INNER ───────────────────────────────────────────────────────────────── */
+
+.main__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
 }
 
 .main__title-group {
