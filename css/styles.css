@@ -1,0 +1,468 @@
+@font-face {
+  font-family: 'Helvetica Neue LT Pro';
+  src: url('../assets/fonts/Helvetica Neue LT Pro-roman.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Pro';
+  src: url('../assets/fonts/Helvetica Neue LT Pro-medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Pro';
+  src: url('../assets/fonts/Helvetica Neue LT Pro-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plantin MT Pro';
+  src: url('../assets/fonts/Plantin MT Pro-light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plantin MT Pro';
+  src: url('../assets/fonts/Plantin MT Pro-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-white: #FFFFFF;
+  --color-gray: #333333;
+  --color-black: #000000;
+
+  --font-primary: 'Helvetica Neue LT Pro', sans-serif;
+  --font-secondary: 'Plantin MT Pro', serif;
+
+  --h1-size: 37px;
+  --h1-font: var(--font-secondary);
+  --h1-weight: 300;
+  --h1-line-height: 1.0;
+  --h1-letter-spacing: -0.02em;
+
+  --body-lg-size: 15px;
+  --body-lg-font: var(--font-primary);
+  --body-lg-weight: 400;
+  --body-lg-line-height: 1.15;
+  --body-lg-letter-spacing: -0.02em;
+
+  --button-size: 18px;
+  --button-font: var(--font-primary);
+  --button-weight: 700;
+  --button-line-height: 1.15;
+  --button-letter-spacing: 0.02em;
+
+  --badge-size: 25px;
+  --badge-font: var(--font-secondary);
+  --badge-weight: 300;
+  --badge-line-height: 1.05;
+  --badge-letter-spacing: -0.03em;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-primary);
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --h1-size: 60px;
+    --h1-line-height: 1.05;
+    --body-lg-size: 16px;
+    --body-lg-line-height: 1.2;
+    --button-size: 18px;
+    --badge-size: 30px;
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --h1-size: 65px;
+    --h1-line-height: 1.05;
+    --body-lg-size: 18px;
+    --body-lg-line-height: 1.2;
+    --button-size: 18px;
+    --badge-size: 30px;
+  }
+}
+
+.header {
+  width: 100%;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 27px;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.header__logo svg {
+  width: 90px;
+  height: 18px;
+  display: block;
+}
+
+.header__socials {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform-origin: center;
+}
+
+.header__social-link:hover {
+  opacity: 0.6;
+  transform: scale(1.15);
+}
+
+@media (min-width: 768px) {
+  .header__container {
+    padding: 25px 40px;
+  }
+  .header__logo svg {
+    width: 98px;
+    height: 20px;
+  }
+}
+
+.main {
+  padding: 0 15px 25px;
+  padding-bottom: max(25px, env(safe-area-inset-bottom));
+  height: calc(100vh - 68px);
+  display: flex;
+  flex-direction: column;
+}
+
+.main__container {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  width: 100%;
+}
+
+.main__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 15px;
+}
+
+@media (min-width: 768px) {
+  .main {
+    height: calc(100vh - 70px);
+  }
+}
+
+.main__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 40px 12px 0;
+}
+
+.main__title-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.main__title {
+  color: #FFF;
+  font-family: 'Plantin MT Pro', serif;
+  font-size: 37px;
+  font-weight: 300;
+  line-height: 1.0;
+  letter-spacing: -0.74px;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  max-width: 321px;
+}
+
+.main__description {
+  color: #FFF;
+  font-family: 'Helvetica Neue LT Pro', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin: 0;
+  max-width: 310px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.main__cta {
+  display: inline-flex;
+  height: 50px;
+  padding: 11px 28px 9px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 30px;
+  background: #FFF;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  color: #333;
+  font-family: 'Helvetica Neue LT Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  transition: transform 0.3s ease;
+  will-change: transform;
+  width: auto;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.main__cta:hover {
+  transform: scale(1.02);
+}
+
+.main__cta-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.main__social-proof {
+  display: inline-flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.main__dot {
+  width: 7px;
+  height: 7px;
+  min-width: 7px;
+  min-height: 7px;
+  border-radius: 50%;
+  background: #F43F5E;
+  flex-shrink: 0;
+  position: relative;
+  top: -2px;
+}
+
+.main__social-text {
+  color: #FFF;
+  font-family: 'Helvetica Neue LT Pro', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+.main__badge {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 5px 5px 5px 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(40px) brightness(1.1);
+  -webkit-backdrop-filter: blur(40px) brightness(1.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 0 0 0.5px rgba(255, 255, 255, 0.2) inset,
+    0 2px 0 rgba(255, 255, 255, 0.25) inset,
+    0 -1px 0 rgba(0, 0, 0, 0.2) inset,
+    2px 0 0 rgba(255, 255, 255, 0.1) inset,
+    -2px 0 0 rgba(0, 0, 0, 0.1) inset;
+  width: fit-content;
+}
+
+.main__badge-text {
+  color: #FFF;
+  font-family: 'Plantin MT Pro', serif;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin: 0;
+  white-space: nowrap;
+  -webkit-font-smoothing: antialiased;
+}
+
+.main__badge-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  background: transparent;
+  backdrop-filter: blur(40px) brightness(1.1);
+  -webkit-backdrop-filter: blur(40px) brightness(1.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 0 0 0.5px rgba(255, 255, 255, 0.2) inset,
+    0 2px 0 rgba(255, 255, 255, 0.25) inset,
+    0 -1px 0 rgba(0, 0, 0, 0.2) inset,
+    2px 0 0 rgba(255, 255, 255, 0.1) inset,
+    -2px 0 0 rgba(0, 0, 0, 0.1) inset;
+  flex-shrink: 0;
+  isolation: isolate;
+}
+
+.main__badge-icon img {
+  width: 29px;
+  height: 24px;
+}
+
+@media (min-width: 768px) {
+  .main__content {
+    padding: 40px 40px 0;
+  }
+  .main__title-group {
+    gap: 25px;
+  }
+  .main__title {
+    font-size: 60px;
+    line-height: 1.05;
+    letter-spacing: -1.2px;
+    max-width: 690px;
+  }
+  .main__description {
+    font-size: 16px;
+    line-height: 1.2;
+    max-width: 412px;
+  }
+  .main__cta {
+    font-size: 18px;
+    line-height: 1.2;
+    width: auto;
+  }
+  .main__dot {
+    width: 8px;
+    height: 8px;
+    min-width: 8px;
+    min-height: 8px;
+  }
+  .main__social-text {
+    font-size: 16px;
+  }
+  .main__badge {
+    border-radius: 15px;
+  }
+  .main__badge-text {
+    font-size: 30px;
+  }
+  .main__badge-icon {
+    width: 66px;
+    height: 66px;
+  }
+  .main__badge-icon img {
+    width: 34px;
+    height: 28px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .main__title {
+    font-size: 65px;
+    letter-spacing: -1.3px;
+    max-width: 747px;
+  }
+  .main__description {
+    font-size: 18px;
+    max-width: 465px;
+  }
+  .main__social-text {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .main__container {
+    max-width: 1395px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.h1 {
+  font-family: var(--h1-font);
+  font-size: var(--h1-size);
+  font-weight: var(--h1-weight);
+  line-height: var(--h1-line-height);
+  letter-spacing: var(--h1-letter-spacing);
+}
+
+.body-lg {
+  font-family: var(--body-lg-font);
+  font-size: var(--body-lg-size);
+  font-weight: var(--body-lg-weight);
+  line-height: var(--body-lg-line-height);
+  letter-spacing: var(--body-lg-letter-spacing);
+}
+
+.button {
+  font-family: var(--button-font);
+  font-size: var(--button-size);
+  font-weight: var(--button-weight);
+  line-height: var(--button-line-height);
+  letter-spacing: var(--button-letter-spacing);
+}
+
+.badge {
+  font-family: var(--badge-font);
+  font-size: var(--badge-size);
+  font-weight: var(--badge-weight);
+  line-height: var(--badge-line-height);
+  letter-spacing: var(--badge-letter-spacing);
+}
