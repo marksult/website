@@ -62,7 +62,7 @@ body {
   min-height: -webkit-fill-available;
 }
 
-/* ─── HEADER ─────────────────────────────────────────────────────────── */
+/* ─── HEADER ─────────────────────────────────────────────────────────────── */
 
 .header {
   width: 100%;
@@ -117,7 +117,7 @@ body {
   }
 }
 
-/* ─── MAIN ───────────────────────────────────────────────────────────────── */
+/* ─── MAIN ───────────────────────────────────────────────────────────────────── */
 
 .main {
   padding: 0 15px 25px;
@@ -156,7 +156,7 @@ body {
   backface-visibility: hidden;
 }
 
-/* ─── CONTENT ────────────────────────────────────────────────────────────── */
+/* ─── CONTENT ─────────────────────────────────────────────────────────────── */
 
 .main__content {
   position: absolute;
@@ -167,6 +167,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 40px 12px;
+  gap: 35px;
 }
 
 @media (min-width: 768px) {
@@ -216,7 +217,7 @@ body {
   }
 }
 
-/* ─── DESCRIPTION ─────────────────────────────────────────────────────── */
+/* ─── DESCRIPTION ───────────────────────────────────────────────────────── */
 
 .main__description {
   color: #FFF;
@@ -227,7 +228,6 @@ body {
   letter-spacing: -0.02em;
   text-align: center;
   margin: 0;
-  margin-bottom: 15px;
   max-width: 310px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -238,7 +238,6 @@ body {
     font-size: 16px;
     line-height: 1.2;
     max-width: 412px;
-    margin-bottom: 15px;
   }
 }
 
@@ -249,7 +248,7 @@ body {
   }
 }
 
-/* ─── CTA ────────────────────────────────────────────────────────────────── */
+/* ─── CTA ──────────────────────────────────────────────────────────────────── */
 
 .main__cta-group {
   display: flex;
@@ -291,7 +290,7 @@ body {
   transform: scale(1.02);
 }
 
-/* ─── SOCIAL PROOF ───────────────────────────────────────────────────────── */
+/* ─── SOCIAL PROOF ──────────────────────────────────────────────────────── */
 
 @keyframes dot-pulse {
   0%, 100% { opacity: 1; }
@@ -358,7 +357,7 @@ body {
   }
 }
 
-/* ─── BADGE ──────────────────────────────────────────────────────────────── */
+/* ─── BADGE ────────────────────────────────────────────────────────────── */
 
 .main__badge {
   position: relative;
