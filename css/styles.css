@@ -62,7 +62,7 @@ body {
   min-height: -webkit-fill-available;
 }
 
-/* ─── HEADER ─────────────────────────────────────────────── */
+/* ─── HEADER ─────────────────────────────────────────────────────────── */
 
 .header {
   width: 100%;
@@ -117,7 +117,7 @@ body {
   }
 }
 
-/* ─── MAIN ───────────────────────────────────────────────── */
+/* ─── MAIN ────────────────────────────────────────────────────────────── */
 
 .main {
   padding: 0 15px 25px;
@@ -156,7 +156,7 @@ body {
   backface-visibility: hidden;
 }
 
-/* ─── CONTENT ────────────────────────────────────────────── */
+/* ─── CONTENT ─────────────────────────────────────────────────────────── */
 
 .main__content {
   position: absolute;
@@ -175,7 +175,6 @@ body {
   }
 }
 
-/* title-group: NO gap — all spacing via margin-bottom on children */
 .main__title-group {
   display: flex;
   flex-direction: column;
@@ -183,7 +182,7 @@ body {
   gap: 0;
 }
 
-/* ─── TITLE ──────────────────────────────────────────────── */
+/* ─── TITLE ───────────────────────────────────────────────────────────── */
 
 .main__title {
   color: #FFF;
@@ -217,7 +216,7 @@ body {
   }
 }
 
-/* ─── DESCRIPTION ────────────────────────────────────────── */
+/* ─── DESCRIPTION ─────────────────────────────────────────────────────── */
 
 .main__description {
   color: #FFF;
@@ -250,7 +249,7 @@ body {
   }
 }
 
-/* ─── CTA ────────────────────────────────────────────────── */
+/* ─── CTA ─────────────────────────────────────────────────────────────── */
 
 .main__cta-group {
   display: flex;
@@ -289,8 +288,11 @@ body {
   transform: scale(1.02);
 }
 
-/* ─── SOCIAL PROOF ───────────────────────────────────────── */
+/* ─── SOCIAL PROOF ────────────────────────────────────────────────────── */
 
+/* Parent: align-items center aligns dot to middle of text line box.
+   With line-height: 1.15 on Helvetica Neue the half-leading is symmetric
+   so center = visual cap-height center. No hacks needed. */
 .main__social-proof {
   display: inline-flex;
   justify-content: center;
@@ -298,7 +300,6 @@ body {
   gap: 5px;
 }
 
-/* Dot — centered by flex, no manual top offset needed */
 .main__dot {
   width: 7px;
   height: 7px;
@@ -307,9 +308,6 @@ body {
   border-radius: 50%;
   background: #F43F5E;
   flex-shrink: 0;
-  /* shift down by half of descender space so dot sits at cap-height center:
-     Helvetica Neue descender ≈ 20% of em → at 15px = 3px → shift 1.5px ≈ 2px */
-  margin-top: 1px;
 }
 
 .main__social-text {
@@ -317,8 +315,7 @@ body {
   font-family: 'Helvetica Neue LT Pro', sans-serif;
   font-size: 15px;
   font-weight: 400;
-  /* line-height: 1 keeps the line box tight — no extra leading above/below */
-  line-height: 1;
+  line-height: 1.15;
   letter-spacing: -0.02em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -326,20 +323,11 @@ body {
   padding: 0;
   margin: 0;
   white-space: nowrap;
-  /* leading-trim cuts line box to cap-height top, baseline bottom.
-     Supported in Safari 17.4+, Chrome 114+, Firefox 120+.
-     Fallback: margin-top on dot handles other browsers. */
-  leading-trim: both;
-  text-edge: cap alphabetic;
 }
 
 @media (min-width: 768px) {
   .main__social-text {
     font-size: 16px;
-  }
-  .main__dot {
-    /* at 16px: descender 3.2px → shift ~2px */
-    margin-top: 1px;
   }
 }
 
@@ -352,12 +340,10 @@ body {
     height: 8px;
     min-width: 8px;
     min-height: 8px;
-    /* at 18px: descender 3.6px → shift ~2px */
-    margin-top: 1px;
   }
 }
 
-/* ─── BADGE ──────────────────────────────────────────────── */
+/* ─── BADGE ───────────────────────────────────────────────────────────── */
 
 .main__badge {
   position: relative;
