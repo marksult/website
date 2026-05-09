@@ -580,7 +580,9 @@ body {
 
 .logos {
   margin-top: 60px;
-  padding: 0 15px 120px;
+  padding: 0 0 120px;
+  /* overflow hidden so the track scroll stays inside */
+  overflow: hidden;
 }
 
 .logos__inner {
@@ -603,32 +605,54 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.logos__row {
+/* Track — scrollable row, icons never shrink */
+.logos__track {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 50px;
+  /* no wrap — icons stay in one line */
   flex-wrap: nowrap;
-  gap: 40px;
+  /* allow horizontal scroll on small screens without body overflow */
+  overflow-x: auto;
+  /* hide scrollbar visually */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  width: 100%;
+  padding: 0 15px;
 }
 
+.logos__track::-webkit-scrollbar {
+  display: none;
+}
+
+/* All icons: never shrink, never grow — fixed px from HTML width/height attrs */
 .logos__img {
   display: block;
-  height: 18px;
-  width: auto;
   flex-shrink: 0;
+  flex-grow: 0;
 }
+
+/* Per-icon exact desktop sizes */
+.logos__img--ironclad  { width: 193px; height: 23px; }
+.logos__img--maxout    { width: 96px;  height: 60px; }
+.logos__img--lexon     { width: 117px; height: 23px; }
+.logos__img--elsworth  { width: 184px; height: 20px; }
+.logos__img--veritam   { width: 110px; height: 23px; }
+.logos__img--nobilis   { width: 100px; height: 60px; }
+.logos__img--harwick   { width: 192px; height: 22px; }
+.logos__img--blun      { width: 80px;  height: 60px; }
+.logos__img--vargen    { width: 174px; height: 16px; }
 
 @media (min-width: 768px) {
   .logos {
     margin-top: 60px;
-    padding: 0 40px 140px;
+    padding: 0 0 140px;
   }
-  .logos__row {
+  .logos__track {
+    padding: 0 40px;
     gap: 50px;
-  }
-  .logos__img {
-    height: 20px;
   }
   .logos__label {
     font-size: 15px;
@@ -638,13 +662,11 @@ body {
 @media (min-width: 1440px) {
   .logos {
     margin-top: 60px;
-    padding: 0 80px 160px;
+    padding: 0 0 160px;
   }
-  .logos__row {
-    gap: 60px;
-  }
-  .logos__img {
-    height: 22px;
+  .logos__track {
+    padding: 0 80px;
+    gap: 50px;
   }
   .logos__label {
     font-size: 18px;
