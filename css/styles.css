@@ -247,6 +247,13 @@ body {
 }
 
 
+@media (max-width: 767px) {
+  .main__title {
+    margin-bottom: 15px;
+  }
+}
+
+
 @media (min-width: 768px) {
   .main__title {
     font-size: 60px;
