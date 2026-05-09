@@ -129,7 +129,10 @@ body {
 
 @media (min-width: 768px) {
   .main {
-    height: calc(100vh - 70px);
+    height: auto;
+  }
+  .main__container {
+    flex: none;
   }
 }
 
@@ -171,7 +174,9 @@ body {
 
 @media (min-width: 768px) {
   .main__content {
-    padding: 84px 40px;
+    position: relative;
+    inset: auto;
+    padding: 60px 40px;
   }
 }
 
@@ -387,7 +392,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.12);
   flex-shrink: 0;
   overflow: hidden;
-  margin-top: 25px;
+  margin-top: 40px;
 }
 
 .main__badge::before {
@@ -450,24 +455,28 @@ body {
   overflow: hidden;
 }
 
-.main__badge-icon::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 10px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
-  background-size: 100px 100px;
-  opacity: 0.04;
-  pointer-events: none;
-  z-index: 0;
-  mix-blend-mode: overlay;
-}
-
 .main__badge-icon svg,
 .main__badge-icon img {
-  position: relative;
-  z-index: 1;
   width: 34px;
   height: 28px;
   flex-shrink: 0;
+}
+
+@media (max-width: 767px) {
+  .main__badge {
+    max-width: 293px;
+    height: 59.7px;
+    padding: 3.928px 3.928px 3.928px 19px;
+    gap: 11.783px;
+    border-radius: 9.185px;
+  }
+  .main__badge-text {
+    font-size: 23px;
+  }
+  .main__badge-icon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    min-height: 52px;
+  }
 }
