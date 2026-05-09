@@ -593,7 +593,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 35px;
 }
 
 .logos__label {
@@ -607,12 +607,6 @@ body {
   text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-@media (max-width: 767px) {
-  .logos__label {
-    font-size: 15px;
-  }
 }
 
 .logos__viewport {
