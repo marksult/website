@@ -896,8 +896,6 @@ body {
   justify-content: center;
   padding: 0 15px 20px;
   margin-top: 40px;
-  position: relative;
-  z-index: 1;
 }
 
 .article-block5 {
@@ -905,8 +903,6 @@ body {
   justify-content: center;
   padding: 0 15px 20px;
   margin-top: 0;
-  position: relative;
-  z-index: 2;
 }
 
 .article-block6 {
@@ -914,8 +910,6 @@ body {
   justify-content: center;
   padding: 0 15px 20px;
   margin-top: 0;
-  position: relative;
-  z-index: 3;
 }
 
 .article-block7 {
@@ -923,8 +917,6 @@ body {
   justify-content: center;
   padding: 0 15px 20px;
   margin-top: 0;
-  position: relative;
-  z-index: 4;
 }
 
 .article-block8 {
@@ -932,8 +924,6 @@ body {
   justify-content: center;
   padding: 0 15px 120px;
   margin-top: 0;
-  position: relative;
-  z-index: 5;
 }
 
 .article__card {
@@ -1131,19 +1121,15 @@ body {
   }
   .article-block5 {
     padding: 0 15px 10px;
-    margin-top: 0;
   }
   .article-block6 {
     padding: 0 15px 10px;
-    margin-top: 0;
   }
   .article-block7 {
     padding: 0 15px 10px;
-    margin-top: 0;
   }
   .article-block8 {
     padding: 0 15px 80px;
-    margin-top: 0;
   }
   .article__card {
     width: 100%;
@@ -1205,19 +1191,15 @@ body {
   }
   .article-block5 {
     padding: 0 20px 15px;
-    margin-top: 0;
   }
   .article-block6 {
     padding: 0 20px 15px;
-    margin-top: 0;
   }
   .article-block7 {
     padding: 0 20px 15px;
-    margin-top: 0;
   }
   .article-block8 {
     padding: 0 20px 100px;
-    margin-top: 0;
   }
   .article__card {
     width: 100%;
