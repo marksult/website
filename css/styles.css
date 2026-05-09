@@ -888,6 +888,10 @@ body {
   margin-top: 60px;
 }
 
+.article--section5 {
+  margin-top: 20px;
+}
+
 .article__card {
   display: flex;
   flex-direction: column;
@@ -1072,6 +1076,9 @@ body {
     padding: 0 15px 80px;
     margin-top: 10px;
   }
+  .article--section5 {
+    margin-top: 10px;
+  }
   .article__card {
     width: 100%;
     padding: 31px;
@@ -1129,6 +1136,9 @@ body {
   .article {
     padding: 0 20px 100px;
     margin-top: 50px;
+  }
+  .article--section5 {
+    margin-top: 15px;
   }
   .article__card {
     width: 100%;
