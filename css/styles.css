@@ -558,6 +558,7 @@ body {
     padding: 4px 3px 4px 12px;
     justify-content: space-between;
     border-radius: 9.185px;
+    margin-top: 30px;
   }
   .main__badge::before {
     border-radius: 9.185px;
