@@ -1,11 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-  /* ── Sticky stack ─────────────────────────────────────────────────────────
-     Кожна карточка прилипає коли кнопка внизу доходить до краю viewport.
-     Наступна карточка виїжджає знизу і накладується поверх.
-  ───────────────────────────────────────────────────────────────────────── */
-
-  var SELECTORS = [
+  var SELS = [
     '.article',
     '.article-block5',
     '.article-block6',
@@ -13,55 +8,43 @@ document.addEventListener('DOMContentLoaded', function () {
     '.article-block8'
   ];
 
-  var sections = SELECTORS.map(function (s) {
-    return document.querySelector(s);
-  }).filter(Boolean);
-
+  var sections = SELS.map(function (s) { return document.querySelector(s); }).filter(Boolean);
   if (sections.length < 2) return;
 
-  var cards = sections.map(function (s) {
-    return s.querySelector('.article__card');
-  }).filter(Boolean);
-
-  if (cards.length !== sections.length) return;
-
-  /* Скидаємо будь-які залишки від попередньої entrance-анімації */
-  cards.forEach(function (card) {
-    card.style.opacity    = '';
-    card.style.transform  = '';
-    card.style.transition = '';
-    card.style.willChange = '';
+  /* Скидаємо залишки попередніх inline-стилів */
+  sections.forEach(function (section) {
+    var card = section.querySelector('.article__card');
+    if (!card) return;
+    card.style.cssText = '';
   });
 
-  function applyStack() {
+  function setup() {
     var vh  = window.innerHeight;
     var mob = window.innerWidth < 768;
 
-    /* Скільки пікселів скролу дається наступній карточці щоб виїхати */
-    var buf = mob ? 220 : 360;
-
     sections.forEach(function (section, i) {
-      var card  = cards[i];
+      var card  = section.querySelector('.article__card');
+      if (!card) return;
+
       var cardH = card.offsetHeight;
+      if (!cardH) return;
 
-      /* Стекінг-контекст: наступна секція перекриває попередню */
+      /* Стекінг-контекст */
       section.style.position = 'relative';
-      section.style.zIndex   = String(i + 1);
+      section.style.zIndex   = i + 1;
 
-      /* Sticky */
-      card.style.position = 'sticky';
-
-      /* top розрахунок:
-         - Якщо карточка ≤ viewport: top = 20px (прилипає зверху, всі видно)
-         - Якщо карточка > viewport: top = vh - cardH - 20 (від'ємне)
-           → карточка прилипає коли її НИЖНІЙ КРАЙ (кнопка) = нижній край viewport
-           → юзер бачить кнопку в останній момент перед тим як виїжджає наступна */
+      /* Sticky на карточці:
+         - Карточка <= viewport: top 20px (видно зверху)
+         - Карточка > viewport: від'ємний top, щоб кнопка
+           опинялась на нижньому краї viewport в момент прилипання */
       var topPx = Math.min(20, vh - cardH - 20);
-      card.style.top = topPx + 'px';
+      card.style.position = 'sticky';
+      card.style.top      = topPx + 'px';
 
-      /* Буфер скролу щоб наступна карточка встигла виїхати знизу.
-         Для останньої секції — не чіпаємо (зберігається CSS padding-bottom). */
+      /* Буфер після карточки — час щоб наступна виїхала знизу.
+         Остання секція зберігає свій CSS padding. */
       if (i < sections.length - 1) {
+        var buf = mob ? 220 : 360;
         section.style.paddingBottom = buf + 'px';
       } else {
         section.style.paddingBottom = '';
@@ -69,15 +52,22 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  applyStack();
+  /* Запускаємо після повного завантаження (правильні висоти) */
+  if (document.readyState === 'complete') {
+    setup();
+  } else {
+    window.addEventListener('load', setup);
+  }
 
-  /* Перерахунок після повного завантаження (шрифти, зображення → висоти змінюються) */
-  window.addEventListener('load', applyStack);
+  /* Підстраховка — деякі шрифти вантажаться пізніше */
+  window.addEventListener('load', function () {
+    setTimeout(setup, 300);
+  });
 
   var resizeTimer;
   window.addEventListener('resize', function () {
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(applyStack, 150);
+    resizeTimer = setTimeout(setup, 150);
   }, { passive: true });
 
 });
