@@ -68,6 +68,16 @@ body {
   display: none;
 }
 
+.desktop-tablet-br {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .desktop-tablet-br {
+    display: none;
+  }
+}
+
 
 /* ================================================================
    HERO SECTION
