@@ -600,13 +600,19 @@ body {
   margin: 0;
   color: #000000;
   font-family: 'Helvetica Neue LT Pro', sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: -0.01em;
   text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 767px) {
+  .logos__label {
+    font-size: 15px;
+  }
 }
 
 .logos__viewport {
@@ -647,7 +653,7 @@ body {
     padding: 0 0 140px;
   }
   .logos__label {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 
