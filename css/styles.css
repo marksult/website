@@ -843,14 +843,6 @@ body {
 }
 
 /* --- LETTER TABLET ----------------------------------------------------- */
-/*
-  Figma tablet values:
-  container padding:  80px
-  card gap (body→stamp): 20px
-  body gap (між групами): 40px
-  group gap (text-group→tag): 30px
-  text-group gap (Plantin→Helvetica): 25px
-*/
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .letter {
@@ -885,18 +877,6 @@ body {
 /* ================================================================
    ARTICLE SECTION (block 4)
    ================================================================ */
-
-/*
-  Margins mirror letter section (block 2→3 gap):
-  desktop:  margin-top 60px  | padding-bottom 120px
-  tablet:   margin-top 50px  | padding-bottom 100px
-  mobile:   margin-top 35px  | padding-bottom 80px
-
-  Desktop card (from Figma):
-    width:   900px
-    padding: 70px 100px
-    gap:     30px   (between chunks)
-*/
 
 .article {
   display: flex;
@@ -950,7 +930,7 @@ body {
 
 .article__warning-tag {
   display: inline-flex;
-  padding: 15px;
+  padding: 13px 13px 10px;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -965,7 +945,7 @@ body {
   font-family: 'Helvetica Neue LT Pro', sans-serif;
   font-size: 18px;
   font-weight: 500;
-  line-height: 1.15;
+  line-height: 1;
   letter-spacing: -0.02em;
   -webkit-font-smoothing: antialiased;
 }
@@ -1009,8 +989,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.article__body--bold {
+/* Medium weight for inline emphasis phrases */
+.article__body strong {
   font-weight: 500;
+  font-style: normal;
 }
 
 /* ---- Map placeholder ---- */
