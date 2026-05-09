@@ -774,13 +774,6 @@ body {
 
 /*
   Letter tag-badges — static, non-interactive
-  Height = 43px:
-    border-top 1px + border-bottom 1px
-    + padding-top 13px + padding-bottom 10px
-    + line-height 1 on font-size 18px → line-box 18px
-    = 1 + 13 + 18 + 10 + 1 = 43px
-  padding-top > padding-bottom compensates for descender space
-  so cap-height sits visually centred inside the badge.
 */
 .letter__tag {
   display: inline-flex;
@@ -816,7 +809,7 @@ body {
 @media (max-width: 767px) {
   .letter {
     padding: 0 15px 80px;
-    margin-top: 40px;
+    margin-top: 35px;
   }
   .letter__card {
     width: 100%;
@@ -829,11 +822,9 @@ body {
     gap: 30px;
   }
   .letter__group {
-    /* gap between paragraph and tag badge */
     gap: 20px;
   }
   .letter__text-group {
-    /* gap between different fonts: Plantin (salutation) → Helvetica (paragraph) */
     gap: 15px;
   }
   .letter__salutation {
@@ -844,7 +835,6 @@ body {
     font-size: 15px;
     line-height: 1.15;
   }
-  /* Mobile tag: not touched — already pixel-perfect */
   .letter__tag {
     font-size: 15px;
     padding: 11px 13px 8px;
@@ -858,7 +848,7 @@ body {
 @media (min-width: 768px) and (max-width: 1023px) {
   .letter {
     padding: 0 20px 100px;
-    margin-top: 60px;
+    margin-top: 50px;
   }
   .letter__card {
     width: 100%;
