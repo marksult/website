@@ -584,7 +584,7 @@ body {
 }
 
 .logos {
-  margin-top: 50px;
+  margin-top: 40px;
   padding: 0 0 120px;
   overflow: hidden;
 }
@@ -643,7 +643,7 @@ body {
 
 @media (min-width: 768px) {
   .logos {
-    margin-top: 50px;
+    margin-top: 40px;
     padding: 0 0 140px;
   }
   .logos__label {
@@ -653,7 +653,7 @@ body {
 
 @media (min-width: 1440px) {
   .logos {
-    margin-top: 50px;
+    margin-top: 40px;
     padding: 0 0 160px;
   }
   .logos__label {
