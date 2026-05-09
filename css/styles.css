@@ -652,6 +652,9 @@ body {
     margin-top: 40px;
     padding: 0 0 140px;
   }
+  .logos__inner {
+    gap: 35px;
+  }
   .logos__label {
     font-size: 16px;
   }
@@ -661,6 +664,9 @@ body {
   .logos {
     margin-top: 40px;
     padding: 0 0 160px;
+  }
+  .logos__inner {
+    gap: 40px;
   }
   .logos__label {
     font-size: 18px;
