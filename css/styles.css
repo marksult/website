@@ -772,9 +772,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/*
-  Letter tag-badges — static, non-interactive
-*/
 .letter__tag {
   display: inline-flex;
   align-items: center;
@@ -845,6 +842,16 @@ body {
   }
 }
 
+/* --- LETTER TABLET ----------------------------------------------------- */
+/*
+  Figma tablet values:
+  container padding:  80px
+  card gap (body→stamp): 20px
+  body gap (між групами): 40px
+  group gap (text-group→tag): 30px
+  text-group gap (Plantin→Helvetica): 25px
+*/
+
 @media (min-width: 768px) and (max-width: 1023px) {
   .letter {
     padding: 0 20px 100px;
@@ -852,11 +859,22 @@ body {
   }
   .letter__card {
     width: 100%;
-    max-width: 900px;
-    padding: 60px;
+    max-width: 738px;
+    min-height: auto;
+    padding: 80px;
+    gap: 20px;
+  }
+  .letter__body {
+    gap: 40px;
+  }
+  .letter__group {
+    gap: 30px;
+  }
+  .letter__text-group {
+    gap: 25px;
   }
   .letter__salutation {
-    font-size: 20px;
+    font-size: 22px;
   }
   .letter__paragraph {
     font-size: 16px;
