@@ -908,6 +908,13 @@ body {
 .article-block6 {
   display: flex;
   justify-content: center;
+  padding: 0 15px 20px;
+  margin-top: 0px;
+}
+
+.article-block7 {
+  display: flex;
+  justify-content: center;
   padding: 0 15px 120px;
   margin-top: 0px;
 }
@@ -1101,6 +1108,10 @@ body {
     margin-top: 0px;
   }
   .article-block6 {
+    padding: 0 15px 10px;
+    margin-top: 0px;
+  }
+  .article-block7 {
     padding: 0 15px 80px;
     margin-top: 0px;
   }
@@ -1167,6 +1178,10 @@ body {
     margin-top: 0px;
   }
   .article-block6 {
+    padding: 0 20px 15px;
+    margin-top: 0px;
+  }
+  .article-block7 {
     padding: 0 20px 100px;
     margin-top: 0px;
   }
