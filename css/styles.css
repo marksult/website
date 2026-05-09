@@ -880,3 +880,265 @@ body {
     font-size: 16px;
   }
 }
+
+
+/* ================================================================
+   ARTICLE SECTION (block 4)
+   ================================================================ */
+
+/*
+  Margins mirror letter section (block 2→3 gap):
+  desktop:  margin-top 60px  | padding-bottom 120px
+  tablet:   margin-top 50px  | padding-bottom 100px
+  mobile:   margin-top 35px  | padding-bottom 80px
+
+  Desktop card (from Figma):
+    width:   900px
+    padding: 70px 100px
+    gap:     30px   (between chunks)
+*/
+
+.article {
+  display: flex;
+  justify-content: center;
+  padding: 0 15px 120px;
+  margin-top: 60px;
+}
+
+.article__card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  width: 900px;
+  padding: 70px 100px;
+  border-radius: 15px;
+  border: 1px solid #E7E7E7;
+  background: #FFF;
+}
+
+/* ---- Divider ---- */
+
+.article__divider {
+  width: 100%;
+  height: 1px;
+  background: #E7E7E7;
+  flex-shrink: 0;
+}
+
+/* ---- Chunk (section inside card) ---- */
+
+.article__chunk {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 35px;
+  width: 100%;
+}
+
+/* ---- Header group (warning tag + heading) ---- */
+
+.article__header-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+  width: 100%;
+}
+
+/* ---- Warning tag ---- */
+
+.article__warning-tag {
+  display: inline-flex;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: #F43F5E;
+  border: none;
+  cursor: default;
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+  color: #FFF;
+  font-family: 'Helvetica Neue LT Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Section heading ---- */
+
+.article__heading {
+  margin: 0;
+  color: #000;
+  font-family: 'Plantin MT Pro', serif;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  max-width: 422px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Serif heading variant (Copernicus-style: medium weight, tracking -0.02em) */
+.article__heading--serif {
+  font-family: 'Plantin MT Pro', serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #333;
+}
+
+/* ---- Body text ---- */
+
+.article__body {
+  margin: 0;
+  color: #000;
+  font-family: 'Helvetica Neue LT Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  width: 100%;
+  max-width: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+.article__body--bold {
+  font-weight: 500;
+}
+
+/* ---- Map placeholder ---- */
+
+.article__map-placeholder {
+  width: 100%;
+  height: 300px;
+  border-radius: 15px;
+  border: 1px solid #E7E7E7;
+  background: #FAFAFA;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* ---- CTA block ---- */
+
+.article__chunk--cta {
+  gap: 60px;
+}
+
+.article__cta-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  width: fit-content;
+}
+
+.article__cta-label {
+  margin: 0;
+  color: #000;
+  font-family: 'Helvetica Neue LT Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* CTA button: same shape as main__cta but black bg, white text */
+.article__cta {
+  display: inline-flex;
+  height: 50px;
+  padding: 12px 28px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 30px;
+  background: #000;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  color: #FFF;
+  font-family: 'Helvetica Neue LT Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: transform 0.3s ease;
+  will-change: transform;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.article__cta:hover {
+  transform: scale(1.02);
+}
+
+/* --- ARTICLE MOBILE ---------------------------------------------------- */
+
+@media (max-width: 767px) {
+  .article {
+    padding: 0 15px 80px;
+    margin-top: 35px;
+  }
+  .article__card {
+    width: 100%;
+    padding: 31px;
+    gap: 25px;
+  }
+  .article__chunk {
+    gap: 25px;
+  }
+  .article__header-group {
+    gap: 20px;
+  }
+  .article__warning-tag {
+    font-size: 15px;
+    padding: 11px 13px 8px;
+  }
+  .article__heading {
+    font-size: 18px;
+    max-width: 100%;
+  }
+  .article__body {
+    font-size: 15px;
+    line-height: 1.15;
+  }
+  .article__chunk--cta {
+    gap: 40px;
+  }
+  .article__cta-label {
+    font-size: 15px;
+  }
+  .article__cta {
+    font-size: 15px;
+    height: 44px;
+    padding: 10px 20px 8px;
+  }
+}
+
+/* --- ARTICLE TABLET ---------------------------------------------------- */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .article {
+    padding: 0 20px 100px;
+    margin-top: 50px;
+  }
+  .article__card {
+    width: 100%;
+    max-width: 738px;
+    padding: 80px;
+    gap: 30px;
+  }
+  .article__body {
+    font-size: 16px;
+  }
+}
