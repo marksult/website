@@ -829,10 +829,12 @@ body {
     gap: 30px;
   }
   .letter__group {
-    gap: 15px;
+    /* gap between paragraph and tag badge */
+    gap: 20px;
   }
   .letter__text-group {
-    gap: 20px;
+    /* gap between different fonts: Plantin (salutation) → Helvetica (paragraph) */
+    gap: 15px;
   }
   .letter__salutation {
     font-size: 18px;
