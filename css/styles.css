@@ -647,6 +647,18 @@ body {
 .logos__img--blun      { width: 80px;  height: 60px; }
 .logos__img--vargen    { width: 174px; height: 16px; }
 
+@media (max-width: 767px) {
+  .logos__img--ironclad  { width: 167px; height: 20px; }
+  .logos__img--maxout    { width: 83px;  height: 52px; }
+  .logos__img--lexon     { width: 102px; height: 20px; }
+  .logos__img--elsworth  { width: 159px; height: 18px; }
+  .logos__img--veritam   { width: 95px;  height: 20px; }
+  .logos__img--nobilis   { width: 87px;  height: 52px; }
+  .logos__img--harwick   { width: 167px; height: 20px; }
+  .logos__img--blun      { width: 69px;  height: 52px; }
+  .logos__img--vargen    { width: 151px; height: 14px; }
+}
+
 @media (min-width: 768px) {
   .logos {
     margin-top: 40px;
