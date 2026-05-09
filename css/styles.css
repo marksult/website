@@ -643,8 +643,11 @@ body {
 
 @media (max-width: 767px) {
   .logos {
-    margin-top: 25px;
+    margin-top: 15px;
     padding: 0 0 40px;
+  }
+  .logos__inner {
+    gap: 30px;
   }
   .logos__track {
     gap: 45px;
@@ -806,7 +809,7 @@ body {
 @media (max-width: 767px) {
   .letter {
     padding: 0 15px 80px;
-    margin-top: 30px;
+    margin-top: 20px;
   }
   .letter__card {
     width: 100%;
