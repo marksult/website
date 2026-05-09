@@ -894,7 +894,7 @@ body {
 .article {
   display: flex;
   justify-content: center;
-  padding: 0 15px 120px;
+  padding: 0 15px 20px;
   margin-top: 60px;
 }
 
@@ -902,7 +902,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 0 15px 120px;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
 .article__card {
@@ -1086,12 +1086,12 @@ body {
 
 @media (max-width: 767px) {
   .article {
-    padding: 0 15px 80px;
+    padding: 0 15px 10px;
     margin-top: 10px;
   }
   .article-block5 {
     padding: 0 15px 80px;
-    margin-top: 10px;
+    margin-top: 0px;
   }
   .article__card {
     width: 100%;
@@ -1148,12 +1148,12 @@ body {
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .article {
-    padding: 0 20px 100px;
+    padding: 0 20px 15px;
     margin-top: 50px;
   }
   .article-block5 {
     padding: 0 20px 100px;
-    margin-top: 15px;
+    margin-top: 0px;
   }
   .article__card {
     width: 100%;
