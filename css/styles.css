@@ -183,7 +183,7 @@ body {
 }
 
 
-/* ─── CONTENT ─────────────────────────────────────────────────────────────── */
+/* ─── CONTENT ────────────────────────────────────────────────────────────── */
 
 
 .main__content {
@@ -207,7 +207,7 @@ body {
 }
 
 
-/* ─── INNER ───────────────────────────────────────────────────────────────── */
+/* ─── INNER ──────────────────────────────────────────────────────────────── */
 
 
 .main__inner {
@@ -226,7 +226,7 @@ body {
 }
 
 
-/* ─── TITLE ───────────────────────────────────────────────────────────────── */
+/* ─── TITLE ──────────────────────────────────────────────────────────────── */
 
 
 .main__title {
@@ -264,7 +264,7 @@ body {
 }
 
 
-/* ─── DESCRIPTION ──────────────────────────────────────────────────────────── */
+/* ─── DESCRIPTION ────────────────────────────────────────────────────────── */
 
 
 .main__description {
@@ -299,7 +299,7 @@ body {
 }
 
 
-/* ─── CTA ──────────────────────────────────────────────────────────────────── */
+/* ─── CTA ────────────────────────────────────────────────────────────────── */
 
 
 .main__cta-group {
@@ -344,7 +344,7 @@ body {
 }
 
 
-/* ─── SOCIAL PROOF ──────────────────────────────────────────────────────────── */
+/* ─── SOCIAL PROOF ───────────────────────────────────────────────────────── */
 
 
 @keyframes dot-pulse {
@@ -419,12 +419,13 @@ body {
 }
 
 
-/* ─── BADGE ───────────────────────────────────────────────────────────────── */
+/* ─── BADGE ──────────────────────────────────────────────────────────────── */
 
 
-/* backdrop-filter is moved to ::after so overflow:hidden on the parent
-   actually clips children (backdrop-filter creates a new stacking context
-   that bypasses overflow:hidden when set on the element itself) */
+/* padding = Figma value + 1px to compensate for border:1px
+   desired visual gaps: top/bottom/right = 5px, left = 15px
+   so: padding 6px 6px 6px 16px
+   icon height = 76 - 6 - 6 = 64px (fills container exactly) */
 .main__badge {
   position: relative;
   display: flex;
@@ -432,7 +433,7 @@ body {
   align-items: center;
   width: 367px;
   height: 76px;
-  padding: 5px 5px 5px 15px;
+  padding: 6px 6px 6px 16px;
   gap: 0;
   border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -442,7 +443,6 @@ body {
   margin-top: 40px;
 }
 
-/* layer 1: blur + bg + glow — sits behind content */
 .main__badge::before {
   content: '';
   position: absolute;
@@ -461,7 +461,6 @@ body {
   z-index: 0;
 }
 
-/* layer 2: grain texture */
 .main__badge::after {
   content: '';
   position: absolute;
@@ -502,9 +501,9 @@ body {
   justify-content: center;
   align-items: center;
   width: 65px;
-  height: 66px;
+  height: 64px;
   min-width: 65px;
-  min-height: 66px;
+  min-height: 64px;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.04);
   box-shadow:
@@ -532,7 +531,10 @@ body {
     width: 100%;
     max-width: 293px;
     height: 59.7px;
-    padding: 4px 4px 4px 12px;
+    /* desired visual: top/bottom/right = 4px, left = 12px
+       padding = desired + 1px border = 5px / 5px / 5px / 13px
+       icon = 59.7 - 5 - 5 = 49.7 → 49px */
+    padding: 5px 5px 5px 13px;
     justify-content: space-between;
     border-radius: 9.185px;
   }
@@ -549,10 +551,10 @@ body {
     padding-top: 0;
   }
   .main__badge-icon {
-    width: 51px;
-    height: 51px;
-    min-width: 51px;
-    min-height: 51px;
+    width: 49px;
+    height: 49px;
+    min-width: 49px;
+    min-height: 49px;
     border-radius: 8px;
     flex-shrink: 0;
   }
