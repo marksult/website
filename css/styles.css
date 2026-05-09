@@ -618,7 +618,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 40px;
+  gap: 75px;
   flex-wrap: nowrap;
   width: max-content;
   animation: marquee 40s linear infinite;
@@ -646,6 +646,9 @@ body {
     margin-top: 25px;
     padding: 0 0 40px;
   }
+  .logos__track {
+    gap: 45px;
+  }
   .logos__img--ironclad  { width: 167px; height: 20px; }
   .logos__img--maxout    { width: 83px;  height: 52px; }
   .logos__img--lexon     { width: 102px; height: 20px; }
@@ -668,6 +671,9 @@ body {
   .logos__label {
     font-size: 16px;
   }
+  .logos__track {
+    gap: 75px;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -680,6 +686,9 @@ body {
   }
   .logos__label {
     font-size: 18px;
+  }
+  .logos__track {
+    gap: 75px;
   }
 }
 
