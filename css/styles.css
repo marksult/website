@@ -422,12 +422,14 @@ body {
 /* ─── BADGE ───────────────────────────────────────────────────────────────── */
 
 
+/* Figma desktop: w367 h76, icon left:298 top:5 w65 h66
+   padding-top/bottom = 5px, padding-left = 15px, padding-right = 4px (367-298-65=4) */
 .main__badge {
   position: relative;
   display: flex;
-  width: 373px;
+  width: 367px;
   height: 76px;
-  padding: 5px 5px 5px 16px;
+  padding: 5px 4px 5px 15px;
   align-items: center;
   gap: 0;
   border-radius: 15px;
@@ -464,6 +466,7 @@ body {
 }
 
 
+/* text flex:1 fills space between left padding and icon; no explicit padding-right needed */
 .main__badge-text {
   position: relative;
   z-index: 1;
@@ -475,7 +478,7 @@ body {
   letter-spacing: -0.01em;
   margin: 0;
   padding-top: 3px;
-  padding-right: 16px;
+  padding-right: 0;
   white-space: nowrap;
   -webkit-font-smoothing: antialiased;
   flex: 1;
@@ -486,26 +489,29 @@ body {
 
 @media (min-width: 768px) {
   .main__badge {
-    padding: 5px 5px 5px 16px;
+    width: 367px;
+    height: 76px;
+    padding: 5px 4px 5px 15px;
     gap: 0;
   }
   .main__badge-text {
     font-size: 28px;
     letter-spacing: -0.01em;
-    padding-right: 16px;
+    padding-right: 0;
   }
 }
 
 
+/* icon: 65x66px, fits exactly inside 76px height with 5px top/bottom padding */
 .main__badge-icon {
   position: relative;
   z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 66px;
+  width: 65px;
   height: 66px;
-  min-width: 66px;
+  min-width: 65px;
   min-height: 66px;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.04);
