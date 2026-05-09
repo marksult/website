@@ -609,32 +609,28 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Viewport-wide overflow clip */
 .logos__viewport {
   width: 100%;
   overflow: hidden;
 }
 
-/* The moving strip — contains two identical sets of logos side by side */
 .logos__track {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 50px;
+  gap: 45px;
   flex-wrap: nowrap;
   width: max-content;
   animation: marquee 40s linear infinite;
   will-change: transform;
 }
 
-/* All icons: never shrink, never grow */
 .logos__img {
   display: block;
   flex-shrink: 0;
   flex-grow: 0;
 }
 
-/* Per-icon exact desktop sizes */
 .logos__img--ironclad  { width: 193px; height: 23px; }
 .logos__img--maxout    { width: 96px;  height: 60px; }
 .logos__img--lexon     { width: 117px; height: 23px; }
