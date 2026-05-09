@@ -222,6 +222,13 @@ body {
 }
 
 
+@media (max-width: 767px) {
+  .main__inner {
+    gap: 30px;
+  }
+}
+
+
 .main__title-group {
   display: flex;
   flex-direction: column;
