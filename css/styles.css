@@ -898,8 +898,11 @@ body {
   margin-top: 60px;
 }
 
-.article--section5 {
-  margin-top: 0px;
+.article-block5 {
+  display: flex;
+  justify-content: center;
+  padding: 0 15px 120px;
+  margin-top: 20px;
 }
 
 .article__card {
@@ -1086,8 +1089,9 @@ body {
     padding: 0 15px 80px;
     margin-top: 10px;
   }
-  .article--section5 {
-    margin-top: 0px;
+  .article-block5 {
+    padding: 0 15px 80px;
+    margin-top: 10px;
   }
   .article__card {
     width: 100%;
@@ -1147,8 +1151,9 @@ body {
     padding: 0 20px 100px;
     margin-top: 50px;
   }
-  .article--section5 {
-    margin-top: 0px;
+  .article-block5 {
+    padding: 0 20px 100px;
+    margin-top: 15px;
   }
   .article__card {
     width: 100%;
