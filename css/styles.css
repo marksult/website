@@ -416,7 +416,7 @@ body {
   font-size: 25px;
   font-weight: 300;
   line-height: 1.0;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.01em;
   margin: 0;
   padding-top: 3px;
   white-space: nowrap;
@@ -427,8 +427,13 @@ body {
 }
 
 @media (min-width: 768px) {
+  .main__badge {
+    padding: 5px 5px 5px 16px;
+  }
   .main__badge-text {
-    font-size: 30px;
+    font-size: 28px;
+    letter-spacing: -0.01em;
+    padding-right: 16px;
   }
 }
 
@@ -464,19 +469,31 @@ body {
 
 @media (max-width: 767px) {
   .main__badge {
+    width: 100%;
     max-width: 293px;
     height: 59.7px;
-    padding: 3.928px 3.928px 3.928px 19px;
-    gap: 11.783px;
+    padding: 4px 4px 4px 12px;
+    gap: 0;
     border-radius: 9.185px;
   }
   .main__badge-text {
     font-size: 23px;
+    letter-spacing: -0.01em;
+    flex: 1;
+    padding-right: 12px;
+    padding-top: 0;
+    text-align: left;
   }
   .main__badge-icon {
-    width: 52px;
-    height: 52px;
-    min-width: 52px;
-    min-height: 52px;
+    width: 51px;
+    height: 51px;
+    min-width: 51px;
+    min-height: 51px;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+  .main__badge-icon img {
+    width: 27px;
+    height: 22px;
   }
 }
