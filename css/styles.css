@@ -82,6 +82,9 @@
 /* Block 7 → Block 8 */
 .article-block8  { margin-top: 20px; }
 
+/* Block 8 → Section title */
+.section-title   { margin-top: 120px; }
+
 /* --- Tablet ---------------------------------------------------- */
 @media (min-width: 768px) and (max-width: 1023px) {
   .logos          { margin-top: 40px; }
@@ -91,6 +94,7 @@
   .article-block6 { margin-top: 15px; }
   .article-block7 { margin-top: 15px; }
   .article-block8 { margin-top: 15px; }
+  .section-title  { margin-top: 80px; }
 }
 
 /* --- Mobile ---------------------------------------------------- */
@@ -102,6 +106,7 @@
   .article-block6 { margin-top: 10px; }
   .article-block7 { margin-top: 10px; }
   .article-block8 { margin-top: 10px; }
+  .section-title  { margin-top: 60px; }
 }
 
 html {
@@ -1150,6 +1155,42 @@ body {
 .article__cta:hover {
   transform: scale(1.02);
 }
+
+/* ================================================================
+   SECTION TITLE (block 9)
+   ================================================================ */
+
+.section-title {
+  display: flex;
+  justify-content: center;
+  padding: 0 15px;
+}
+
+.section-title__heading {
+  margin: 0;
+  color: #000;
+  font-family: 'Plantin MT Pro', serif;
+  font-size: 43px;
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  text-align: center;
+  max-width: 900px;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .section-title__heading {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-title__heading {
+    font-size: 25px;
+  }
+}
+
 
 /* --- ARTICLE MOBILE ---------------------------------------------------- */
 
