@@ -540,7 +540,7 @@ body {
     font-size: 23px;
     letter-spacing: -0.01em;
     flex: none;
-    padding-top: 0;
+    padding-top: 1px;
   }
   .main__badge-icon {
     width: 51px;
