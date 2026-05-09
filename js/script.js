@@ -25,6 +25,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (cards.length !== sections.length) return;
 
+  /* Скидаємо будь-які залишки від попередньої entrance-анімації */
+  cards.forEach(function (card) {
+    card.style.opacity    = '';
+    card.style.transform  = '';
+    card.style.transition = '';
+    card.style.willChange = '';
+  });
+
   function applyStack() {
     var vh  = window.innerHeight;
     var mob = window.innerWidth < 768;
