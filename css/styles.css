@@ -74,7 +74,6 @@ body {
    ================================================================ */
 
 .hero {
-  /* transparent wrapper — no visual style, purely semantic */
   display: block;
 }
 
@@ -576,7 +575,7 @@ body {
 
 
 /* ================================================================
-   LOGOS SECTION — окрема секція, 60px від hero
+   LOGOS SECTION
    ================================================================ */
 
 .logos {
@@ -596,7 +595,7 @@ body {
   color: #333333;
   font-family: 'Helvetica Neue LT Pro', sans-serif;
   font-size: 13px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.2;
   letter-spacing: -0.01em;
   text-align: center;
@@ -620,7 +619,6 @@ body {
   flex-shrink: 0;
 }
 
-/* tablet 768px+ */
 @media (min-width: 768px) {
   .logos {
     margin-top: 60px;
@@ -637,7 +635,6 @@ body {
   }
 }
 
-/* desktop 1440px+ */
 @media (min-width: 1440px) {
   .logos {
     margin-top: 60px;
