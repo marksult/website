@@ -1036,7 +1036,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* CTA button: same shape as main__cta but black bg, white text */
+/* CTA button: same shape and size as main__cta, black bg, white text */
 .article__cta {
   display: inline-flex;
   height: 50px;
@@ -1052,7 +1052,7 @@ body {
   color: #FFF;
   font-family: 'Helvetica Neue LT Pro', sans-serif;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 450;
   line-height: 1.2;
   letter-spacing: -0.02em;
   font-synthesis: none;
@@ -1116,11 +1116,6 @@ body {
   }
   .article__cta-label {
     font-size: 15px;
-  }
-  .article__cta {
-    font-size: 15px;
-    height: 44px;
-    padding: 10px 20px 8px;
   }
 }
 
