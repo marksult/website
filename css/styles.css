@@ -83,7 +83,7 @@
 .article-block8  { margin-top: 20px; }
 
 /* Block 8 → Section title */
-.section-title   { margin-top: 120px; }
+.section-title   { margin-top: 60px; }
 
 /* --- Tablet ---------------------------------------------------- */
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -94,7 +94,7 @@
   .article-block6 { margin-top: 15px; }
   .article-block7 { margin-top: 15px; }
   .article-block8 { margin-top: 15px; }
-  .section-title  { margin-top: 80px; }
+  .section-title  { margin-top: 40px; }
 }
 
 /* --- Mobile ---------------------------------------------------- */
@@ -106,7 +106,7 @@
   .article-block6 { margin-top: 10px; }
   .article-block7 { margin-top: 10px; }
   .article-block8 { margin-top: 10px; }
-  .section-title  { margin-top: 60px; }
+  .section-title  { margin-top: 30px; }
 }
 
 html {
