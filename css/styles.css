@@ -1040,7 +1040,9 @@ body {
 .article__cta {
   display: inline-flex;
   height: 50px;
-  padding: 12px 28px 8px;
+  /* Cap-height compensation: top padding absorbs descender space,
+     bottom padding reduced so text sits visually centered */
+  padding: 14px 28px 10px;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -1053,7 +1055,7 @@ body {
   font-family: 'Helvetica Neue LT Pro', sans-serif;
   font-size: 18px;
   font-weight: 450;
-  line-height: 1.2;
+  line-height: 1;
   letter-spacing: -0.02em;
   font-synthesis: none;
   -webkit-font-smoothing: antialiased;
@@ -1123,7 +1125,8 @@ body {
   .article__cta {
     width: 100%;
     font-size: 16px;
-    padding: 12px 20px 8px;
+    /* Cap-height compensation at 16px: slightly more top padding */
+    padding: 15px 20px 11px;
   }
 }
 
