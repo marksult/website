@@ -1011,6 +1011,15 @@ body {
   }
 }
 
+/* ---- Heading no-wrap (desktop only) ---- */
+
+@media (min-width: 1024px) {
+  .article__heading--nowrap {
+    white-space: nowrap;
+    max-width: none;
+  }
+}
+
 /* ---- Body text ---- */
 
 .article__body {
