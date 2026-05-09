@@ -70,7 +70,7 @@ body {
 
 
 /* ================================================================
-   HERO SECTION — wraps header + main
+   HERO SECTION
    ================================================================ */
 
 .hero {
@@ -592,7 +592,7 @@ body {
 
 .logos__label {
   margin: 0;
-  color: #333333;
+  color: #000000;
   font-family: 'Helvetica Neue LT Pro', sans-serif;
   font-size: 13px;
   font-weight: 500;
@@ -631,7 +631,7 @@ body {
     height: 20px;
   }
   .logos__label {
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 
@@ -647,6 +647,6 @@ body {
     height: 22px;
   }
   .logos__label {
-    font-size: 15px;
+    font-size: 18px;
   }
 }
