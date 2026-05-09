@@ -1070,7 +1070,7 @@ body {
 @media (max-width: 767px) {
   .article {
     padding: 0 15px 80px;
-    margin-top: 35px;
+    margin-top: 20px;
   }
   .article__card {
     width: 100%;
