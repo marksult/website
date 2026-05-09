@@ -581,7 +581,7 @@ body {
 
 .logos {
   margin-top: 60px;
-  padding: 0 15px 60px;
+  padding: 0 15px 120px;
 }
 
 .logos__inner {
@@ -602,7 +602,6 @@ body {
   text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  opacity: 0.5;
 }
 
 .logos__row {
@@ -619,14 +618,13 @@ body {
   height: 18px;
   width: auto;
   flex-shrink: 0;
-  opacity: 0.45;
 }
 
 /* tablet 768px+ */
 @media (min-width: 768px) {
   .logos {
     margin-top: 60px;
-    padding: 0 40px 70px;
+    padding: 0 40px 140px;
   }
   .logos__row {
     gap: 50px;
@@ -643,7 +641,7 @@ body {
 @media (min-width: 1440px) {
   .logos {
     margin-top: 60px;
-    padding: 0 80px 80px;
+    padding: 0 80px 160px;
   }
   .logos__row {
     gap: 60px;
