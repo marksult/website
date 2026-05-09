@@ -912,7 +912,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 35px;
+  gap: 25px;
   width: 100%;
 }
 
@@ -962,16 +962,6 @@ body {
   letter-spacing: -0.01em;
   max-width: 422px;
   -webkit-font-smoothing: antialiased;
-}
-
-/* Serif heading variant (Copernicus-style: medium weight, tracking -0.02em) */
-.article__heading--serif {
-  font-family: 'Plantin MT Pro', serif;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-  color: #333;
 }
 
 /* ---- Body text ---- */
@@ -1077,10 +1067,10 @@ body {
     gap: 25px;
   }
   .article__chunk {
-    gap: 25px;
+    gap: 15px;
   }
   .article__header-group {
-    gap: 20px;
+    gap: 15px;
   }
   .article__warning-tag {
     font-size: 15px;
@@ -1119,6 +1109,12 @@ body {
     max-width: 738px;
     padding: 80px;
     gap: 30px;
+  }
+  .article__chunk {
+    gap: 25px;
+  }
+  .article__header-group {
+    gap: 25px;
   }
   .article__body {
     font-size: 16px;
