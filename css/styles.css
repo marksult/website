@@ -894,40 +894,36 @@ body {
 .article {
   display: flex;
   justify-content: center;
-  padding: 0 15px 400px;
+  padding: 0 15px 0;
   margin-top: 40px;
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 1;
 }
 
 .article-block5 {
   display: flex;
   justify-content: center;
-  padding: 0 15px 400px;
+  padding: 0 15px 0;
   margin-top: 0;
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 2;
 }
 
 .article-block6 {
   display: flex;
   justify-content: center;
-  padding: 0 15px 400px;
+  padding: 0 15px 0;
   margin-top: 0;
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 3;
 }
 
 .article-block7 {
   display: flex;
   justify-content: center;
-  padding: 0 15px 400px;
+  padding: 0 15px 0;
   margin-top: 0;
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 4;
 }
 
@@ -936,8 +932,7 @@ body {
   justify-content: center;
   padding: 0 15px 120px;
   margin-top: 0;
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 5;
 }
 
@@ -1131,19 +1126,19 @@ body {
 
 @media (max-width: 767px) {
   .article {
-    padding: 0 15px 250px;
+    padding: 0 15px 0;
     margin-top: 10px;
   }
   .article-block5 {
-    padding: 0 15px 250px;
+    padding: 0 15px 0;
     margin-top: 0;
   }
   .article-block6 {
-    padding: 0 15px 250px;
+    padding: 0 15px 0;
     margin-top: 0;
   }
   .article-block7 {
-    padding: 0 15px 250px;
+    padding: 0 15px 0;
     margin-top: 0;
   }
   .article-block8 {
@@ -1205,19 +1200,19 @@ body {
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .article {
-    padding: 0 20px 300px;
+    padding: 0 20px 0;
     margin-top: 30px;
   }
   .article-block5 {
-    padding: 0 20px 300px;
+    padding: 0 20px 0;
     margin-top: 0;
   }
   .article-block6 {
-    padding: 0 20px 300px;
+    padding: 0 20px 0;
     margin-top: 0;
   }
   .article-block7 {
-    padding: 0 20px 300px;
+    padding: 0 20px 0;
     margin-top: 0;
   }
   .article-block8 {
