@@ -703,7 +703,6 @@ body {
 
 @media (max-width: 767px) {
   .logos {
-    margin-top: 15px;
     padding: 0 0 40px;
   }
   .logos__inner {
@@ -725,7 +724,6 @@ body {
 
 @media (min-width: 768px) {
   .logos {
-    margin-top: 40px;
     padding: 0 0 60px;
   }
   .logos__inner {
@@ -741,7 +739,6 @@ body {
 
 @media (min-width: 1440px) {
   .logos {
-    margin-top: 40px;
     padding: 0 0 60px;
   }
   .logos__inner {
@@ -868,7 +865,6 @@ body {
 @media (max-width: 767px) {
   .letter {
     padding: 0 15px 80px;
-    margin-top: 20px;
   }
   .letter__card {
     width: 100%;
@@ -909,7 +905,6 @@ body {
 @media (min-width: 768px) and (max-width: 1023px) {
   .letter {
     padding: 0 20px 100px;
-    margin-top: 50px;
   }
   .letter__card {
     width: 100%;
@@ -1161,7 +1156,6 @@ body {
 @media (max-width: 767px) {
   .article {
     padding: 0 15px 10px;
-    margin-top: 10px;
   }
   .article-block5 {
     padding: 0 15px 10px;
@@ -1231,7 +1225,6 @@ body {
 @media (min-width: 768px) and (max-width: 1023px) {
   .article {
     padding: 0 20px 15px;
-    margin-top: 30px;
   }
   .article-block5 {
     padding: 0 20px 15px;
