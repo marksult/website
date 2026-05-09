@@ -964,6 +964,13 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Desktop Safari: prevent orphan word on last line of heading */
+@media (min-width: 768px) {
+  .article__heading {
+    max-width: 520px;
+  }
+}
+
 /* ---- Body text ---- */
 
 .article__body {
@@ -1091,12 +1098,18 @@ body {
     font-size: 15px;
     line-height: 1.15;
   }
-  /* On mobile: hide desktop version (with <br><br>), show continuous flow version */
+  /* On mobile: hide desktop version (with <br><br>), show separate paragraphs version */
   .article__body--chunk1-desktop {
     display: none;
   }
   .article__body--chunk1-mobile {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+  .article__body--chunk1-mobile-p {
+    margin: 0;
   }
   .article__chunk--cta {
     gap: 40px;
