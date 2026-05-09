@@ -202,6 +202,13 @@ body {
 }
 
 
+@media (max-width: 767px) {
+  .main__content {
+    padding: 70px 12px;
+  }
+}
+
+
 @media (min-width: 768px) {
   .main__content {
     position: relative;
