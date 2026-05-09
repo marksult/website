@@ -53,6 +53,57 @@
   box-sizing: border-box;
 }
 
+
+/* ================================================================
+   ВІДСТУПИ МІЖ БЛОКАМИ — змінюй тут
+   Desktop  = без медіа-запиту (за замовчуванням)
+   Tablet   = @media (min-width: 768px) and (max-width: 1023px)
+   Mobile   = @media (max-width: 767px)
+   ================================================================ */
+
+/* Hero → Logos */
+.logos           { margin-top: 40px; }
+
+/* Logos → Letter (Dear Friend) */
+.letter          { margin-top: 60px; }
+
+/* Letter → Article block 4 */
+.article         { margin-top: 40px; }
+
+/* Block 4 → Block 5 */
+.article-block5  { margin-top: 20px; }
+
+/* Block 5 → Block 6 */
+.article-block6  { margin-top: 20px; }
+
+/* Block 6 → Block 7 */
+.article-block7  { margin-top: 20px; }
+
+/* Block 7 → Block 8 */
+.article-block8  { margin-top: 20px; }
+
+/* --- Tablet ---------------------------------------------------- */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .logos          { margin-top: 40px; }
+  .letter         { margin-top: 50px; }
+  .article        { margin-top: 30px; }
+  .article-block5 { margin-top: 15px; }
+  .article-block6 { margin-top: 15px; }
+  .article-block7 { margin-top: 15px; }
+  .article-block8 { margin-top: 15px; }
+}
+
+/* --- Mobile ---------------------------------------------------- */
+@media (max-width: 767px) {
+  .logos          { margin-top: 15px; }
+  .letter         { margin-top: 20px; }
+  .article        { margin-top: 10px; }
+  .article-block5 { margin-top: 10px; }
+  .article-block6 { margin-top: 10px; }
+  .article-block7 { margin-top: 10px; }
+  .article-block8 { margin-top: 10px; }
+}
+
 html {
   height: -webkit-fill-available;
 }
@@ -594,7 +645,6 @@ body {
 }
 
 .logos {
-  margin-top: 40px;
   padding: 0 0 60px;
   overflow: hidden;
 }
@@ -720,7 +770,6 @@ body {
   display: flex;
   justify-content: center;
   padding: 0 15px 120px;
-  margin-top: 60px;
 }
 
 .letter__card {
@@ -895,35 +944,30 @@ body {
   display: flex;
   justify-content: center;
   padding: 0 15px 20px;
-  margin-top: 40px;
 }
 
 .article-block5 {
   display: flex;
   justify-content: center;
   padding: 0 15px 20px;
-  margin-top: 0;
 }
 
 .article-block6 {
   display: flex;
   justify-content: center;
   padding: 0 15px 20px;
-  margin-top: 0;
 }
 
 .article-block7 {
   display: flex;
   justify-content: center;
   padding: 0 15px 20px;
-  margin-top: 0;
 }
 
 .article-block8 {
   display: flex;
   justify-content: center;
   padding: 0 15px 120px;
-  margin-top: 0;
 }
 
 .article__card {
