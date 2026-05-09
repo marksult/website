@@ -1,43 +1,75 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-  // ── Stack entrance animation ──────────────────────────────────────────────
-  // Cards 2-5 (blocks 5-8) rise from below when they enter the viewport.
-  var stackSelectors = [
-    '.article-block5 .article__card',
-    '.article-block6 .article__card',
-    '.article-block7 .article__card',
-    '.article-block8 .article__card'
+  /* ── Sticky stack ─────────────────────────────────────────────────────────
+     Кожна карточка прилипає коли кнопка внизу доходить до краю viewport.
+     Наступна карточка виїжджає знизу і накладується поверх.
+  ───────────────────────────────────────────────────────────────────────── */
+
+  var SELECTORS = [
+    '.article',
+    '.article-block5',
+    '.article-block6',
+    '.article-block7',
+    '.article-block8'
   ];
 
-  var stackCards = stackSelectors
-    .map(function (s) { return document.querySelector(s); })
-    .filter(Boolean);
+  var sections = SELECTORS.map(function (s) {
+    return document.querySelector(s);
+  }).filter(Boolean);
 
-  if (stackCards.length && 'IntersectionObserver' in window) {
+  if (sections.length < 2) return;
 
-    // Set initial hidden state immediately (before paint)
-    stackCards.forEach(function (card) {
-      card.style.transform    = 'translateY(80px)';
-      card.style.opacity      = '0';
-      card.style.transition   = 'transform 0.9s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.65s ease';
-      card.style.willChange   = 'transform, opacity';
+  var cards = sections.map(function (s) {
+    return s.querySelector('.article__card');
+  }).filter(Boolean);
+
+  if (cards.length !== sections.length) return;
+
+  function applyStack() {
+    var vh  = window.innerHeight;
+    var mob = window.innerWidth < 768;
+
+    /* Скільки пікселів скролу дається наступній карточці щоб виїхати */
+    var buf = mob ? 220 : 360;
+
+    sections.forEach(function (section, i) {
+      var card  = cards[i];
+      var cardH = card.offsetHeight;
+
+      /* Стекінг-контекст: наступна секція перекриває попередню */
+      section.style.position = 'relative';
+      section.style.zIndex   = String(i + 1);
+
+      /* Sticky */
+      card.style.position = 'sticky';
+
+      /* top розрахунок:
+         - Якщо карточка ≤ viewport: top = 20px (прилипає зверху, всі видно)
+         - Якщо карточка > viewport: top = vh - cardH - 20 (від'ємне)
+           → карточка прилипає коли її НИЖНІЙ КРАЙ (кнопка) = нижній край viewport
+           → юзер бачить кнопку в останній момент перед тим як виїжджає наступна */
+      var topPx = Math.min(20, vh - cardH - 20);
+      card.style.top = topPx + 'px';
+
+      /* Буфер скролу щоб наступна карточка встигла виїхати знизу.
+         Для останньої секції — не чіпаємо (зберігається CSS padding-bottom). */
+      if (i < sections.length - 1) {
+        section.style.paddingBottom = buf + 'px';
+      } else {
+        section.style.paddingBottom = '';
+      }
     });
-
-    var stackObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        var card = entry.target;
-        card.style.transform = 'translateY(0)';
-        card.style.opacity   = '1';
-        // Release GPU hint after animation completes
-        setTimeout(function () { card.style.willChange = 'auto'; }, 1000);
-        stackObserver.unobserve(card);
-      });
-    }, {
-      threshold: 0.04  // trigger when 4% of card is visible (top edge enters viewport)
-    });
-
-    stackCards.forEach(function (card) { stackObserver.observe(card); });
   }
+
+  applyStack();
+
+  /* Перерахунок після повного завантаження (шрифти, зображення → висоти змінюються) */
+  window.addEventListener('load', applyStack);
+
+  var resizeTimer;
+  window.addEventListener('resize', function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(applyStack, 150);
+  }, { passive: true });
 
 });
