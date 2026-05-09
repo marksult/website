@@ -578,11 +578,6 @@ body {
    LOGOS SECTION
    ================================================================ */
 
-/*
-  4 identical sets in the HTML track.
-  Animating -25% = exactly one set width.
-  The loop point is invisible because sets 2-4 fill the gap.
-*/
 @keyframes marquee {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-25%); }
@@ -598,7 +593,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 35px;
 }
 
 .logos__label {
