@@ -985,6 +985,13 @@ body {
   font-style: normal;
 }
 
+/* ---- Chunk 1 body: two versions (desktop vs mobile) ---- */
+
+/* Desktop/tablet: show paragraph with <br><br> breaks, hide mobile version */
+.article__body--chunk1-mobile {
+  display: none;
+}
+
 /* ---- Map placeholder ---- */
 
 .article__map-placeholder {
@@ -1083,6 +1090,13 @@ body {
   .article__body {
     font-size: 15px;
     line-height: 1.15;
+  }
+  /* On mobile: hide desktop version (with <br><br>), show continuous flow version */
+  .article__body--chunk1-desktop {
+    display: none;
+  }
+  .article__body--chunk1-mobile {
+    display: block;
   }
   .article__chunk--cta {
     gap: 40px;
