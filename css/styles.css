@@ -894,36 +894,36 @@ body {
 .article {
   display: flex;
   justify-content: center;
-  padding: 0 15px 20px;
+  padding: 0 15px 0;
   margin-top: 40px;
 }
 
 .article-block5 {
   display: flex;
   justify-content: center;
-  padding: 0 15px 20px;
-  margin-top: 0px;
+  padding: 0 15px 0;
+  margin-top: 20px;
 }
 
 .article-block6 {
   display: flex;
   justify-content: center;
-  padding: 0 15px 20px;
-  margin-top: 0px;
+  padding: 0 15px 0;
+  margin-top: 20px;
 }
 
 .article-block7 {
   display: flex;
   justify-content: center;
-  padding: 0 15px 20px;
-  margin-top: 0px;
+  padding: 0 15px 0;
+  margin-top: 20px;
 }
 
 .article-block8 {
   display: flex;
   justify-content: center;
   padding: 0 15px 120px;
-  margin-top: 0px;
+  margin-top: 20px;
 }
 
 .article__card {
@@ -1116,24 +1116,24 @@ body {
 
 @media (max-width: 767px) {
   .article {
-    padding: 0 15px 10px;
+    padding: 0 15px 0;
     margin-top: 10px;
   }
   .article-block5 {
-    padding: 0 15px 10px;
-    margin-top: 0px;
+    padding: 0 15px 0;
+    margin-top: 15px;
   }
   .article-block6 {
-    padding: 0 15px 10px;
-    margin-top: 0px;
+    padding: 0 15px 0;
+    margin-top: 15px;
   }
   .article-block7 {
-    padding: 0 15px 10px;
-    margin-top: 0px;
+    padding: 0 15px 0;
+    margin-top: 15px;
   }
   .article-block8 {
     padding: 0 15px 80px;
-    margin-top: 0px;
+    margin-top: 15px;
   }
   .article__card {
     width: 100%;
@@ -1190,24 +1190,24 @@ body {
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .article {
-    padding: 0 20px 15px;
+    padding: 0 20px 0;
     margin-top: 30px;
   }
   .article-block5 {
-    padding: 0 20px 15px;
-    margin-top: 0px;
+    padding: 0 20px 0;
+    margin-top: 20px;
   }
   .article-block6 {
-    padding: 0 20px 15px;
-    margin-top: 0px;
+    padding: 0 20px 0;
+    margin-top: 20px;
   }
   .article-block7 {
-    padding: 0 20px 15px;
-    margin-top: 0px;
+    padding: 0 20px 0;
+    margin-top: 20px;
   }
   .article-block8 {
     padding: 0 20px 100px;
-    margin-top: 0px;
+    margin-top: 20px;
   }
   .article__card {
     width: 100%;
