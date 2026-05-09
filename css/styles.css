@@ -618,7 +618,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 45px;
+  gap: 40px;
   flex-wrap: nowrap;
   width: max-content;
   animation: marquee 40s linear infinite;
