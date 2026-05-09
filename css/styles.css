@@ -6,6 +6,7 @@
   font-display: swap;
 }
 
+
 @font-face {
   font-family: 'Helvetica Neue LT Pro';
   src: url('../assets/fonts/Helvetica Neue LT Pro-medium.woff2') format('woff2');
@@ -13,6 +14,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 
 @font-face {
   font-family: 'Helvetica Neue LT Pro';
@@ -22,6 +24,7 @@
   font-display: swap;
 }
 
+
 @font-face {
   font-family: 'Plantin MT Pro';
   src: url('../assets/fonts/Plantin MT Pro-light.woff2') format('woff2');
@@ -29,6 +32,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 
 @font-face {
   font-family: 'Plantin MT Pro';
@@ -38,22 +42,27 @@
   font-display: swap;
 }
 
+
 :root {
   --color-white: #FFFFFF;
   --color-gray: #333333;
   --color-black: #000000;
 
+
   --font-primary: 'Helvetica Neue LT Pro', sans-serif;
   --font-secondary: 'Plantin MT Pro', serif;
 }
+
 
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
+
 html {
   height: -webkit-fill-available;
 }
+
 
 body {
   margin: 0;
@@ -62,11 +71,14 @@ body {
   min-height: -webkit-fill-available;
 }
 
+
 /* ─── HEADER ─────────────────────────────────────────────────────────────── */
+
 
 .header {
   width: 100%;
 }
+
 
 .header__container {
   display: flex;
@@ -75,11 +87,13 @@ body {
   padding: 25px 27px;
 }
 
+
 .header__logo {
   display: flex;
   align-items: center;
   text-decoration: none;
 }
+
 
 .header__logo svg {
   width: 90px;
@@ -87,11 +101,13 @@ body {
   display: block;
 }
 
+
 .header__socials {
   display: flex;
   align-items: center;
   gap: 15px;
 }
+
 
 .header__social-link {
   display: flex;
@@ -102,10 +118,12 @@ body {
   transform-origin: center;
 }
 
+
 .header__social-link:hover {
   opacity: 0.6;
   transform: scale(1.15);
 }
+
 
 @media (min-width: 768px) {
   .header__container {
@@ -117,7 +135,9 @@ body {
   }
 }
 
+
 /* ─── MAIN ───────────────────────────────────────────────────────────────── */
+
 
 .main {
   padding: 0 15px 25px;
@@ -126,6 +146,7 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 
 @media (min-width: 768px) {
   .main {
@@ -136,6 +157,7 @@ body {
   }
 }
 
+
 .main__container {
   flex: 1;
   position: relative;
@@ -143,6 +165,7 @@ body {
   border-radius: 15px;
   width: 100%;
 }
+
 
 .main__video {
   position: absolute;
@@ -159,7 +182,9 @@ body {
   backface-visibility: hidden;
 }
 
+
 /* ─── CONTENT ─────────────────────────────────────────────────────────────── */
+
 
 .main__content {
   position: absolute;
@@ -172,6 +197,7 @@ body {
   padding: 84px 12px;
 }
 
+
 @media (min-width: 768px) {
   .main__content {
     position: relative;
@@ -180,7 +206,9 @@ body {
   }
 }
 
+
 /* ─── INNER ───────────────────────────────────────────────────────────────── */
+
 
 .main__inner {
   display: flex;
@@ -189,6 +217,7 @@ body {
   gap: 35px;
 }
 
+
 .main__title-group {
   display: flex;
   flex-direction: column;
@@ -196,7 +225,9 @@ body {
   gap: 0;
 }
 
+
 /* ─── TITLE ───────────────────────────────────────────────────────────────── */
+
 
 .main__title {
   color: #FFF;
@@ -211,6 +242,7 @@ body {
   max-width: 321px;
 }
 
+
 @media (min-width: 768px) {
   .main__title {
     font-size: 60px;
@@ -221,6 +253,7 @@ body {
   }
 }
 
+
 @media (min-width: 1440px) {
   .main__title {
     font-size: 65px;
@@ -230,7 +263,9 @@ body {
   }
 }
 
+
 /* ─── DESCRIPTION ──────────────────────────────────────────────────────────── */
+
 
 .main__description {
   color: #FFF;
@@ -246,6 +281,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 @media (min-width: 768px) {
   .main__description {
     font-size: 16px;
@@ -254,6 +290,7 @@ body {
   }
 }
 
+
 @media (min-width: 1440px) {
   .main__description {
     font-size: 18px;
@@ -261,7 +298,9 @@ body {
   }
 }
 
+
 /* ─── CTA ──────────────────────────────────────────────────────────────────── */
+
 
 .main__cta-group {
   display: flex;
@@ -269,6 +308,7 @@ body {
   align-items: center;
   gap: 15px;
 }
+
 
 .main__cta {
   display: inline-flex;
@@ -298,16 +338,20 @@ body {
   appearance: none;
 }
 
+
 .main__cta:hover {
   transform: scale(1.02);
 }
 
+
 /* ─── SOCIAL PROOF ──────────────────────────────────────────────────────────── */
+
 
 @keyframes dot-pulse {
   0%, 100% { opacity: 1; }
   50%       { opacity: 0.3; }
 }
+
 
 .main__social-proof {
   display: inline-flex;
@@ -315,6 +359,7 @@ body {
   align-items: baseline;
   gap: 5px;
 }
+
 
 .main__dot {
   width: 7px;
@@ -328,6 +373,7 @@ body {
   top: -1px;
   animation: dot-pulse 2.4s ease-in-out infinite;
 }
+
 
 .main__social-text {
   color: #FFF;
@@ -344,11 +390,13 @@ body {
   white-space: nowrap;
 }
 
+
 @media (min-width: 768px) {
   .main__social-text {
     font-size: 16px;
   }
 }
+
 
 @media (min-width: 1440px) {
   .main__social-text {
@@ -363,20 +411,23 @@ body {
   }
 }
 
+
 @media (prefers-reduced-motion: reduce) {
   .main__dot {
     animation: none;
   }
 }
 
+
 /* ─── BADGE ───────────────────────────────────────────────────────────────── */
+
 
 .main__badge {
   position: relative;
   display: flex;
   width: 373px;
   height: 76px;
-  padding: 5px 5px 5px 20px;
+  padding: 5px 5px 5px 16px;
   align-items: center;
   gap: 15px;
   border-radius: 15px;
@@ -395,6 +446,7 @@ body {
   margin-top: 40px;
 }
 
+
 .main__badge::before {
   content: '';
   position: absolute;
@@ -408,23 +460,26 @@ body {
   mix-blend-mode: overlay;
 }
 
+
 .main__badge-text {
   position: relative;
   z-index: 1;
   color: #FFF;
   font-family: 'Plantin MT Pro', serif;
-  font-size: 25px;
+  font-size: 28px;
   font-weight: 300;
   line-height: 1.0;
   letter-spacing: -0.01em;
   margin: 0;
   padding-top: 3px;
+  padding-right: 16px;
   white-space: nowrap;
   -webkit-font-smoothing: antialiased;
   flex: 1;
   display: flex;
   align-items: center;
 }
+
 
 @media (min-width: 768px) {
   .main__badge {
@@ -436,6 +491,7 @@ body {
     padding-right: 16px;
   }
 }
+
 
 .main__badge-icon {
   position: relative;
@@ -460,12 +516,14 @@ body {
   overflow: hidden;
 }
 
+
 .main__badge-icon svg,
 .main__badge-icon img {
   width: 34px;
   height: 28px;
   flex-shrink: 0;
 }
+
 
 @media (max-width: 767px) {
   .main__badge {
