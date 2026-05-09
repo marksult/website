@@ -578,6 +578,11 @@ body {
    LOGOS SECTION
    ================================================================ */
 
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 .logos {
   margin-top: 60px;
   padding: 0 0 120px;
@@ -604,26 +609,25 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Track — scrollable row, icons never shrink */
+/* Viewport-wide overflow clip */
+.logos__viewport {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* The moving strip — contains two identical sets of logos side by side */
 .logos__track {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
   gap: 50px;
   flex-wrap: nowrap;
-  overflow-x: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  width: 100%;
-  padding: 0 15px;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+  will-change: transform;
 }
 
-.logos__track::-webkit-scrollbar {
-  display: none;
-}
-
-/* All icons: never shrink, never grow — fixed px from HTML width/height attrs */
+/* All icons: never shrink, never grow */
 .logos__img {
   display: block;
   flex-shrink: 0;
@@ -636,7 +640,7 @@ body {
 .logos__img--lexon     { width: 117px; height: 23px; }
 .logos__img--elsworth  { width: 184px; height: 20px; }
 .logos__img--veritam   { width: 110px; height: 23px; }
-.logos__img--nobilis   { width: 100px; height: 60px; mix-blend-mode: multiply; }
+.logos__img--nobilis   { width: 100px; height: 60px; }
 .logos__img--harwick   { width: 192px; height: 22px; }
 .logos__img--blun      { width: 80px;  height: 60px; }
 .logos__img--vargen    { width: 174px; height: 16px; }
@@ -645,10 +649,6 @@ body {
   .logos {
     margin-top: 60px;
     padding: 0 0 140px;
-  }
-  .logos__track {
-    padding: 0 40px;
-    gap: 50px;
   }
   .logos__label {
     font-size: 15px;
@@ -660,11 +660,13 @@ body {
     margin-top: 60px;
     padding: 0 0 160px;
   }
-  .logos__track {
-    padding: 0 80px;
-    gap: 50px;
-  }
   .logos__label {
     font-size: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logos__track {
+    animation: none;
   }
 }
