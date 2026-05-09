@@ -422,10 +422,9 @@ body {
 /* ─── BADGE ───────────────────────────────────────────────────────────────── */
 
 
-/* Desktop Figma: w367 h76
-   padding: 5px top/bottom, 5px right, 15px left
-   icon: 65×66px, sits flush right with 5px gap from edge
-   text: left-aligned, no stretch — space-between pushes icon to right */
+/* backdrop-filter is moved to ::after so overflow:hidden on the parent
+   actually clips children (backdrop-filter creates a new stacking context
+   that bypasses overflow:hidden when set on the element itself) */
 .main__badge {
   position: relative;
   display: flex;
@@ -436,6 +435,19 @@ body {
   padding: 5px 5px 5px 15px;
   gap: 0;
   border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: transparent;
+  flex-shrink: 0;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+/* layer 1: blur + bg + glow — sits behind content */
+.main__badge::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -445,17 +457,12 @@ body {
     2.2px 4px 0 -3.172px rgba(255, 255, 255, 0.37) inset,
     -2.2px -4px 0 -3.172px rgba(255, 255, 255, 0.25) inset,
     0 0 9.517px 0 rgba(255, 255, 255, 0.12) inset;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  flex-shrink: 0;
-  overflow: hidden;
-  isolation: isolate;
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-  margin-top: 40px;
+  pointer-events: none;
+  z-index: 0;
 }
 
-
-.main__badge::before {
+/* layer 2: grain texture */
+.main__badge::after {
   content: '';
   position: absolute;
   inset: 0;
@@ -527,6 +534,12 @@ body {
     height: 59.7px;
     padding: 4px 4px 4px 12px;
     justify-content: space-between;
+    border-radius: 9.185px;
+  }
+  .main__badge::before {
+    border-radius: 9.185px;
+  }
+  .main__badge::after {
     border-radius: 9.185px;
   }
   .main__badge-text {
