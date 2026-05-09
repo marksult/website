@@ -806,7 +806,7 @@ body {
 @media (max-width: 767px) {
   .letter {
     padding: 0 15px 80px;
-    margin-top: 35px;
+    margin-top: 30px;
   }
   .letter__card {
     width: 100%;
@@ -964,7 +964,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Desktop Safari: prevent orphan word on last line of heading */
 @media (min-width: 768px) {
   .article__heading {
     max-width: 520px;
@@ -986,15 +985,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Medium weight for inline emphasis phrases */
 .article__body strong {
   font-weight: 500;
   font-style: normal;
 }
 
-/* ---- Chunk 1 body: two versions (desktop vs mobile) ---- */
-
-/* Desktop/tablet: show paragraph with <br><br> breaks, hide mobile version */
 .article__body--chunk1-mobile {
   display: none;
 }
@@ -1036,7 +1031,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* CTA button: same shape and size as main__cta, black bg, white text */
 .article__cta {
   display: inline-flex;
   height: 50px;
