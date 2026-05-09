@@ -128,8 +128,8 @@ body {
     padding: 25px 40px;
   }
   .header__logo svg {
-    width: 98px;
-    height: 20px;
+    width: 90px;
+    height: 18px;
   }
 }
 
@@ -340,7 +340,7 @@ body {
   border: none;
   cursor: pointer;
   white-space: nowrap;
-  color: #333;
+  color: #000000;
   font-family: 'Helvetica Neue LT Pro', sans-serif;
   font-size: 18px;
   font-weight: 450;
