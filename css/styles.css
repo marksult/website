@@ -687,3 +687,109 @@ body {
     animation: none;
   }
 }
+
+
+/* ================================================================
+   LETTER SECTION (block 3)
+   ================================================================ */
+
+.letter {
+  display: flex;
+  justify-content: center;
+  padding: 0 15px 120px;
+}
+
+.letter__card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 45px;
+  width: 897px;
+  min-height: 948px;
+  padding: 100px;
+  border-radius: 15px;
+  border: 1px solid #E7E7E7;
+  background: #FFF;
+}
+
+.letter__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 45px;
+  width: 100%;
+}
+
+.letter__group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  width: 100%;
+}
+
+.letter__text-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+  width: 100%;
+}
+
+.letter__salutation {
+  margin: 0;
+  color: #000;
+  font-family: 'Plantin MT Pro', serif;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+.letter__paragraph {
+  margin: 0;
+  color: #000;
+  font-family: 'Helvetica Neue LT Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  width: 100%;
+  max-width: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+.letter__btn {
+  display: inline-flex;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  border: 1px solid #E7E7E7;
+  background: #FFF;
+  cursor: pointer;
+  white-space: nowrap;
+  color: #000;
+  font-family: 'Helvetica Neue LT Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.letter__btn:hover {
+  background: #F7F7F7;
+  border-color: #D0D0D0;
+}
+
+.letter__stamp {
+  width: 148px;
+  height: 74px;
+  flex-shrink: 0;
+  display: block;
+}
