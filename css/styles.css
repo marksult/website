@@ -642,6 +642,9 @@ body {
 .logos__img--vargen    { width: 174px; height: 16px; }
 
 @media (max-width: 767px) {
+  .logos {
+    margin-top: 30px;
+  }
   .logos__img--ironclad  { width: 167px; height: 20px; }
   .logos__img--maxout    { width: 83px;  height: 52px; }
   .logos__img--lexon     { width: 102px; height: 20px; }
