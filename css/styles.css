@@ -821,7 +821,8 @@ body {
   .letter__card {
     width: 100%;
     min-height: auto;
-    padding: 40px 24px;
+    /* 31px horizontal padding on mobile */
+    padding: 40px 31px;
     gap: 35px;
     border-radius: 12px;
   }
@@ -829,9 +830,11 @@ body {
     gap: 35px;
   }
   .letter__group {
-    gap: 24px;
+    /* 15px between text-group and tag badge */
+    gap: 15px;
   }
   .letter__text-group {
+    /* 20px between Dear Friend and paragraphs */
     gap: 20px;
   }
   .letter__salutation {
