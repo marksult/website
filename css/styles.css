@@ -889,10 +889,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 45px;
+  gap: 30px;
   width: 900px;
-  min-height: 946px;
-  padding: 100px;
+  padding: 70px 100px;
   border-radius: 15px;
   border: 1px solid #E7E7E7;
   background: #FFF;
@@ -1064,15 +1063,14 @@ body {
   }
   .article__card {
     width: 100%;
-    min-height: auto;
     padding: 31px;
-    gap: 30px;
+    gap: 25px;
   }
   .article__chunk {
     gap: 15px;
   }
   .article__header-group {
-    gap: 15px;
+    gap: 20px;
   }
   .article__warning-tag {
     font-size: 15px;
@@ -1109,14 +1107,10 @@ body {
   .article__card {
     width: 100%;
     max-width: 738px;
-    min-height: auto;
     padding: 80px;
     gap: 30px;
   }
   .article__chunk {
-    gap: 25px;
-  }
-  .article__header-group {
     gap: 25px;
   }
   .article__body {
