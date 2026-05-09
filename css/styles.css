@@ -48,7 +48,6 @@
   --color-gray: #333333;
   --color-black: #000000;
 
-
   --font-primary: 'Helvetica Neue LT Pro', sans-serif;
   --font-secondary: 'Plantin MT Pro', serif;
 }
@@ -207,7 +206,7 @@ body {
 }
 
 
-/* ─── INNER ─────────────────────────────────────────────────────────────── */
+/* ─── INNER ────────────────────────────────────────────────────────────── */
 
 
 .main__inner {
@@ -422,11 +421,9 @@ body {
 /* ─── BADGE ──────────────────────────────────────────────────────────────── */
 
 
-/* Exact Figma values:
-   badge: 367x76px, padding top 5 / right 4 / bottom 5 / left 15
-         (icon left=298, top=5 → right gap = 367-298-65 = 4, bottom = 76-5-66 = 5)
-   icon: 65x66px, border-radius 10px
-   No border on badge/icon — glass effect via box-shadow only */
+/* Original glass style restored.
+   Padding from Figma: top 5 / right 4 / bottom 5 / left 15
+   Icon: 65x66px (exact Figma values) */
 .main__badge {
   position: relative;
   display: flex;
@@ -437,7 +434,8 @@ body {
   padding: 5px 4px 5px 15px;
   gap: 0;
   border-radius: 15px;
-  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: transparent;
   flex-shrink: 0;
   overflow: hidden;
   margin-top: 40px;
@@ -448,15 +446,15 @@ body {
   position: absolute;
   inset: 0;
   border-radius: 15px;
+  background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow:
-    2px 1px 0 -1.586px #5D5D5D inset,
-    -2px -1px 0 -1.586px #5D5D5D inset,
-    2.2px 4px 0 -3.172px rgba(145, 145, 145, 0.90) inset,
-    -2.2px -4px 0 -3.172px rgba(102, 102, 102, 0.95) inset,
-    0 0 9.517px 0 rgba(255, 255, 255, 0.50) inset,
-    0 0 50.755px 0 #F2F2F2 inset;
+    2px 1px 0 -1.586px rgba(255, 255, 255, 0.50) inset,
+    -2px -1px 0 -1.586px rgba(255, 255, 255, 0.42) inset,
+    2.2px 4px 0 -3.172px rgba(255, 255, 255, 0.37) inset,
+    -2.2px -4px 0 -3.172px rgba(255, 255, 255, 0.25) inset,
+    0 0 9.517px 0 rgba(255, 255, 255, 0.12) inset;
   pointer-events: none;
   z-index: 0;
 }
@@ -505,15 +503,14 @@ body {
   min-width: 65px;
   min-height: 66px;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
   box-shadow:
-    0 4px 4px 0 rgba(0, 0, 0, 0.25),
-    2px 1px 0 -1.586px #5D5D5D inset,
-    -2px -1px 0 -1.586px #5D5D5D inset,
-    2.2px 4px 0 -3.172px #919191 inset,
-    -2.2px -4px 0 -3.172px #666 inset,
-    0 0 9.517px 0 rgba(255, 255, 255, 0.50) inset,
-    0 0 50.755px 0 #F2F2F2 inset;
+    2px 1px 0 -1.586px rgba(255, 255, 255, 0.50) inset,
+    -2px -1px 0 -1.586px rgba(255, 255, 255, 0.42) inset,
+    2.2px 4px 0 -3.172px rgba(255, 255, 255, 0.37) inset,
+    -2.2px -4px 0 -3.172px rgba(255, 255, 255, 0.25) inset,
+    0 0 9.517px 0 rgba(255, 255, 255, 0.12) inset;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   flex-shrink: 0;
   overflow: hidden;
 }
