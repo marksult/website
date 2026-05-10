@@ -1267,7 +1267,7 @@ body {
   align-items: flex-start;
   gap: 7px;
   position: relative;
-  top: 1px;
+  top: 2px;
 }
 
 .cases__name {
