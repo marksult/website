@@ -1604,13 +1604,13 @@ body {
     gap: 2px;
   }
   .cases__pin-icon {
-    width: 5px;
-    height: 7px;
-    top: -0.5px;
+    width: 7px;
+    height: 9px;
+    top: -1px;
   }
   .cases__location-text {
     font-size: 8px;
-    top: 0.5px;
+    top: 1px;
   }
   .cases__attribution {
     position: absolute;
