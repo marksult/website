@@ -1574,38 +1574,73 @@ body {
     width: 100%;
     padding: 25px;
     gap: 20px;
+    position: relative;
   }
   .cases__top {
     flex-direction: column;
-    gap: 18px;
+    gap: 20px;
   }
   .cases__left {
     width: 100%;
-    gap: 18px;
+    gap: 20px;
+  }
+  .cases__avatar {
+    width: 50px;
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 4px;
+  }
+  .cases__name {
+    font-size: 15px;
+  }
+  .cases__role {
+    font-size: 8px;
+  }
+  .cases__location {
+    top: 0;
+  }
+  .cases__pin-icon {
+    width: 5px;
+    height: 7px;
+    top: 0;
+  }
+  .cases__location-text {
+    font-size: 6px;
+    top: 0;
+  }
+  .cases__attribution {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    align-items: flex-end;
   }
   .cases__image {
     width: 100%;
-    height: 180px;
-  }
-  .cases__name {
-    font-size: 16px;
+    height: 250px;
+    border-radius: 15px;
   }
   .cases__quote-text {
     font-size: 18px;
+    line-height: 1;
+  }
+  .cases__tab {
+    font-size: 6px;
   }
   .cases__body {
     flex-direction: column;
-    gap: 18px;
+    gap: 20px;
   }
   .cases__body-left {
     width: 100%;
     align-self: auto;
     justify-content: flex-start;
-    gap: 25px;
+    gap: 0;
   }
   .cases__body-right {
     width: 100%;
-    padding: 35px;
+    padding: 16px;
+    gap: 10px;
+    border-radius: 15px;
   }
   .cases__body-text {
     font-size: 15px;
