@@ -1419,6 +1419,7 @@ body {
   align-items: flex-start;
   justify-content: space-between;
   align-self: stretch;
+  gap: 20px;
   width: 347px;
   flex-shrink: 0;
 }
