@@ -1516,12 +1516,14 @@ body {
     gap: 25px;
   }
   .cases__top {
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: row;
+    gap: 41px;
+    align-items: flex-start;
   }
   .cases__left {
-    width: 100%;
-    gap: 20px;
+    width: 284px;
+    flex-shrink: 0;
+    gap: 24px;
   }
   .cases__avatar {
     width: 49px;
@@ -1533,8 +1535,9 @@ body {
     font-size: 16px;
   }
   .cases__image {
-    width: 100%;
-    height: 220px;
+    flex: 1;
+    height: 246px;
+    border-radius: 12px;
   }
   .cases__quote-text {
     font-size: 22px;
