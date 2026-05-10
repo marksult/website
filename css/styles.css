@@ -85,6 +85,9 @@
 /* Block 8 → Section title */
 .section-title   { margin-top: 60px; }
 
+/* Section title → Cases */
+.cases           { margin-top: 20px; }
+
 /* --- Tablet ---------------------------------------------------- */
 @media (min-width: 768px) and (max-width: 1023px) {
   .logos          { margin-top: 40px; }
@@ -95,6 +98,7 @@
   .article-block7 { margin-top: 15px; }
   .article-block8 { margin-top: 15px; }
   .section-title  { margin-top: 40px; }
+  .cases          { margin-top: 15px; }
 }
 
 /* --- Mobile ---------------------------------------------------- */
@@ -107,6 +111,7 @@
   .article-block7 { margin-top: 10px; }
   .article-block8 { margin-top: 10px; }
   .section-title  { margin-top: 30px; }
+  .cases          { margin-top: 10px; }
 }
 
 html {
@@ -1188,6 +1193,280 @@ body {
 @media (max-width: 767px) {
   .section-title__heading {
     font-size: 25px;
+  }
+}
+
+
+/* ================================================================
+   CASES SECTION (block 10)
+   ================================================================ */
+
+.cases {
+  display: flex;
+  justify-content: center;
+  padding: 0 15px 120px;
+}
+
+.cases__card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  width: 900px;
+  padding: 35px;
+  border-radius: 15px;
+  border: 1px solid #E7E7E7;
+  background: #FFF;
+  overflow: hidden;
+}
+
+/* ---- Top row -------------------------------------------------- */
+
+.cases__top {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  width: 100%;
+}
+
+/* ---- Left column ---------------------------------------------- */
+
+.cases__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  width: 346px;
+  flex-shrink: 0;
+}
+
+/* ---- Person --------------------------------------------------- */
+
+.cases__person {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cases__avatar {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  min-height: 60px;
+  border-radius: 5px;
+  border: 1px solid #E7E7E7;
+  background: #FAFAFA;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.cases__person-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.cases__name {
+  margin: 0;
+  color: #000;
+  font-family: 'Plantin MT Pro', serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  -webkit-font-smoothing: antialiased;
+}
+
+.cases__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.cases__role {
+  margin: 0;
+  color: #000;
+  font-family: 'Helvetica Neue LT Pro', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  -webkit-font-smoothing: antialiased;
+}
+
+.cases__location {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.cases__location svg {
+  flex-shrink: 0;
+}
+
+.cases__location-text {
+  color: #000;
+  font-family: 'Helvetica Neue LT Pro', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  opacity: 0.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Quote ---------------------------------------------------- */
+
+.cases__quote {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  width: 100%;
+}
+
+.cases__quote-marks {
+  flex-shrink: 0;
+  display: block;
+}
+
+.cases__quote-text {
+  margin: 0;
+  color: #000;
+  font-family: 'Plantin MT Pro', serif;
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Right image placeholder ---------------------------------- */
+
+.cases__image {
+  flex: 1;
+  height: 300px;
+  border-radius: 15px;
+  border: 1px solid #E7E7E7;
+  background: #FAFAFA;
+  overflow: hidden;
+  min-width: 0;
+}
+
+/* ---- Tabs ----------------------------------------------------- */
+
+.cases__tabs {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+
+.cases__tab {
+  color: #000;
+  font-family: 'Helvetica Neue LT Pro', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  -webkit-font-smoothing: antialiased;
+}
+
+.cases__tab-line {
+  flex: 1;
+  height: 1px;
+  background: #E7E7E7;
+}
+
+/* ---- Body text ------------------------------------------------ */
+
+.cases__body {
+  width: 100%;
+}
+
+.cases__body-text {
+  margin: 0;
+  color: #000;
+  font-family: 'Helvetica Neue LT Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  max-width: 347px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- CASES TABLET ---------------------------------------------- */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .cases {
+    padding: 0 20px 100px;
+  }
+  .cases__card {
+    width: 100%;
+    max-width: 738px;
+    padding: 30px;
+    gap: 25px;
+  }
+  .cases__top {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .cases__left {
+    width: 100%;
+    gap: 20px;
+  }
+  .cases__image {
+    width: 100%;
+    height: 220px;
+  }
+  .cases__quote-text {
+    font-size: 22px;
+  }
+  .cases__body-text {
+    font-size: 16px;
+    max-width: 100%;
+  }
+}
+
+/* --- CASES MOBILE ---------------------------------------------- */
+
+@media (max-width: 767px) {
+  .cases {
+    padding: 0 15px 80px;
+  }
+  .cases__card {
+    width: 100%;
+    padding: 25px;
+    gap: 20px;
+  }
+  .cases__top {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .cases__left {
+    width: 100%;
+    gap: 18px;
+  }
+  .cases__image {
+    width: 100%;
+    height: 180px;
+  }
+  .cases__name {
+    font-size: 16px;
+  }
+  .cases__quote-text {
+    font-size: 18px;
+  }
+  .cases__body-text {
+    font-size: 15px;
+    line-height: 1.15;
+    max-width: 100%;
   }
 }
 
