@@ -1601,7 +1601,7 @@ body {
   }
   .cases__location {
     top: 0;
-    gap: 2px;
+    gap: 3px;
   }
   .cases__pin-icon {
     width: 7px;
