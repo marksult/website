@@ -1306,12 +1306,14 @@ body {
   align-items: center;
   gap: 3px;
   position: relative;
-  top: -1px;
+  top: -2px;
 }
 
 .cases__pin-icon {
   flex-shrink: 0;
   display: block;
+  position: relative;
+  top: -1px;
 }
 
 .cases__location-text {
