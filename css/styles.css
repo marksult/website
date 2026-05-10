@@ -1446,18 +1446,16 @@ body {
 .cases__attribution {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
 }
 
 .cases__brand-logo-wrap {
   display: flex;
-  padding-top: 6px;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   width: 60px;
-  height: 49px;
+  height: 43px;
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -1473,7 +1471,7 @@ body {
 
 .cases__stars {
   display: block;
-  width: 60px;
+  width: 58px;
   height: 9px;
   flex-shrink: 0;
 }
