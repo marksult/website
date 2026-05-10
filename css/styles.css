@@ -1305,13 +1305,13 @@ body {
   display: flex;
   align-items: center;
   gap: 3px;
+  position: relative;
+  top: -1px;
 }
 
 .cases__pin-icon {
   flex-shrink: 0;
   display: block;
-  position: relative;
-  top: -1px;
 }
 
 .cases__location-text {
@@ -1324,8 +1324,6 @@ body {
   line-height: 1.2;
   letter-spacing: -0.02em;
   opacity: 0.7;
-  position: relative;
-  top: 1px;
   -webkit-font-smoothing: antialiased;
 }
 
