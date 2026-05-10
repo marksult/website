@@ -1464,8 +1464,10 @@ body {
 
 .cases__brand-logo {
   display: block;
+  width: 60px;
   height: 43px;
-  width: auto;
+  object-fit: contain;
+  object-position: center;
   flex-shrink: 0;
 }
 
