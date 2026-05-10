@@ -1572,7 +1572,7 @@ body {
   }
   .cases__card {
     width: 100%;
-    padding: 25px;
+    padding: 31px;
     gap: 20px;
     position: relative;
   }
@@ -1590,6 +1590,9 @@ body {
     min-height: 50px;
     border-radius: 4px;
   }
+  .cases__person-info {
+    top: 0;
+  }
   .cases__name {
     font-size: 15px;
   }
@@ -1598,33 +1601,45 @@ body {
   }
   .cases__location {
     top: 0;
+    gap: 2px;
   }
   .cases__pin-icon {
     width: 5px;
     height: 7px;
-    top: 0;
+    top: -0.5px;
   }
   .cases__location-text {
-    font-size: 6px;
-    top: 0;
+    font-size: 8px;
+    top: 0.5px;
   }
   .cases__attribution {
     position: absolute;
-    top: 25px;
-    right: 25px;
+    top: 31px;
+    right: 31px;
     align-items: flex-end;
+    gap: 8px;
   }
   .cases__image {
     width: 100%;
     height: 250px;
+    flex: none;
+    flex-shrink: 0;
     border-radius: 15px;
+  }
+  .cases__quote-marks {
+    width: 11px;
+    height: 7px;
+    fill: #333333;
   }
   .cases__quote-text {
     font-size: 18px;
     line-height: 1;
   }
+  .cases__tabs {
+    gap: 5px;
+  }
   .cases__tab {
-    font-size: 6px;
+    font-size: 8px;
   }
   .cases__body {
     flex-direction: column;
