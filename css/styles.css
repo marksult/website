@@ -1623,33 +1623,32 @@ body {
     align-self: auto;
   }
   .cases__person-info {
-    top: 2px;
-    gap: 4px;
+    top: 0;
+    gap: 5px;
     overflow: visible;
   }
   .cases__meta {
     overflow: visible;
+    gap: 4px;
   }
   .cases__role {
-    position: relative;
-    top: 1px;
+    position: static;
   }
   .cases__location {
-    top: 0;
+    position: static;
     gap: 3px;
     overflow: visible;
-    padding-top: 2px;
+    align-items: center;
   }
   .cases__pin-icon {
     width: 7px;
     height: 9px;
-    top: 0;
-    overflow: visible;
-    flex-shrink: 0;
+    position: static;
   }
   .cases__location-text {
     font-size: 8px;
-    top: 2px;
+    position: static;
+    top: auto;
   }
   .cases__attribution {
     position: absolute;
