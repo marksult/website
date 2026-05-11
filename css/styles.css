@@ -1638,7 +1638,7 @@ body {
     top: 0;
     gap: 3px;
     overflow: visible;
-    margin-top: 1px;
+    padding-top: 2px;
   }
   .cases__pin-icon {
     width: 7px;
