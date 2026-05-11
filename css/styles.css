@@ -1167,13 +1167,14 @@ body {
 
 .cases-wrapper {
   position: relative;
-  overflow: visible;
+  isolation: isolate;
 }
 
 .section-title {
   display: flex;
   justify-content: center;
   padding: 0 15px;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 0;
@@ -1542,6 +1543,11 @@ body {
 /* --- CASES TABLET ---------------------------------------------- */
 
 @media (min-width: 768px) and (max-width: 1023px) {
+  .cases-wrapper {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    will-change: transform;
+  }
   .cases {
     padding: 0 20px 100px;
   }
