@@ -86,7 +86,7 @@
 .section-title   { margin-top: 40px; }
 
 /* Section title → Cases */
-.cases           { margin-top: 20px; }
+.cases           { margin-top: 30px; }
 
 /* --- Tablet ---------------------------------------------------- */
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -98,7 +98,7 @@
   .article-block7 { margin-top: 15px; }
   .article-block8 { margin-top: 15px; }
   .section-title  { margin-top: 30px; }
-  .cases          { margin-top: 15px; }
+  .cases          { margin-top: 20px; }
 }
 
 /* --- Mobile ---------------------------------------------------- */
@@ -111,7 +111,7 @@
   .article-block7 { margin-top: 10px; }
   .article-block8 { margin-top: 10px; }
   .section-title  { margin-top: 10px; }
-  .cases          { margin-top: 10px; }
+  .cases          { margin-top: 15px; }
 }
 
 html {
