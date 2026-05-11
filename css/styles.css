@@ -1166,18 +1166,26 @@ body {
    ================================================================ */
 
 .cases-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: relative;
 }
 
 .section-title {
   display: flex;
   justify-content: center;
   padding: 0 15px;
-  position: sticky;
-  top: 20px;
+}
+
+.section-title--fixed {
+  position: fixed;
+  left: 0;
+  right: 0;
   z-index: 0;
+  pointer-events: none;
+}
+
+.section-title--placeholder {
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .section-title__heading {
