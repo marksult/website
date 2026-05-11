@@ -1643,7 +1643,7 @@ body {
   .cases__pin-icon {
     width: 7px;
     height: 9px;
-    top: -1px;
+    top: 0;
     overflow: visible;
     flex-shrink: 0;
   }
