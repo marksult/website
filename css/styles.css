@@ -1165,10 +1165,19 @@ body {
    SECTION TITLE (block 9)
    ================================================================ */
 
+.cases-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .section-title {
   display: flex;
   justify-content: center;
   padding: 0 15px;
+  position: sticky;
+  top: 20px;
+  z-index: 0;
 }
 
 .section-title__heading {
