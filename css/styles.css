@@ -1167,7 +1167,6 @@ body {
 
 .cases-wrapper {
   position: relative;
-  isolation: isolate;
 }
 
 .section-title {
@@ -1177,7 +1176,6 @@ body {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 0;
   margin-top: 0;
 }
 
