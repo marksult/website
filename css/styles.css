@@ -82,8 +82,8 @@
 /* Block 7 → Block 8 */
 .article-block8  { margin-top: 20px; }
 
-/* Block 8 → Section title */
-.section-title   { margin-top: 40px; }
+/* Block 8 → Cases wrapper (heading spacing moved here) */
+.cases-wrapper   { margin-top: 40px; }
 
 /* Section title → Cases */
 .cases           { margin-top: 30px; }
@@ -97,7 +97,7 @@
   .article-block6 { margin-top: 15px; }
   .article-block7 { margin-top: 15px; }
   .article-block8 { margin-top: 15px; }
-  .section-title  { margin-top: 30px; }
+  .cases-wrapper  { margin-top: 30px; }
   .cases          { margin-top: 20px; }
 }
 
@@ -110,7 +110,7 @@
   .article-block6 { margin-top: 10px; }
   .article-block7 { margin-top: 10px; }
   .article-block8 { margin-top: 10px; }
-  .section-title  { margin-top: 5px; }
+  .cases-wrapper  { margin-top: 5px; }
   .cases          { margin-top: 20px; }
 }
 
@@ -1167,25 +1167,17 @@ body {
 
 .cases-wrapper {
   position: relative;
+  overflow: visible;
 }
 
 .section-title {
   display: flex;
   justify-content: center;
   padding: 0 15px;
-}
-
-.section-title--fixed {
-  position: fixed;
-  left: 0;
-  right: 0;
+  position: sticky;
+  top: 0;
   z-index: 0;
-  pointer-events: none;
-}
-
-.section-title--placeholder {
-  visibility: hidden;
-  pointer-events: none;
+  margin-top: 0;
 }
 
 .section-title__heading {
