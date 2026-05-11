@@ -12,35 +12,52 @@
 
   /* ── fixed heading ────────────────────────────────────── */
   function initFixedTitle() {
-    var title = document.querySelector('.section-title');
+    var title   = document.querySelector('.section-title');
     var wrapper = document.querySelector('.cases-wrapper');
     if (!title || !wrapper) return;
 
-    /* create invisible placeholder to preserve layout space */
-    var placeholder = title.cloneNode(true);
-    placeholder.classList.add('section-title--placeholder');
-    placeholder.removeAttribute('id');
-    title.parentNode.insertBefore(placeholder, title.nextSibling);
+    var isFixed   = false;
+    var fixedTop  = 0;
+    var ph = document.createElement('div');
+
+    function applyFixed() {
+      if (isFixed) return;
+      var r = title.getBoundingClientRect();
+      fixedTop = r.top;
+      ph.style.cssText = 'height:' + r.height + 'px;visibility:hidden;pointer-events:none;';
+      title.parentNode.insertBefore(ph, title.nextSibling);
+      title.style.cssText = 'position:fixed;top:' + fixedTop + 'px;left:0;right:0;z-index:0;pointer-events:none;';
+      isFixed = true;
+    }
+
+    function removeFixed() {
+      if (!isFixed) return;
+      title.style.cssText = '';
+      if (ph.parentNode) ph.parentNode.removeChild(ph);
+      isFixed = false;
+    }
 
     function onScroll() {
-      var wrapperRect = wrapper.getBoundingClientRect();
+      var wRect = wrapper.getBoundingClientRect();
       var lastCard = wrapper.querySelector('.cases__card:last-child');
-      var lastCardRect = lastCard ? lastCard.getBoundingClientRect() : null;
+      var lRect = lastCard ? lastCard.getBoundingClientRect() : null;
 
-      /* fix heading while wrapper is on screen and last card hasn't passed */
-      var inRange = wrapperRect.top <= 0 && lastCardRect && lastCardRect.bottom > 0;
+      var past = wRect.top < 0 && lRect && lRect.bottom > 0;
 
-      if (inRange) {
-        var titleRect = placeholder.getBoundingClientRect();
-        title.classList.add('section-title--fixed');
-        title.style.top = titleRect.top + 'px';
+      if (past) {
+        applyFixed();
       } else {
-        title.classList.remove('section-title--fixed');
-        title.style.top = '';
+        removeFixed();
       }
     }
 
     window.addEventListener('scroll', onScroll, { passive: true });
+
+    window.addEventListener('resize', function () {
+      removeFixed();
+      onScroll();
+    });
+
     onScroll();
   }
 
