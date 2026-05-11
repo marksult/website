@@ -46,6 +46,8 @@
 
     function applyFixed() {
       if (isFixed) return;
+      var marginTop = parseFloat(window.getComputedStyle(title).marginTop) || 0;
+      ph.style.height = (m.titleH + marginTop) + 'px';
       ph.style.display = 'block';
       title.style.cssText =
         'position:fixed;top:' + m.fixedTop + 'px' +
