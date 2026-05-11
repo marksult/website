@@ -1638,18 +1638,16 @@ body {
     gap: 3px;
     overflow: visible;
     align-items: center;
-    padding-top: 2px;
   }
   .cases__pin-icon {
     width: 7px;
     height: 9px;
-    position: relative;
-    top: -1.5px;
+    position: static;
   }
   .cases__location-text {
     font-size: 8px;
-    position: static;
-    top: auto;
+    position: relative;
+    top: 1px;
   }
   .cases__attribution {
     position: absolute;
