@@ -4,7 +4,8 @@
   function updateCardTops() {
     var vh = window.innerHeight;
     document.querySelectorAll('.cases__card').forEach(function (card) {
-      card.style.top = (vh - card.offsetHeight - CARD_OFFSET) + 'px';
+      var top = vh - card.offsetHeight - CARD_OFFSET;
+      card.style.top = Math.min(top, 0) + 'px';
     });
   }
 
