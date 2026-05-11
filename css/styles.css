@@ -1624,7 +1624,7 @@ body {
   }
   .cases__person-info {
     top: 2px;
-    gap: 5px;
+    gap: 4px;
     overflow: visible;
   }
   .cases__meta {
@@ -1636,7 +1636,7 @@ body {
   }
   .cases__location {
     top: 0;
-    gap: 4px;
+    gap: 3px;
     overflow: visible;
     margin-top: 1px;
   }
@@ -1649,7 +1649,7 @@ body {
   }
   .cases__location-text {
     font-size: 8px;
-    top: 1px;
+    top: 2px;
   }
   .cases__attribution {
     position: absolute;
