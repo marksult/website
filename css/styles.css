@@ -1661,7 +1661,7 @@ body {
     top: 31px;
     right: 31px;
     align-items: flex-end;
-    gap: 8px;
+    gap: 7.5px;
   }
   .cases__image {
     width: 100%;
