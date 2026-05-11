@@ -1223,7 +1223,14 @@ body {
   border: 1px solid #E7E7E7;
   background: #FFF;
   overflow: hidden;
+  position: sticky;
+  top: 20px;
+  will-change: transform;
 }
+
+.cases__card--1 { z-index: 1; }
+.cases__card--2 { z-index: 2; }
+.cases__card--3 { z-index: 3; }
 
 /* ---- Top row -------------------------------------------------- */
 
@@ -1537,6 +1544,7 @@ body {
     max-width: 738px;
     padding: 30px;
     gap: 25px;
+    top: 15px;
   }
   .cases__top {
     flex-direction: row;
@@ -1600,7 +1608,7 @@ body {
     width: 100%;
     padding: 31px;
     gap: 20px;
-    position: relative;
+    top: 10px;
   }
   .cases__top {
     overflow: visible;
