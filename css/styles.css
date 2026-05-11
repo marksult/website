@@ -1369,7 +1369,6 @@ body {
   flex: 1;
   height: 300px;
   border-radius: 15px;
-  border: 1px solid #E7E7E7;
   background: #FAFAFA;
   overflow: hidden;
   min-width: 0;
@@ -1643,7 +1642,8 @@ body {
   .cases__pin-icon {
     width: 7px;
     height: 9px;
-    position: static;
+    position: relative;
+    top: -2px;
   }
   .cases__location-text {
     font-size: 8px;
