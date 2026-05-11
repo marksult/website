@@ -5,46 +5,58 @@
   function updateCardTops() {
     var vh = window.innerHeight;
     document.querySelectorAll('.cases__card').forEach(function (card) {
-      var h = card.offsetHeight;
-      card.style.top = (vh - h - CARD_OFFSET) + 'px';
+      card.style.top = (vh - card.offsetHeight - CARD_OFFSET) + 'px';
     });
   }
 
   /* ── fixed heading ────────────────────────────────────── */
   function initFixedTitle() {
     var title   = document.querySelector('.section-title');
-    var wrapper = document.querySelector('.cases-wrapper');
-    if (!title || !wrapper) return;
+    var cases   = document.querySelector('.cases');
+    if (!title || !cases) return;
 
-    var isFixed   = false;
-    var fixedTop  = 0;
     var ph = document.createElement('div');
+    ph.style.cssText = 'visibility:hidden;pointer-events:none;';
+    title.parentNode.insertBefore(ph, title.nextSibling);
+
+    var isFixed = false;
+    var metrics = {};
+
+    function recalc() {
+      /* page-absolute positions — reliable on all breakpoints */
+      metrics.titleH  = title.offsetHeight;
+      metrics.titleY  = title.getBoundingClientRect().top + window.pageYOffset;
+      metrics.casesY  = cases.getBoundingClientRect().top  + window.pageYOffset;
+      metrics.casesH  = cases.offsetHeight;
+
+      ph.style.height = metrics.titleH + 'px';
+
+      if (isFixed) {
+        removeFixed();
+        onScroll();
+      }
+    }
 
     function applyFixed() {
       if (isFixed) return;
-      var r = title.getBoundingClientRect();
-      fixedTop = r.top;
-      ph.style.cssText = 'height:' + r.height + 'px;visibility:hidden;pointer-events:none;';
-      title.parentNode.insertBefore(ph, title.nextSibling);
-      title.style.cssText = 'position:fixed;top:' + fixedTop + 'px;left:0;right:0;z-index:0;pointer-events:none;';
+      title.style.cssText =
+        'position:fixed;top:' + (metrics.titleY - window.pageYOffset) + 'px' +
+        ';left:0;right:0;z-index:0;pointer-events:none;';
       isFixed = true;
     }
 
     function removeFixed() {
       if (!isFixed) return;
       title.style.cssText = '';
-      if (ph.parentNode) ph.parentNode.removeChild(ph);
       isFixed = false;
     }
 
     function onScroll() {
-      var wRect = wrapper.getBoundingClientRect();
-      var lastCard = wrapper.querySelector('.cases__card:last-child');
-      var lRect = lastCard ? lastCard.getBoundingClientRect() : null;
+      var scrollY   = window.pageYOffset;
+      var triggerAt = metrics.titleY;                       /* when heading natural pos reached */
+      var stopAt    = metrics.casesY + metrics.casesH;     /* after last card */
 
-      var past = wRect.top < 0 && lRect && lRect.bottom > 0;
-
-      if (past) {
+      if (scrollY >= triggerAt && scrollY < stopAt - metrics.titleH) {
         applyFixed();
       } else {
         removeFixed();
@@ -55,9 +67,16 @@
 
     window.addEventListener('resize', function () {
       removeFixed();
+      recalc();
+    });
+
+    /* wait for fonts + images then recalc */
+    window.addEventListener('load', function () {
+      recalc();
       onScroll();
     });
 
+    recalc();
     onScroll();
   }
 
