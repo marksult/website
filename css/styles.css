@@ -1617,13 +1617,13 @@ body {
   }
   .cases__person {
     overflow: visible;
-    align-items: flex-start;
+    align-items: center;
   }
   .cases__avatar {
     align-self: auto;
   }
   .cases__person-info {
-    top: 0;
+    top: 2px;
     gap: 5px;
     overflow: visible;
   }
@@ -1643,13 +1643,13 @@ body {
   .cases__pin-icon {
     width: 7px;
     height: 9px;
-    top: 1px;
+    top: -1px;
     overflow: visible;
     flex-shrink: 0;
   }
   .cases__location-text {
     font-size: 8px;
-    top: 0;
+    top: 1px;
   }
   .cases__attribution {
     position: absolute;
