@@ -1649,6 +1649,7 @@ body {
     width: 7px;
     height: 9px;
     position: static;
+    overflow: visible;
   }
   .cases__location-text {
     font-size: 8px;
