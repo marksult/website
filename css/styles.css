@@ -1368,6 +1368,17 @@ body {
   background: #FAFAFA;
   overflow: hidden;
   min-width: 0;
+  position: relative;
+}
+
+.cases__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
 }
 
 /* ---- Tabs ----------------------------------------------------- */
