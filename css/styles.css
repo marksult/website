@@ -1207,6 +1207,10 @@ body {
   padding: 0 15px 120px;
 }
 
+.cases__card + .cases__card {
+  margin-top: 20px;
+}
+
 .cases__card {
   display: flex;
   flex-direction: column;
@@ -1524,6 +1528,9 @@ body {
   .cases {
     padding: 0 20px 100px;
   }
+  .cases__card + .cases__card {
+    margin-top: 15px;
+  }
   .cases__card {
     width: 100%;
     max-width: 738px;
@@ -1584,6 +1591,9 @@ body {
 @media (max-width: 767px) {
   .cases {
     padding: 0 15px 80px;
+  }
+  .cases__card + .cases__card {
+    margin-top: 10px;
   }
   .cases__card {
     width: 100%;
