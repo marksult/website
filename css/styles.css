@@ -1209,7 +1209,7 @@ body {
 }
 
 .cases__card + .cases__card {
-  margin-top: 20px;
+  margin-top: 60px;
 }
 
 .cases__card {
@@ -1537,7 +1537,7 @@ body {
     padding: 0 20px 100px;
   }
   .cases__card + .cases__card {
-    margin-top: 15px;
+    margin-top: 45px;
   }
   .cases__card {
     width: 100%;
@@ -1602,7 +1602,7 @@ body {
     padding: 0 15px 80px;
   }
   .cases__card + .cases__card {
-    margin-top: 10px;
+    margin-top: 30px;
   }
   .cases__card {
     width: 100%;
