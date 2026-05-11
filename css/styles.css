@@ -1638,6 +1638,7 @@ body {
     gap: 3px;
     overflow: visible;
     align-items: center;
+    padding-top: 2px;
   }
   .cases__pin-icon {
     width: 7px;
