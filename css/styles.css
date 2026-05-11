@@ -1600,26 +1600,31 @@ body {
     font-size: 8px;
   }
   .cases__person-info {
-    gap: 6px;
+    gap: 5px;
   }
   .cases__meta {
     overflow: visible;
+  }
+  .cases__role {
+    position: relative;
+    top: 1px;
   }
   .cases__location {
     top: 0;
     gap: 4px;
     overflow: visible;
-    margin-top: 1px;
+    padding-top: 2px;
   }
   .cases__pin-icon {
     width: 7px;
     height: 9px;
     top: 0;
     overflow: visible;
+    flex-shrink: 0;
   }
   .cases__location-text {
     font-size: 8px;
-    top: 1.5px;
+    top: 1px;
   }
   .cases__attribution {
     position: absolute;
