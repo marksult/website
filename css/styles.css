@@ -1599,8 +1599,17 @@ body {
   .cases__role {
     font-size: 8px;
   }
+  .cases__person {
+    overflow: visible;
+    align-items: flex-start;
+  }
+  .cases__avatar {
+    align-self: auto;
+  }
   .cases__person-info {
+    top: 0;
     gap: 5px;
+    overflow: visible;
   }
   .cases__meta {
     overflow: visible;
@@ -1613,18 +1622,18 @@ body {
     top: 0;
     gap: 4px;
     overflow: visible;
-    padding-top: 2px;
+    margin-top: 1px;
   }
   .cases__pin-icon {
     width: 7px;
     height: 9px;
-    top: 0;
+    top: 1px;
     overflow: visible;
     flex-shrink: 0;
   }
   .cases__location-text {
     font-size: 8px;
-    top: 1px;
+    top: 0;
   }
   .cases__attribution {
     position: absolute;
