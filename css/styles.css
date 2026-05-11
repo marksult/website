@@ -1590,6 +1590,11 @@ body {
     padding: 31px;
     gap: 20px;
     position: relative;
+  }
+  .cases__top {
+    overflow: visible;
+  }
+  .cases__left {
     overflow: visible;
   }
   .cases__top {
@@ -1648,7 +1653,7 @@ body {
   .cases__location-text {
     font-size: 8px;
     position: relative;
-    top: 0.5px;
+    top: 1px;
   }
   .cases__attribution {
     position: absolute;
