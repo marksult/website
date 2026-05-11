@@ -1599,10 +1599,17 @@ body {
   .cases__role {
     font-size: 8px;
   }
+  .cases__person-info {
+    gap: 6px;
+  }
+  .cases__meta {
+    overflow: visible;
+  }
   .cases__location {
     top: 0;
     gap: 4px;
     overflow: visible;
+    margin-top: 1px;
   }
   .cases__pin-icon {
     width: 7px;
@@ -1612,7 +1619,7 @@ body {
   }
   .cases__location-text {
     font-size: 8px;
-    top: 0.5px;
+    top: 1.5px;
   }
   .cases__attribution {
     position: absolute;
