@@ -12,86 +12,88 @@
   /* ── fixed heading ────────────────────────────────────── */
   function initFixedTitle() {
     var title   = document.querySelector('.section-title');
-    var cases   = document.querySelector('.cases');
-    if (!title || !cases) return;
+    var wrapper = document.querySelector('.cases-wrapper');
+    if (!title || !wrapper) return;
 
+    /* placeholder preserves layout space when title becomes fixed */
     var ph = document.createElement('div');
-    ph.style.cssText = 'visibility:hidden;pointer-events:none;';
-    title.parentNode.insertBefore(ph, title.nextSibling);
+    ph.style.cssText = 'display:none;visibility:hidden;pointer-events:none;';
+    wrapper.insertBefore(ph, title);
 
-    var isFixed = false;
-    var metrics = {};
+    var isFixed  = false;
+    var m        = {};
 
-    function recalc() {
-      /* page-absolute positions — reliable on all breakpoints */
-      metrics.titleH  = title.offsetHeight;
-      metrics.titleY  = title.getBoundingClientRect().top + window.pageYOffset;
-      metrics.casesY  = cases.getBoundingClientRect().top  + window.pageYOffset;
-      metrics.casesH  = cases.offsetHeight;
+    function measure() {
+      var tRect = title.getBoundingClientRect();
+      var wRect = wrapper.getBoundingClientRect();
+      var scrollY = window.pageYOffset;
 
-      ph.style.height = metrics.titleH + 'px';
+      m.wrapperAbsY  = wRect.top  + scrollY;   /* absolute top of wrapper  */
+      m.wrapperAbsH  = wrapper.offsetHeight;
+      m.titleAbsY    = tRect.top  + scrollY;   /* absolute top of title    */
+      m.titleH       = tRect.height;
 
-      if (isFixed) {
-        removeFixed();
-        onScroll();
-      }
+      /*
+        When wrapper's top reaches viewport top (scrollY == wrapperAbsY),
+        the title's viewport Y = titleAbsY - wrapperAbsY  →  always constant.
+      */
+      m.fixedTop     = m.titleAbsY - m.wrapperAbsY;
+      m.triggerAt    = m.wrapperAbsY;                           /* enter  */
+      m.stopAt       = m.wrapperAbsY + m.wrapperAbsH - m.titleH; /* leave  */
+
+      ph.style.height = m.titleH + 'px';
     }
 
     function applyFixed() {
       if (isFixed) return;
+      ph.style.display = 'block';
       title.style.cssText =
-        'position:fixed;top:' + (metrics.titleY - window.pageYOffset) + 'px' +
+        'position:fixed;top:' + m.fixedTop + 'px' +
         ';left:0;right:0;z-index:0;pointer-events:none;';
       isFixed = true;
     }
 
     function removeFixed() {
       if (!isFixed) return;
+      ph.style.display = 'none';
       title.style.cssText = '';
       isFixed = false;
     }
 
     function onScroll() {
-      var scrollY   = window.pageYOffset;
-      var triggerAt = metrics.titleY;                       /* when heading natural pos reached */
-      var stopAt    = metrics.casesY + metrics.casesH;     /* after last card */
-
-      if (scrollY >= triggerAt && scrollY < stopAt - metrics.titleH) {
+      var scrollY = window.pageYOffset;
+      if (scrollY >= m.triggerAt && scrollY < m.stopAt) {
         applyFixed();
       } else {
         removeFixed();
       }
     }
 
-    window.addEventListener('scroll', onScroll, { passive: true });
-
-    window.addEventListener('resize', function () {
+    function init() {
       removeFixed();
-      recalc();
-    });
-
-    /* wait for fonts + images then recalc */
-    window.addEventListener('load', function () {
-      recalc();
+      measure();
       onScroll();
-    });
+    }
 
-    recalc();
-    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', init);
+    window.addEventListener('load',   init);
+
+    init();
   }
 
-  /* ── init ─────────────────────────────────────────────── */
-  function init() {
+  /* ── boot ─────────────────────────────────────────────── */
+  function boot() {
     updateCardTops();
     initFixedTitle();
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
+    document.addEventListener('DOMContentLoaded', boot);
   } else {
-    init();
+    boot();
   }
 
-  window.addEventListener('load', updateCardTops);
+  window.addEventListener('load',   updateCardTops);
   window.addEventListener('resize', updateCardTops);
 })();
