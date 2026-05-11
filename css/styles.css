@@ -105,12 +105,12 @@
 @media (max-width: 767px) {
   .logos          { margin-top: 15px; }
   .letter         { margin-top: 20px; }
-  .article        { margin-top: 10px; }
+  .article        { margin-top: 5px; }
   .article-block5 { margin-top: 10px; }
   .article-block6 { margin-top: 10px; }
   .article-block7 { margin-top: 10px; }
   .article-block8 { margin-top: 10px; }
-  .section-title  { margin-top: 10px; }
+  .section-title  { margin-top: 5px; }
   .cases          { margin-top: 15px; }
 }
 
@@ -1601,16 +1601,18 @@ body {
   }
   .cases__location {
     top: 0;
-    gap: 3px;
+    gap: 4px;
+    overflow: visible;
   }
   .cases__pin-icon {
     width: 7px;
     height: 9px;
-    top: -1px;
+    top: 0;
+    overflow: visible;
   }
   .cases__location-text {
     font-size: 8px;
-    top: 1px;
+    top: 0.5px;
   }
   .cases__attribution {
     position: absolute;
