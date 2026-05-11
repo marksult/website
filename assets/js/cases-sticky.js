@@ -5,8 +5,7 @@
     var vh = window.innerHeight;
     document.querySelectorAll('.cases__card').forEach(function (card) {
       var cardH = card.offsetHeight;
-      var top = cardH > vh ? vh - cardH - OFFSET : OFFSET;
-      card.style.top = top + 'px';
+      card.style.top = (vh - cardH - OFFSET) + 'px';
     });
   }
 
@@ -16,5 +15,6 @@
     updateStickyTops();
   }
 
+  window.addEventListener('load', updateStickyTops);
   window.addEventListener('resize', updateStickyTops);
 })();
