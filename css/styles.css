@@ -1628,7 +1628,7 @@ body {
   }
   .cases__meta {
     overflow: visible;
-    gap: 4px;
+    gap: 3px;
   }
   .cases__role {
     position: static;
@@ -1638,11 +1638,13 @@ body {
     gap: 3px;
     overflow: visible;
     align-items: center;
+    padding-top: 1px;
   }
   .cases__pin-icon {
     width: 7px;
     height: 9px;
-    position: static;
+    position: relative;
+    top: -0.5px;
   }
   .cases__location-text {
     font-size: 8px;
