@@ -1862,8 +1862,9 @@ body {
 
 .features__slider {
   position: relative;
-  overflow: hidden;
-  padding: 0 40px 60px 40px;
+  overflow: visible;
+  padding: 0 0 60px 0;
+  margin-left: 263px;
 }
 
 .features__track {
@@ -1880,7 +1881,7 @@ body {
   border-radius: 15px;
   border: 1px solid #E7E7E7;
   background: var(--color-white);
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -1997,4 +1998,18 @@ body {
   width: 20%;
   transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: width;
+}
+
+/* Card icon (01-05) */
+.features__card-icon {
+  position: absolute;
+  bottom: 35px;
+  right: 35px;
+  width: auto;
+  height: auto;
+  max-width: 50px;
+  max-height: 50px;
+  display: block;
+  pointer-events: none;
+  z-index: 1;
 }
