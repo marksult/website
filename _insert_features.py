@@ -1,0 +1,5 @@
+with open('index.html','r') as f: c=f.read()
+with open('_features_block.html','r') as f: block=f.read()
+c=c.replace('  <!-- Features Benefits slider will be rebuilt here -->\n</body>\n</html>', block)
+with open('index.html','w') as f: f.write(c)
+print('HTML inserted')
