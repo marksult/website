@@ -2085,6 +2085,11 @@ body {
     text-box-edge: cap alphabetic;
   }
 
+  .features__card-number {
+    text-box-trim: both;
+    text-box-edge: cap alphabetic;
+  }
+
   .features__nav {
     margin-top: 14px;
     padding-left: calc((100% - 738px) / 2);
