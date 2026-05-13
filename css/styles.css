@@ -1909,6 +1909,15 @@ body {
   min-width: 0;
 }
 
+/* ================================================================
+   FEATURES CARD TEXT — CAP HEIGHT TO BASELINE (leading trim)
+   Прибирає зайвий простір зверху (до cap height) і знизу
+   (до baseline) у текстових контейнерах карточок features.
+   Сучасні браузери: text-box-trim + text-box-edge
+   Fallback (старі): line-height: 1 + від'ємний margin через ::before/::after
+   ================================================================ */
+
+/* --- title: Plantin MT Pro 300 --- */
 .features__card-title {
   margin: 0;
   color: #000000;
@@ -1918,8 +1927,13 @@ body {
   line-height: 1.05em;
   letter-spacing: -0.02em;
   -webkit-font-smoothing: antialiased;
+
+  /* Modern leading trim */
+  text-box-trim: both;
+  text-box-edge: cap alphabetic;
 }
 
+/* --- desc: Helvetica Neue LT Pro 400 --- */
 .features__card-desc {
   margin: 0;
   color: #000000;
@@ -1929,8 +1943,13 @@ body {
   line-height: 1.2em;
   letter-spacing: -0.02em;
   -webkit-font-smoothing: antialiased;
+
+  /* Modern leading trim */
+  text-box-trim: both;
+  text-box-edge: cap alphabetic;
 }
 
+/* --- number badge: Helvetica Neue LT Pro 400 --- */
 .features__card-number {
   display: flex;
   justify-content: center;
@@ -1944,9 +1963,13 @@ body {
   font-family: 'Helvetica Neue LT Pro', sans-serif;
   font-size: 10px;
   font-weight: 400;
-  line-height: 1.2em;
+  line-height: 1;
   letter-spacing: -0.02em;
   flex-shrink: 0;
+
+  /* Modern leading trim */
+  text-box-trim: both;
+  text-box-edge: cap alphabetic;
 }
 
 /* Navigation */
@@ -2052,10 +2075,14 @@ body {
 
   .features__card-title {
     font-size: 22px;
+    text-box-trim: both;
+    text-box-edge: cap alphabetic;
   }
 
   .features__card-desc {
     font-size: 16px;
+    text-box-trim: both;
+    text-box-edge: cap alphabetic;
   }
 
   .features__nav {
@@ -2109,16 +2136,22 @@ body {
 
   .features__card-title {
     font-size: 18px;
+    text-box-trim: both;
+    text-box-edge: cap alphabetic;
   }
 
   .features__card-desc {
     font-size: 15px;
+    text-box-trim: both;
+    text-box-edge: cap alphabetic;
   }
 
   .features__card-number {
     width: 25px;
     height: 25px;
     font-size: 8px;
+    text-box-trim: both;
+    text-box-edge: cap alphabetic;
   }
 
   .features__nav {
