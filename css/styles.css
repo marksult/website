@@ -1862,6 +1862,8 @@ body {
 .features__slider {
   overflow: hidden;
   width: 100%;
+  /* Desktop: лівий край карточки = лівий край .cases__card (900px центр + 15px padding) */
+  padding-left: calc((100% - 900px) / 2);
 }
 
 .features__track {
@@ -2020,6 +2022,11 @@ body {
     margin-bottom: 30px;
   }
 
+  /* Tablet: карточка cases max-width 738px з padding 0 20px */
+  .features__slider {
+    padding-left: calc((100% - 738px) / 2);
+  }
+
   .features__card {
     width: 711px;
     height: 406px;
@@ -2064,6 +2071,11 @@ body {
   .features__title {
     font-size: 25px;
     margin-bottom: 20px;
+  }
+
+  /* Mobile: той самий відступ що і padding у .cases (15px) */
+  .features__slider {
+    padding-left: 15px;
   }
 
   .features__track {
