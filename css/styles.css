@@ -1956,6 +1956,7 @@ body {
   align-items: center;
   width: 30px;
   height: 30px;
+  padding-top: 2px;  /* зсув тексту на 1px вниз у flex-центрі */
   border-radius: 5px;
   border: 1px solid #E7E7E7;
   background: #FFFFFF;
