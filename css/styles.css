@@ -1892,7 +1892,7 @@ body {
   border-radius: 15px;
   border: 1px solid #E7E7E7;
   background: var(--color-white);
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   flex-direction: column;
   position: relative;
