@@ -1,0 +1,15 @@
+
+# AI local files
+.claude/
+.deepseek/
+PROJECT_STRUCTURE.md
+project-structure.md
+project_structure.md
+*.log
+
+# Local env / secrets
+.env
+.env.local
+
+# Mac
+.DS_Store
