@@ -2025,6 +2025,9 @@ body {
   /* Modern leading trim — обжимає текст по cap-height / baseline */
   text-box-trim: both;
   text-box-edge: cap alphabetic;
+
+  position: relative;
+  top: 1px;  /* зсув тексту на 1px вниз */
 }
 
 .features__nav-line {
