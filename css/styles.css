@@ -1958,8 +1958,8 @@ body {
   margin-top: 20px;
   /* Desktop: той самий лівий відступ що і слайдер */
   padding-left: calc((100% - 900px) / 2);
-  /* Лінія тягнеться до правого краю вьюпорту — overflow:hidden обрізає */
-  overflow: hidden;
+  /* Лінія тягнеться до правого краю — overflow прибрано, margin-right на лінії */
+  overflow: visible;
 }
 
 .features__nav-arrows {
@@ -2004,7 +2004,8 @@ body {
   height: 1px;
   background: #D9D9D9;
   overflow: hidden;
-  /* Нема margin-right — лінія розтягується до правого краю вьюпорту */
+  /* Відступ 15px від правого краю вьюпорту на desktop */
+  margin-right: 15px;
 }
 
 .features__nav-line-fill {
@@ -2062,7 +2063,10 @@ body {
     padding-left: calc((100% - 738px) / 2);
   }
 
-  /* Лінія тягнеться до правого краю — margin-right не потрібен */
+  .features__nav-line {
+    /* Tablet: відступ 15px від правого краю */
+    margin-right: 15px;
+  }
 }
 
 /* ---- FEATURES MOBILE ------------------------------------------ */
@@ -2135,6 +2139,7 @@ body {
   .features__nav-line {
     flex: 1;
     width: auto;
-    /* Лінія тягнеться до правого краю — margin-right не потрібен */
+    /* Mobile: відступ 15px від правого краю */
+    margin-right: 15px;
   }
 }
