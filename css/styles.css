@@ -2023,12 +2023,13 @@ body {
   background: #FFFFFF;
 }
 
-/* Left arrow: #E7E7E7 when disabled (slide 1), #333333 when active */
+/* Arrows: #333333 by default, #E7E7E7 when button is disabled */
 .features__arrow-path {
   fill: #333333;
+  transition: fill 0.3s ease;
 }
 
-.features__nav-btn--prev:disabled .features__arrow-path {
+.features__nav-btn:disabled .features__arrow-path {
   fill: #E7E7E7;
 }
 
