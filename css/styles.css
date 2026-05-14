@@ -1860,7 +1860,7 @@ body {
 .features__slider {
   overflow: hidden;
   width: 100%;
-  /* Desktop: лівий край карточки = лівий край .cases__card (900px центр + 15px padding) */
+  touch-action: pan-y;
   padding-left: calc((100% - 900px) / 2);
 }
 
