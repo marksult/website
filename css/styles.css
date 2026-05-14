@@ -2003,15 +2003,33 @@ body {
   background: #FFFFFF;
   cursor: pointer;
   padding: 0;
+  transition: background 0.15s ease;
 }
 
 .features__nav-btn img {
   display: block;
 }
 
+.features__nav-btn:hover {
+  background: #FAFAFA;
+}
+
 .features__nav-btn:disabled {
   opacity: 0.8;
   cursor: default;
+}
+
+.features__nav-btn:disabled:hover {
+  background: #FFFFFF;
+}
+
+/* Left arrow: #E7E7E7 when disabled (slide 1), #333333 when active */
+.features__arrow-path {
+  fill: #333333;
+}
+
+.features__nav-btn--prev:disabled .features__arrow-path {
+  fill: #E7E7E7;
 }
 
 .features__nav-counter {
