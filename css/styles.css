@@ -2187,6 +2187,7 @@ body {
     gap: 10px;
     margin-top: 10px;
     padding-left: 15px;
+    padding-right: 15px;
   }
 
   .features__nav-btn {
@@ -2201,7 +2202,6 @@ body {
   .features__nav-line {
     flex: 1;
     width: auto;
-    /* Mobile: відступ 15px від правого краю */
-    margin-right: 15px;
+    margin-right: 0;
   }
 }
