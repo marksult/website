@@ -1896,7 +1896,7 @@ body {
 .features__card-body {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: flex-end;
   padding: 35px;
   overflow: hidden;
   flex: 1;
@@ -1954,7 +1954,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  align-self: flex-end;
   width: 30px;
   height: 30px;
   padding-top: 2px;
