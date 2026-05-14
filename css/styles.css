@@ -1943,7 +1943,6 @@ body {
   line-height: 1.2em;
   letter-spacing: -0.02em;
   -webkit-font-smoothing: antialiased;
-
   /* Modern leading trim */
   text-box-trim: both;
   text-box-edge: cap alphabetic;
@@ -1955,7 +1954,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  bottom: 3px;
+  bottom: 5px;
   width: 30px;
   height: 30px;
   padding-top: 2px;
