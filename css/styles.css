@@ -1845,6 +1845,8 @@ body {
 .features {
   padding: 60px 0;
   background: #FFFFFF;
+  position: relative;
+  z-index: 4;
 }
 
 .features__title {
