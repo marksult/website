@@ -1839,7 +1839,7 @@ body {
    ================================================================ */
 
 .features {
-  padding: 60px 0;
+  padding: 40px 0 60px;
   background: #FFFFFF;
   position: relative;
   z-index: 4;
@@ -2071,7 +2071,7 @@ body {
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .features {
-    padding: 50px 0;
+    padding: 30px 0 50px;
   }
 
   .features__title {
@@ -2133,7 +2133,7 @@ body {
 
 @media (max-width: 767px) {
   .features {
-    padding: 40px 0;
+    padding: 5px 0 40px;
   }
 
   .features__title {
