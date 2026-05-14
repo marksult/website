@@ -29,7 +29,7 @@
   function goTo(index, animate) {
     current = Math.max(0, Math.min(index, total - 1));
     track.style.transition = animate
-      ? 'transform 0.42s cubic-bezier(0.22, 1, 0.36, 1)'
+      ? 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)'
       : 'none';
     track.style.transform = 'translate3d(' + (-getStep() * current) + 'px,0,0)';
     updateUI();
@@ -50,24 +50,15 @@
   });
 
   /* ── touch ── */
-  var startX    = 0;
-  var startY    = 0;
-  var startT    = 0;
-  var base      = 0;
-  var dir       = null;   /* null | 'h' | 'v' */
-  var active    = false;
-  var rafId     = null;
-  var pendingX  = 0;
+  var startX  = 0;
+  var startY  = 0;
+  var startT  = 0;
+  var base    = 0;
+  var dir     = null;  /* null | 'h' | 'v' */
+  var active  = false;
 
-  function applyRaf() {
-    rafId = null;
-    track.style.transform = 'translate3d(' + pendingX + 'px,0,0)';
-  }
-
-  /* passive:true — не блокує браузерний скрол до визначення напрямку */
   slider.addEventListener('touchstart', function (e) {
     if (e.touches.length !== 1) return;
-    if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
     startX = e.touches[0].clientX;
     startY = e.touches[0].clientY;
     startT = Date.now();
@@ -77,7 +68,6 @@
     track.style.transition = 'none';
   }, { passive: true });
 
-  /* passive:false — потрібен щоб викликати preventDefault для горизонталі */
   slider.addEventListener('touchmove', function (e) {
     if (!active || e.touches.length !== 1) return;
 
@@ -86,32 +76,30 @@
     var adx = Math.abs(dx);
     var ady = Math.abs(dy);
 
-    /* Визначаємо напрямок один раз після 4px */
+    /* Lock direction after 4px */
     if (dir === null) {
       if (adx < 4 && ady < 4) return;
       dir = adx >= ady ? 'h' : 'v';
     }
 
-    if (dir === 'v') return; /* вертикальний скрол — не втручаємось */
+    if (dir === 'v') return;
 
-    /* Горизонтальний свайп — зупиняємо скрол сторінки */
+    /* Stop page scroll for horizontal swipe */
     e.preventDefault();
 
+    /* Edge resistance */
     var offset = dx;
     if ((current === 0 && dx > 0) || (current === total - 1 && dx < 0)) {
-      offset = dx * 0.18; /* пружина на краях */
+      offset = dx * 0.18;
     }
 
-    pendingX = base + offset;
-    if (!rafId) rafId = requestAnimationFrame(applyRaf);
+    /* Direct DOM manipulation — no RAF, zero frame latency */
+    track.style.transform = 'translate3d(' + (base + offset) + 'px,0,0)';
   }, { passive: false });
 
   slider.addEventListener('touchend', function (e) {
     if (!active) return;
     active = false;
-    if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
-
-    /* Не реагуємо якщо свайп був вертикальний */
     if (dir === 'v') return;
 
     var dx  = e.changedTouches[0].clientX - startX;
@@ -129,7 +117,6 @@
   slider.addEventListener('touchcancel', function () {
     if (!active) return;
     active = false;
-    if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
     goTo(current, true);
   }, { passive: true });
 
@@ -140,7 +127,7 @@
     resizeTimer = setTimeout(function () { goTo(current, false); }, 150);
   });
 
-  /* Peek clone: card 1 shows on the right when on last card */
+  /* Peek clone: card 1 peeks on the right when on last card */
   var peek = cards[0].cloneNode(true);
   peek.setAttribute('aria-hidden', 'true');
   peek.setAttribute('tabindex', '-1');
