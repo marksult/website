@@ -2055,8 +2055,7 @@ body {
   height: 1px;
   background: #D9D9D9;
   overflow: hidden;
-  /* Відступ 15px від правого краю вьюпорту на desktop */
-  margin-right: 15px;
+  margin-right: 35px;
 }
 
 .features__nav-line-fill {
@@ -2124,8 +2123,7 @@ body {
   }
 
   .features__nav-line {
-    /* Tablet: відступ 15px від правого краю */
-    margin-right: 15px;
+    margin-right: 35px;
   }
 }
 
