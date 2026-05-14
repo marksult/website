@@ -31,7 +31,7 @@
     if (!animate) {
       track.style.transition = 'none';
     } else if (isTouch) {
-      track.style.transition = 'transform 0.18s ease-out';
+      track.style.transition = 'none';
     } else {
       track.style.transition = 'transform 0.6s cubic-bezier(0.45, 0, 0.15, 1)';
     }
