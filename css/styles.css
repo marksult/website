@@ -2002,8 +2002,14 @@ body {
   transition: background 0.15s ease;
 }
 
-.features__nav-btn img {
+.features__nav-btn img,
+.features__nav-btn svg {
   display: block;
+}
+
+.features__nav-btn--prev svg {
+  position: relative;
+  left: -1px;
 }
 
 .features__nav-btn:hover {

@@ -50,19 +50,21 @@
   });
 
   /* ── touch ── */
-  var startX  = 0;
-  var startY  = 0;
-  var startT  = 0;
-  var base    = 0;
-  var dir     = null;  /* null | 'h' | 'v' */
-  var active  = false;
+  var startX      = 0;
+  var startY      = 0;
+  var startT      = 0;
+  var base        = 0;
+  var cachedStep  = 0;
+  var dir         = null;  /* null | 'h' | 'v' */
+  var active      = false;
 
   slider.addEventListener('touchstart', function (e) {
     if (e.touches.length !== 1) return;
+    cachedStep = getStep();           /* cache once — no reflow during drag */
     startX = e.touches[0].clientX;
     startY = e.touches[0].clientY;
     startT = Date.now();
-    base   = -getStep() * current;
+    base   = -cachedStep * current;
     dir    = null;
     active = true;
     track.style.transition = 'none';
@@ -93,7 +95,6 @@
       offset = dx * 0.18;
     }
 
-    /* Direct DOM manipulation — no RAF, zero frame latency */
     track.style.transform = 'translate3d(' + (base + offset) + 'px,0,0)';
   }, { passive: false });
 
@@ -105,7 +106,7 @@
     var dx  = e.changedTouches[0].clientX - startX;
     var dt  = Math.max(Date.now() - startT, 1);
     var vel = Math.abs(dx) / dt;
-    var thr = Math.min(getStep() * 0.22, 70);
+    var thr = Math.min(cachedStep * 0.22, 70);
 
     var next = current;
     if      (dx < -thr || (vel > 0.3 && dx < -6)) next = current + 1;
