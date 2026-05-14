@@ -1894,7 +1894,9 @@ body {
 }
 
 .features__card-body {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
   padding: 35px;
   overflow: hidden;
   flex: 1;
@@ -1903,7 +1905,7 @@ body {
 .features__card-text {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px;
   min-width: 0;
 }
 
@@ -1949,9 +1951,6 @@ body {
 
 /* --- number badge: Helvetica Neue LT Pro 400 --- */
 .features__card-number {
-  position: absolute;
-  bottom: 35px;
-  right: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1967,6 +1966,7 @@ body {
   font-weight: 400;
   line-height: 1;
   letter-spacing: -0.02em;
+  flex-shrink: 0;
 
   /* Modern leading trim */
   text-box-trim: both;
@@ -2078,7 +2078,7 @@ body {
   }
 
   .features__card-text {
-    gap: 20px;
+    gap: 25px;
   }
 
   .features__card-title {
@@ -2094,8 +2094,6 @@ body {
   }
 
   .features__card-number {
-    bottom: 25px;
-    right: 25px;
     text-box-trim: both;
     text-box-edge: cap alphabetic;
   }
@@ -2162,8 +2160,6 @@ body {
   }
 
   .features__card-number {
-    bottom: 25px;
-    right: 25px;
     width: 25px;
     height: 25px;
     font-size: 8px;
