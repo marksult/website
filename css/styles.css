@@ -1981,9 +1981,8 @@ body {
   align-items: center;
   gap: 15px;
   margin-top: 20px;
-  /* Desktop: той самий лівий відступ що і слайдер */
   padding-left: calc((100% - 900px) / 2);
-  /* Лінія тягнеться до правого краю — overflow прибрано, margin-right на лінії */
+  padding-right: 35px;
   overflow: visible;
 }
 
@@ -2055,7 +2054,6 @@ body {
   height: 1px;
   background: #D9D9D9;
   overflow: hidden;
-  margin-right: 35px;
 }
 
 .features__nav-line-fill {
@@ -2120,10 +2118,11 @@ body {
   .features__nav {
     margin-top: 14px;
     padding-left: calc((100% - 738px) / 2);
+    padding-right: 35px;
   }
 
   .features__nav-line {
-    margin-right: 35px;
+    margin-right: 0;
   }
 }
 
