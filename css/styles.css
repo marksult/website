@@ -1876,7 +1876,7 @@ body {
 .features__card {
   flex-shrink: 0;
   width: 816px;
-  height: 476px;
+  min-height: 476px;
   border-radius: 15px;
   border: 1px solid #E7E7E7;
   background: #FFFFFF;
@@ -2067,7 +2067,7 @@ body {
 
   .features__card {
     width: 711px;
-    height: 406px;
+    min-height: 406px;
   }
 
   .features__card-image {
@@ -2133,7 +2133,7 @@ body {
 
   .features__card {
     width: 345px;
-    height: 373px;
+    min-height: 373px;
   }
 
   .features__card-image {
