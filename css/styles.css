@@ -1954,6 +1954,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  bottom: 3px;
   width: 30px;
   height: 30px;
   padding-top: 2px;
@@ -2160,6 +2162,7 @@ body {
   }
 
   .features__card-number {
+    bottom: 0;
     width: 25px;
     height: 25px;
     font-size: 8px;
