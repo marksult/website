@@ -140,5 +140,11 @@
     resizeTimer = setTimeout(function () { goTo(current, false); }, 150);
   });
 
+  /* Peek clone: card 1 shows on the right when on last card */
+  var peek = cards[0].cloneNode(true);
+  peek.setAttribute('aria-hidden', 'true');
+  peek.setAttribute('tabindex', '-1');
+  track.appendChild(peek);
+
   goTo(0, false);
 }());
