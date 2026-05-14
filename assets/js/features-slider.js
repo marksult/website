@@ -9,72 +9,36 @@
 
   if (!track || !btnPrev || !btnNext) return;
 
-  const origCards = Array.from(track.querySelectorAll('.features__card'));
-  const total = origCards.length;
+  const cards = track.querySelectorAll('.features__card');
+  const total = cards.length;
+  let current = 0;
 
-  /* -- Prepend clones (same order) -- */
-  var beforeFrag = document.createDocumentFragment();
-  origCards.forEach(function (card) {
-    var clone = card.cloneNode(true);
-    clone.setAttribute('aria-hidden', 'true');
-    beforeFrag.appendChild(clone);
-  });
-  track.insertBefore(beforeFrag, track.firstChild);
-
-  /* -- Append clones -- */
-  origCards.forEach(function (card) {
-    var clone = card.cloneNode(true);
-    clone.setAttribute('aria-hidden', 'true');
-    track.appendChild(clone);
-  });
-
-  /* current points to the first real card (offset = total clones before) */
-  var current = total;
-  var busy = false;
+  /* Append a clone of card 1 so it peeks on the right when on last card */
+  var peek = cards[0].cloneNode(true);
+  peek.setAttribute('aria-hidden', 'true');
+  track.appendChild(peek);
 
   function getStep() {
-    var cards = track.querySelectorAll('.features__card');
-    if (!cards.length) return 0;
-    var gap = parseFloat(getComputedStyle(track).gap) || 10;
-    return cards[0].offsetWidth + gap;
+    const card = cards[0];
+    if (!card) return 0;
+    const gap = parseFloat(getComputedStyle(track).gap) || 10;
+    return card.offsetWidth + gap;
   }
 
-  function moveTo(index, animate) {
-    track.style.transition = animate
-      ? 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)'
-      : 'none';
-    track.style.transform = 'translateX(' + (-getStep() * index) + 'px)';
+  function update(index) {
+    current = Math.max(0, Math.min(index, total - 1));
+
+    track.style.transform = 'translateX(' + (-getStep() * current) + 'px)';
+
+    counter.textContent = (current + 1) + '—5';
+    fill.style.width = ((current + 1) / total * 100) + '%';
+
+    btnPrev.disabled = current === 0;
+    btnNext.disabled = current === total - 1;
   }
 
-  function updateUI() {
-    var idx = ((current - total) % total + total) % total; /* 0..total-1 */
-    counter.textContent = (idx + 1) + '—5';
-    fill.style.width = ((idx + 1) / total * 100) + '%';
-  }
-
-  function go(newIndex) {
-    if (busy) return;
-    busy = true;
-    current = newIndex;
-    moveTo(current, true);
-    updateUI();
-  }
-
-  track.addEventListener('transitionend', function (e) {
-    if (e.propertyName !== 'transform') return;
-    busy = false;
-    /* silently jump back into the real zone */
-    if (current < total) {
-      current += total;
-      moveTo(current, false);
-    } else if (current >= total * 2) {
-      current -= total;
-      moveTo(current, false);
-    }
-  });
-
-  btnPrev.addEventListener('click', function () { go(current - 1); });
-  btnNext.addEventListener('click', function () { go(current + 1); });
+  btnPrev.addEventListener('click', function () { update(current - 1); });
+  btnNext.addEventListener('click', function () { update(current + 1); });
 
   /* Touch swipe */
   var touchStartX = 0;
@@ -83,7 +47,7 @@
   }, { passive: true });
   track.addEventListener('touchend', function (e) {
     var dx = e.changedTouches[0].clientX - touchStartX;
-    if (Math.abs(dx) > 40) go(dx < 0 ? current + 1 : current - 1);
+    if (Math.abs(dx) > 40) update(dx < 0 ? current + 1 : current - 1);
   }, { passive: true });
 
   /* Keyboard */
@@ -92,18 +56,16 @@
     if (!section) return;
     var rect = section.getBoundingClientRect();
     if (rect.top > window.innerHeight || rect.bottom < 0) return;
-    if (e.key === 'ArrowRight') go(current + 1);
-    if (e.key === 'ArrowLeft')  go(current - 1);
+    if (e.key === 'ArrowRight') update(current + 1);
+    if (e.key === 'ArrowLeft')  update(current - 1);
   });
 
   /* Resize */
   var resizeTimer;
   window.addEventListener('resize', function () {
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(function () { moveTo(current, false); }, 150);
+    resizeTimer = setTimeout(function () { update(current); }, 150);
   });
 
-  /* Init */
-  moveTo(current, false);
-  updateUI();
+  update(0);
 })();
