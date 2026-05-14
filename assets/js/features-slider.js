@@ -14,47 +14,32 @@
   var total   = cards.length;
   var current = 0;
 
-  /* ─── helpers ─────────────────────────────────────────── */
-
-  function cardWidth() {
-    return cards[0].getBoundingClientRect().width;
-  }
-
-  function getGap() {
-    return parseFloat(getComputedStyle(track).gap) || 10;
-  }
-
   function getStep() {
-    return cardWidth() + getGap();
-  }
-
-  function setX(x, animate) {
-    track.style.transition = animate
-      ? 'transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
-      : 'none';
-    track.style.transform  = 'translate3d(' + x + 'px, 0, 0)';
+    var gap = parseFloat(getComputedStyle(track).gap) || 10;
+    return cards[0].getBoundingClientRect().width + gap;
   }
 
   function updateUI() {
-    counter.textContent  = (current + 1) + '—5';
-    fill.style.width     = ((current + 1) / total * 100) + '%';
-    btnPrev.disabled     = current === 0;
-    btnNext.disabled     = current === total - 1;
+    counter.textContent = (current + 1) + '—5';
+    fill.style.width    = ((current + 1) / total * 100) + '%';
+    btnPrev.disabled    = current === 0;
+    btnNext.disabled    = current === total - 1;
   }
 
   function goTo(index, animate) {
     current = Math.max(0, Math.min(index, total - 1));
-    setX(-getStep() * current, animate);
+    track.style.transition = animate
+      ? 'transform 0.42s cubic-bezier(0.22, 1, 0.36, 1)'
+      : 'none';
+    track.style.transform = 'translate3d(' + (-getStep() * current) + 'px,0,0)';
     updateUI();
   }
 
-  /* ─── buttons ──────────────────────────────────────────── */
-
+  /* ── buttons ── */
   btnPrev.addEventListener('click', function () { goTo(current - 1, true); });
   btnNext.addEventListener('click', function () { goTo(current + 1, true); });
 
-  /* ─── keyboard ─────────────────────────────────────────── */
-
+  /* ── keyboard ── */
   document.addEventListener('keydown', function (e) {
     var s = document.querySelector('.features');
     if (!s) return;
@@ -64,92 +49,96 @@
     if (e.key === 'ArrowLeft')  goTo(current - 1, true);
   });
 
-  /* ─── touch (registered on slider, not track) ──────────── */
-  /*                                                           */
-  /*  CSS touch-action:pan-y on .features__slider lets the    */
-  /*  browser handle vertical scroll natively, so we never    */
-  /*  need e.preventDefault() — all handlers stay passive:true */
-  /*  and work identically on Safari & Chrome.                */
-
-  var touchStartX = 0;
-  var touchStartY = 0;
-  var touchStartT = 0;
-  var touchBase   = 0;
-  var touchActive = false;
-  var rafId       = null;
-  var pendingX    = 0;
+  /* ── touch ── */
+  var startX    = 0;
+  var startY    = 0;
+  var startT    = 0;
+  var base      = 0;
+  var dir       = null;   /* null | 'h' | 'v' */
+  var active    = false;
+  var rafId     = null;
+  var pendingX  = 0;
 
   function applyRaf() {
     rafId = null;
-    track.style.transform = 'translate3d(' + pendingX + 'px, 0, 0)';
+    track.style.transform = 'translate3d(' + pendingX + 'px,0,0)';
   }
 
+  /* passive:true — не блокує браузерний скрол до визначення напрямку */
   slider.addEventListener('touchstart', function (e) {
     if (e.touches.length !== 1) return;
     if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
-
-    touchStartX = e.touches[0].clientX;
-    touchStartY = e.touches[0].clientY;
-    touchStartT = Date.now();
-    touchBase   = -getStep() * current;
-    touchActive = true;
-
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+    startT = Date.now();
+    base   = -getStep() * current;
+    dir    = null;
+    active = true;
     track.style.transition = 'none';
   }, { passive: true });
 
+  /* passive:false — потрібен щоб викликати preventDefault для горизонталі */
   slider.addEventListener('touchmove', function (e) {
-    if (!touchActive || e.touches.length !== 1) return;
+    if (!active || e.touches.length !== 1) return;
 
-    var dx  = e.touches[0].clientX - touchStartX;
-    var dy  = e.touches[0].clientY - touchStartY;
+    var dx  = e.touches[0].clientX - startX;
+    var dy  = e.touches[0].clientY - startY;
+    var adx = Math.abs(dx);
+    var ady = Math.abs(dy);
 
-    /* Ignore clearly vertical scrolls */
-    if (Math.abs(dy) > Math.abs(dx) * 1.5) return;
-
-    /* Resistance at first/last card */
-    var offset = dx;
-    if ((current === 0 && dx > 0) || (current === total - 1 && dx < 0)) {
-      offset = dx * 0.2;
+    /* Визначаємо напрямок один раз після 4px */
+    if (dir === null) {
+      if (adx < 4 && ady < 4) return;
+      dir = adx >= ady ? 'h' : 'v';
     }
 
-    pendingX = touchBase + offset;
+    if (dir === 'v') return; /* вертикальний скрол — не втручаємось */
+
+    /* Горизонтальний свайп — зупиняємо скрол сторінки */
+    e.preventDefault();
+
+    var offset = dx;
+    if ((current === 0 && dx > 0) || (current === total - 1 && dx < 0)) {
+      offset = dx * 0.18; /* пружина на краях */
+    }
+
+    pendingX = base + offset;
     if (!rafId) rafId = requestAnimationFrame(applyRaf);
-  }, { passive: true });
+  }, { passive: false });
 
   slider.addEventListener('touchend', function (e) {
-    if (!touchActive) return;
-    touchActive = false;
+    if (!active) return;
+    active = false;
     if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
 
-    var dx  = e.changedTouches[0].clientX - touchStartX;
-    var dt  = Math.max(Date.now() - touchStartT, 1);
-    var vel = Math.abs(dx) / dt;                    /* px / ms */
-    var thr = Math.min(getStep() * 0.25, 80);       /* max 80px */
+    /* Не реагуємо якщо свайп був вертикальний */
+    if (dir === 'v') return;
+
+    var dx  = e.changedTouches[0].clientX - startX;
+    var dt  = Math.max(Date.now() - startT, 1);
+    var vel = Math.abs(dx) / dt;
+    var thr = Math.min(getStep() * 0.22, 70);
 
     var next = current;
-    if      (dx < -thr || (vel > 0.3 && dx < -8))  next = current + 1;
-    else if (dx >  thr || (vel > 0.3 && dx >  8))  next = current - 1;
+    if      (dx < -thr || (vel > 0.3 && dx < -6)) next = current + 1;
+    else if (dx >  thr || (vel > 0.3 && dx >  6)) next = current - 1;
 
     goTo(next, true);
   }, { passive: true });
 
   slider.addEventListener('touchcancel', function () {
-    if (!touchActive) return;
-    touchActive = false;
+    if (!active) return;
+    active = false;
     if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
     goTo(current, true);
   }, { passive: true });
 
-  /* ─── resize ───────────────────────────────────────────── */
-
+  /* ── resize ── */
   var resizeTimer;
   window.addEventListener('resize', function () {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function () { goTo(current, false); }, 150);
   });
 
-  /* ─── init ─────────────────────────────────────────────── */
-
   goTo(0, false);
-
 }());
