@@ -1905,7 +1905,7 @@ body {
 .features__card-text {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 20px;
   min-width: 0;
 }
 
@@ -2078,7 +2078,7 @@ body {
   }
 
   .features__card-text {
-    gap: 25px;
+    gap: 20px;
   }
 
   .features__card-title {
