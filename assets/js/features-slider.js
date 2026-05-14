@@ -29,7 +29,7 @@
   function goTo(index, animate) {
     current = Math.max(0, Math.min(index, total - 1));
     track.style.transition = animate
-      ? 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)'
+      ? 'transform 0.6s cubic-bezier(0.45, 0, 0.15, 1)'
       : 'none';
     track.style.transform = 'translate3d(' + (-getStep() * current) + 'px,0,0)';
     updateUI();
