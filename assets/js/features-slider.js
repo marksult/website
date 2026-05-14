@@ -26,11 +26,15 @@
     btnNext.disabled    = current === total - 1;
   }
 
-  function goTo(index, animate) {
+  function goTo(index, animate, isTouch) {
     current = Math.max(0, Math.min(index, total - 1));
-    track.style.transition = animate
-      ? 'transform 0.6s cubic-bezier(0.45, 0, 0.15, 1)'
-      : 'none';
+    if (!animate) {
+      track.style.transition = 'none';
+    } else if (isTouch) {
+      track.style.transition = 'transform 0.18s ease-out';
+    } else {
+      track.style.transition = 'transform 0.6s cubic-bezier(0.45, 0, 0.15, 1)';
+    }
     track.style.transform = 'translate3d(' + (-getStep() * current) + 'px,0,0)';
     updateUI();
   }
@@ -112,13 +116,13 @@
     if      (dx < -thr || (vel > 0.3 && dx < -6)) next = current + 1;
     else if (dx >  thr || (vel > 0.3 && dx >  6)) next = current - 1;
 
-    goTo(next, true);
+    goTo(next, true, true);
   }, { passive: true });
 
   slider.addEventListener('touchcancel', function () {
     if (!active) return;
     active = false;
-    goTo(current, true);
+    goTo(current, true, true);
   }, { passive: true });
 
   /* ── resize ── */
