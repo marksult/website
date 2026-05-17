@@ -2411,8 +2411,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  bottom: 5px;
   width: 30px;
   height: 30px;
   padding-top: 2px;
@@ -2603,7 +2601,6 @@ body {
   }
 
   .dfy__badge {
-    bottom: 5px;
     width: 25px;
     height: 25px;
     font-size: 8px;
