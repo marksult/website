@@ -138,6 +138,24 @@ body {
   display: block;
 }
 
+.desktop-only-br {
+  display: block;
+}
+
+.tablet-mobile-br {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .desktop-only-br { display: none; }
+  .tablet-mobile-br { display: block; }
+}
+
+@media (max-width: 767px) {
+  .desktop-only-br { display: none; }
+  .tablet-mobile-br { display: block; }
+}
+
 @media (max-width: 767px) {
   .desktop-tablet-br {
     display: none;
