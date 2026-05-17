@@ -2445,11 +2445,11 @@ body {
   right: 25px;
 }
 
-/* Shift badge text 2px down in DFY cards */
+/* Shift badge text 1px down in DFY cards */
 .dfy__card .features__card-number span,
 .dfy__card--wide .features__card-number span {
   display: block;
-  transform: translateY(2px);
+  transform: translateY(1px);
 }
 
 /* ── Card 05 — wide / horizontal ────────────────────────────── */
