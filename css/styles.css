@@ -2385,6 +2385,7 @@ body {
 }
 
 .dfy__tag-text {
+  display: block;
   margin: 0;
   color: #000000;
   font-family: 'Helvetica Neue LT Pro', sans-serif;
