@@ -2580,17 +2580,17 @@ body {
   }
 
   .dfy__card {
-    gap: 25px;
+    gap: 20px;
     padding: 25px;
   }
 
   .dfy__card-image {
-    height: 170px;
+    height: 200px;
     border-radius: 10px;
   }
 
   .dfy__card-content {
-    gap: 20px;
+    gap: 15px;
   }
 
   .dfy__quote-marks--lg {
@@ -2613,6 +2613,10 @@ body {
     text-box-edge: cap alphabetic;
   }
 
+  .dfy__tag {
+    padding: 14.5px 15px;
+  }
+
   .dfy__tag-text {
     font-size: 15px;
     line-height: 1;
@@ -2626,6 +2630,11 @@ body {
     font-size: 8px;
     text-box-trim: both;
     text-box-edge: cap alphabetic;
+  }
+
+  .dfy__card .features__card-number span,
+  .dfy__card--wide .features__card-number span {
+    transform: translateY(0);
   }
 
   /* Card 05 mobile — vertical like cards 01–04 */
