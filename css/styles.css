@@ -2614,7 +2614,8 @@ body {
   }
 
   .dfy__tag {
-    padding: 14.5px 15px;
+    padding: 12px 15px 7px 15px;
+    align-items: center;
   }
 
   .dfy__tag-text {
