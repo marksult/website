@@ -2415,6 +2415,13 @@ body {
   cursor: default;
 }
 
+/* Shift badge text 2px down in DFY cards */
+.dfy__card .features__card-number span,
+.dfy__card--wide .features__card-number span {
+  display: block;
+  transform: translateY(2px);
+}
+
 /* ── Card 05 — wide / horizontal ────────────────────────────── */
 
 .dfy__card--wide {
