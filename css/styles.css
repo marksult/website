@@ -2447,7 +2447,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 25px;
+  gap: 15px;
   flex: 1;
   order: 1;
 }
@@ -2464,7 +2464,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 50px;
+  gap: 41px;
   width: 100%;
 }
 
