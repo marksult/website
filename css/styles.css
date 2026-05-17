@@ -2485,6 +2485,7 @@ body {
 
   .dfy__card {
     gap: 35px;
+    padding: 25px;
   }
 
   .dfy__card-content {
@@ -2553,6 +2554,7 @@ body {
 
   .dfy__card {
     gap: 25px;
+    padding: 25px;
   }
 
   .dfy__card-image {
