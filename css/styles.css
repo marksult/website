@@ -2362,6 +2362,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  gap: 10px;
   width: 100%;
 }
 
@@ -2375,6 +2376,7 @@ body {
   border: 1px solid #E7E7E7;
   background: #FFF;
   cursor: pointer;
+  max-width: calc(100% - 40px); /* leaves room for 30px badge + 10px gap */
   -webkit-appearance: none;
   appearance: none;
   text-align: left;
