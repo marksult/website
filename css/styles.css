@@ -2390,11 +2390,9 @@ body {
   font-family: 'Helvetica Neue LT Pro', sans-serif;
   font-size: 18px;
   font-weight: 500;
-  line-height: 1.15;
+  line-height: 1;
   letter-spacing: -0.02em;
   -webkit-font-smoothing: antialiased;
-  text-box-trim: both;
-  text-box-edge: cap alphabetic;
 }
 
 /* ── Number badge ────────────────────────────────────────────── */
@@ -2510,8 +2508,6 @@ body {
 
   .dfy__tag-text {
     font-size: 16px;
-    text-box-trim: both;
-    text-box-edge: cap alphabetic;
   }
 
   .dfy__badge {
@@ -2586,8 +2582,6 @@ body {
 
   .dfy__tag-text {
     font-size: 15px;
-    text-box-trim: both;
-    text-box-edge: cap alphabetic;
   }
 
   .dfy__badge {
