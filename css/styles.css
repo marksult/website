@@ -2268,6 +2268,16 @@ body {
   overflow: hidden;
 }
 
+/* ── Card top (image + content) ─────────────────────────────── */
+
+.dfy__card-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+  width: 100%;
+}
+
 /* ── Card image ──────────────────────────────────────────────── */
 
 .dfy__card-image {
@@ -2280,12 +2290,23 @@ body {
   flex-shrink: 0;
 }
 
-/* ── Card text area ──────────────────────────────────────────── */
+/* ── Card content (title-group + body) ──────────────────────── */
 
-.dfy__card-text {
+.dfy__card-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 25px;
+  width: 331px;
+}
+
+/* ── Title group (SVG + title) ──────────────────────────────── */
+
+.dfy__card-title-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
   width: 100%;
 }
 
@@ -2303,7 +2324,7 @@ body {
 /* ── Card title ──────────────────────────────────────────────── */
 
 .dfy__card-title {
-  margin: 15px 0 0 0;
+  margin: 0;
   color: #000000;
   font-family: 'Plantin MT Pro', serif;
   font-size: 26px;
@@ -2317,14 +2338,13 @@ body {
 /* ── Card body ───────────────────────────────────────────────── */
 
 .dfy__card-body {
-  margin: 25px 0 0 0;
+  margin: 0;
   color: #000000;
   font-family: 'Helvetica Neue LT Pro', sans-serif;
   font-size: 18px;
   font-weight: 300;
   line-height: 1.2;
   letter-spacing: -0.02em;
-  width: 100%;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -2359,9 +2379,15 @@ body {
   font-weight: 500;
   line-height: 1.15;
   letter-spacing: -0.02em;
+  width: 273px;
   -webkit-font-smoothing: antialiased;
   text-box-trim: both;
   text-box-edge: cap alphabetic;
+}
+
+/* Wide card: content fills available space */
+.dfy__card--wide .dfy__card-content {
+  width: 100%;
 }
 
 /* ── Number badge — identical to .features__card-number ─────── */
@@ -2461,6 +2487,15 @@ body {
     gap: 35px;
   }
 
+  .dfy__card-content {
+    width: 302px;
+    gap: 25px;
+  }
+
+  .dfy__card-title-group {
+    width: 279px;
+  }
+
   .dfy__card-title {
     font-size: 22px;
   }
@@ -2471,6 +2506,7 @@ body {
 
   .dfy__tag-text {
     font-size: 16px;
+    width: 146px;
     text-box-trim: both;
     text-box-edge: cap alphabetic;
   }
@@ -2482,6 +2518,10 @@ body {
 
   .dfy__card--wide {
     margin-top: 10px;
+  }
+
+  .dfy__card--wide .dfy__card-content {
+    width: 100%;
   }
 
   .dfy__card-wide-image {
@@ -2520,6 +2560,15 @@ body {
     border-radius: 10px;
   }
 
+  .dfy__card-content {
+    width: 273px;
+    gap: 20px;
+  }
+
+  .dfy__card-title-group {
+    width: 228px;
+  }
+
   .dfy__quote-marks--lg {
     display: none;
   }
@@ -2534,11 +2583,11 @@ body {
 
   .dfy__card-body {
     font-size: 15px;
-    margin-top: 20px;
   }
 
   .dfy__tag-text {
     font-size: 15px;
+    width: 137px;
     text-box-trim: both;
     text-box-edge: cap alphabetic;
   }
@@ -2585,5 +2634,9 @@ body {
   .dfy__card-wide-content {
     gap: 25px;
     width: 100%;
+  }
+
+  .dfy__card--wide .dfy__card-content {
+    width: 273px;
   }
 }
