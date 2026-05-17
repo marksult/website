@@ -2376,7 +2376,9 @@ body {
   border-radius: 10px;
   border: 1px solid #E7E7E7;
   background: #FFF;
-  cursor: pointer;
+  cursor: default;
+  pointer-events: none;
+  user-select: none;
   -webkit-appearance: none;
   appearance: none;
   text-align: left;
@@ -2434,9 +2436,9 @@ body {
 
 .dfy__card-wide-image {
   width: 395px;
-  height: 342px;
   flex-shrink: 0;
   order: 2;
+  align-self: stretch;
   border-radius: 11.2px;
   border: 0.75px solid #E7E7E7;
   background: #FAFAFA;
