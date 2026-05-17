@@ -2269,6 +2269,7 @@ body {
   border: 0.75px solid #E7E7E7;
   background: #FFF;
   overflow: hidden;
+  position: relative;
 }
 
 /* ── Card top: image → 25px → content ───────────────────────── */
@@ -2413,6 +2414,13 @@ body {
   -webkit-appearance: none;
   appearance: none;
   cursor: default;
+}
+
+/* Badge fixed at bottom-right of card (01–04 only) */
+.dfy__grid .dfy__card .features__card-number {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
 }
 
 /* Shift badge text 2px down in DFY cards */
