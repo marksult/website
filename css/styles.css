@@ -2416,6 +2416,10 @@ body {
   cursor: default;
 }
 
+.dfy__badge--top {
+  bottom: 0;
+}
+
 /* Badge fixed at bottom-right of card (01–04 only) */
 .dfy__grid .dfy__card .features__card-number {
   position: absolute;
