@@ -2400,6 +2400,13 @@ body {
 
 /* ── Number badge ────────────────────────────────────────────── */
 
+.dfy__badge span,
+.features__card-number span {
+  display: block;
+  text-box-trim: both;
+  text-box-edge: cap alphabetic;
+}
+
 .dfy__badge {
   display: flex;
   justify-content: center;
