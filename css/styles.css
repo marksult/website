@@ -2244,6 +2244,8 @@ body {
   letter-spacing: -0.02em;
   text-align: center;
   -webkit-font-smoothing: antialiased;
+  text-box-trim: both;
+  text-box-edge: cap alphabetic;
 }
 
 /* ── Grid (cards 01–04) ──────────────────────────────────────── */
@@ -2255,12 +2257,13 @@ body {
 }
 
 /* ── Card ────────────────────────────────────────────────────── */
+/* Desktop: 440×hug, padding 25px, flex col                      */
 
 .dfy__card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 50px;
+  gap: 25px;
   padding: 25px;
   border-radius: 15px;
   border: 0.75px solid #E7E7E7;
@@ -2268,7 +2271,7 @@ body {
   overflow: hidden;
 }
 
-/* ── Card top (image + content) ─────────────────────────────── */
+/* ── Card top: image → 25px → content ───────────────────────── */
 
 .dfy__card-top {
   display: flex;
@@ -2278,7 +2281,7 @@ body {
   width: 100%;
 }
 
-/* ── Card image ──────────────────────────────────────────────── */
+/* ── Image placeholder ───────────────────────────────────────── */
 
 .dfy__card-image {
   width: 100%;
@@ -2290,17 +2293,17 @@ body {
   flex-shrink: 0;
 }
 
-/* ── Card content (title-group + body) ──────────────────────── */
+/* ── Content: title-group → 25px → body ─────────────────────── */
 
 .dfy__card-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 25px;
-  width: 331px;
+  width: 100%;
 }
 
-/* ── Title group (SVG + title) ──────────────────────────────── */
+/* ── Title group: quote SVG → 15px → title ──────────────────── */
 
 .dfy__card-title-group {
   display: flex;
@@ -2333,6 +2336,8 @@ body {
   letter-spacing: -0.02em;
   width: 100%;
   -webkit-font-smoothing: antialiased;
+  text-box-trim: both;
+  text-box-edge: cap alphabetic;
 }
 
 /* ── Card body ───────────────────────────────────────────────── */
@@ -2342,13 +2347,16 @@ body {
   color: #000000;
   font-family: 'Helvetica Neue LT Pro', sans-serif;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.2;
   letter-spacing: -0.02em;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
+  text-box-trim: both;
+  text-box-edge: cap alphabetic;
 }
 
-/* ── Bottom row (tag + badge) ────────────────────────────────── */
+/* ── Bottom row: tag (left) + badge aligned to bottom ────────── */
 
 .dfy__card-bottom {
   display: flex;
@@ -2360,15 +2368,16 @@ body {
 /* ── Tag button ──────────────────────────────────────────────── */
 
 .dfy__tag {
-  display: flex;
+  display: inline-flex;
+  align-items: flex-start;
   padding: 15px;
   border-radius: 10px;
   border: 1px solid #E7E7E7;
   background: #FFF;
   cursor: pointer;
-  width: fit-content;
   -webkit-appearance: none;
   appearance: none;
+  text-align: left;
 }
 
 .dfy__tag-text {
@@ -2379,25 +2388,17 @@ body {
   font-weight: 500;
   line-height: 1.15;
   letter-spacing: -0.02em;
-  width: 273px;
   -webkit-font-smoothing: antialiased;
   text-box-trim: both;
   text-box-edge: cap alphabetic;
 }
 
-/* Wide card: content fills available space */
-.dfy__card--wide .dfy__card-content {
-  width: 100%;
-}
-
-/* ── Number badge — identical to .features__card-number ─────── */
+/* ── Number badge ────────────────────────────────────────────── */
 
 .dfy__badge {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  bottom: 5px;
   width: 30px;
   height: 30px;
   padding-top: 2px;
@@ -2411,6 +2412,9 @@ body {
   line-height: 1;
   letter-spacing: -0.02em;
   flex-shrink: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: default;
   text-box-trim: both;
   text-box-edge: cap alphabetic;
 }
@@ -2488,26 +2492,20 @@ body {
     padding: 25px;
   }
 
-  .dfy__card-content {
-    width: 302px;
-    gap: 25px;
-  }
-
-  .dfy__card-title-group {
-    width: 279px;
-  }
-
   .dfy__card-title {
     font-size: 22px;
+    text-box-trim: both;
+    text-box-edge: cap alphabetic;
   }
 
   .dfy__card-body {
     font-size: 16px;
+    text-box-trim: both;
+    text-box-edge: cap alphabetic;
   }
 
   .dfy__tag-text {
     font-size: 16px;
-    width: 146px;
     text-box-trim: both;
     text-box-edge: cap alphabetic;
   }
@@ -2519,10 +2517,6 @@ body {
 
   .dfy__card--wide {
     margin-top: 10px;
-  }
-
-  .dfy__card--wide .dfy__card-content {
-    width: 100%;
   }
 
   .dfy__card-wide-image {
@@ -2563,12 +2557,7 @@ body {
   }
 
   .dfy__card-content {
-    width: 273px;
     gap: 20px;
-  }
-
-  .dfy__card-title-group {
-    width: 228px;
   }
 
   .dfy__quote-marks--lg {
@@ -2581,21 +2570,23 @@ body {
 
   .dfy__card-title {
     font-size: 18px;
+    text-box-trim: both;
+    text-box-edge: cap alphabetic;
   }
 
   .dfy__card-body {
     font-size: 15px;
+    text-box-trim: both;
+    text-box-edge: cap alphabetic;
   }
 
   .dfy__tag-text {
     font-size: 15px;
-    width: 137px;
     text-box-trim: both;
     text-box-edge: cap alphabetic;
   }
 
   .dfy__badge {
-    bottom: 5px;
     width: 25px;
     height: 25px;
     font-size: 8px;
