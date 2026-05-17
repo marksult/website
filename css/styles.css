@@ -2407,28 +2407,12 @@ body {
   text-box-edge: cap alphabetic;
 }
 
-.dfy__badge {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 30px;
-  height: 30px;
-  padding-top: 2px;
-  border-radius: 5px;
-  border: 1px solid #E7E7E7;
-  background: #FFFFFF;
-  color: #333333;
-  font-family: 'Helvetica Neue LT Pro', sans-serif;
-  font-size: 10px;
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: -0.02em;
-  flex-shrink: 0;
+/* .dfy__badge uses features__card-number styles directly via HTML class */
+.dfy__badge--top,
+.dfy__badge--bottom {
   -webkit-appearance: none;
   appearance: none;
   cursor: default;
-  text-box-trim: both;
-  text-box-edge: cap alphabetic;
 }
 
 /* ── Card 05 — wide / horizontal ────────────────────────────── */
