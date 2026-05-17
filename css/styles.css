@@ -2372,7 +2372,7 @@ body {
   display: inline-flex;
   align-items: flex-start;
   padding: 15px;
-  width: 302px;
+  width: fit-content;
   border-radius: 10px;
   border: 1px solid #E7E7E7;
   background: #FFF;
