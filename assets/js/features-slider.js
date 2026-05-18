@@ -21,7 +21,7 @@
 
   function updateUI() {
     counter.textContent = (current + 1) + '—5';
-    fill.style.width    = (current / total * 100) + '%';
+    fill.style.width    = (current / (total - 1) * 100) + '%';
     btnPrev.disabled    = current === 0;
     btnNext.disabled    = current === total - 1;
   }
