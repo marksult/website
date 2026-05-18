@@ -91,6 +91,9 @@
 /* Cases → DFY */
 .dfy             { margin-top: 40px; }
 
+/* DFY → Bonuses */
+.bonuses         { margin-top: 40px; }
+
 /* --- Tablet ---------------------------------------------------- */
 @media (min-width: 768px) and (max-width: 1023px) {
   .logos          { margin-top: 40px; }
@@ -103,6 +106,7 @@
   .cases-wrapper  { margin-top: 30px; }
   .cases          { margin-top: 15px; }
   .dfy            { margin-top: 30px; }
+  .bonuses        { margin-top: 30px; }
 }
 
 /* --- Mobile ---------------------------------------------------- */
@@ -117,6 +121,7 @@
   .cases-wrapper  { margin-top: 5px; }
   .cases          { margin-top: 15px; }
   .dfy            { margin-top: 5px; }
+  .bonuses        { margin-top: 5px; }
 }
 
 html {
@@ -2239,7 +2244,8 @@ body {
    DFY SECTION — 90 Days DFY Rollout
    ================================================================ */
 
-.dfy {
+.dfy,
+.bonuses {
   display: flex;
   justify-content: center;
   padding: 0 15px 120px;
