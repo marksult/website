@@ -2643,7 +2643,7 @@ body {
 
   .dfy__card .features__card-number span,
   .dfy__card--wide .features__card-number span {
-    transform: translateY(0);
+    transform: translateY(1px);
   }
 
   /* Card 05 mobile — identical to cards 01–04 */
