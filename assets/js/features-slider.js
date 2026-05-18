@@ -21,7 +21,7 @@
 
   function updateUI() {
     counter.textContent = (current + 1) + '—5';
-    fill.style.width    = ((current + 1) / total * 100) + '%';
+    fill.style.width    = (current / total * 100) + '%';
     btnPrev.disabled    = current === 0;
     btnNext.disabled    = current === total - 1;
   }
@@ -31,7 +31,7 @@
     if (!animate) {
       track.style.transition = 'none';
     } else if (isTouch) {
-      track.style.transition = 'none';
+      track.style.transition = 'transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
     } else {
       track.style.transition = 'transform 0.6s cubic-bezier(0.45, 0, 0.15, 1)';
     }
