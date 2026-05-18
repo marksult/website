@@ -2581,7 +2581,15 @@ body {
 
   .dfy__card {
     gap: 20px;
-    padding: 25px;
+    padding: 25px 25px 25px 25px;
+  }
+
+  .dfy__card-title-group {
+    gap: 10px;
+  }
+
+  .dfy__card-top {
+    gap: 20px;
   }
 
   .dfy__card-image {
