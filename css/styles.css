@@ -2390,7 +2390,7 @@ body {
 .dfy__tag {
   display: inline-flex;
   align-items: flex-start;
-  padding: 15px;
+  padding: 13px 15px 8px 15px;
   width: fit-content;
   border-radius: 10px;
   border: 1px solid #E7E7E7;
@@ -2518,6 +2518,10 @@ body {
   .dfy__grid {
     grid-template-columns: repeat(2, 364px);
     gap: 10px;
+  }
+
+  .dfy__tag {
+    padding: 13px 15px 8px 15px;
   }
 
   .dfy__card {
