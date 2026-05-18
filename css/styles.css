@@ -94,6 +94,9 @@
 /* DFY → Bonuses */
 .bonuses         { margin-top: 40px; }
 
+/* Bonuses → Stack */
+.stack           { margin-top: 40px; }
+
 /* --- Tablet ---------------------------------------------------- */
 @media (min-width: 768px) and (max-width: 1023px) {
   .logos          { margin-top: 40px; }
@@ -107,6 +110,7 @@
   .cases          { margin-top: 15px; }
   .dfy            { margin-top: 30px; }
   .bonuses        { margin-top: 30px; }
+  .stack          { margin-top: 30px; }
 }
 
 /* --- Mobile ---------------------------------------------------- */
@@ -122,6 +126,7 @@
   .cases          { margin-top: 15px; }
   .dfy            { margin-top: 5px; }
   .bonuses        { margin-top: 5px; }
+  .stack          { margin-top: 5px; }
 }
 
 html {
