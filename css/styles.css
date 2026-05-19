@@ -4296,6 +4296,17 @@ body {
   height: 480px;
 }
 
+@keyframes slideInFadeCard {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 .guarantees__card {
   position: absolute;
   top: 0;
@@ -4307,8 +4318,30 @@ body {
   border-radius: 15px;
   box-sizing: border-box;
   overflow: hidden;
-  will-change: transform;
+  will-change: transform, opacity;
   transform-origin: top center;
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+}
+
+.guarantees__card.animate {
+  animation: slideInFadeCard 0.6s ease-out forwards;
+}
+
+.guarantees__card:nth-child(1).animate {
+  animation-delay: 0s;
+}
+
+.guarantees__card:nth-child(2).animate {
+  animation-delay: 0.1s;
+}
+
+.guarantees__card:nth-child(3).animate {
+  animation-delay: 0.2s;
+}
+
+.guarantees__card:nth-child(4).animate {
+  animation-delay: 0.3s;
 }
 
 .guarantees__card-num {
