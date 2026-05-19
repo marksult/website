@@ -3520,6 +3520,16 @@ body {
 .new__item-title--04 { width: 194px; height: 42px; }
 .new__item-title--05 { width: 213px; height: 42px; }
 
+.new__item-title--b01 { width: 153px; height: 34px; }
+.new__item-title--b02 { width: 139px; height: 34px; }
+.new__item-title--b03 { width: 183px; height: 34px; }
+.new__item-title--b04 { width: 213px; height: 34px; }
+.new__item-title--b05 { width: 140px; height: 34px; }
+.new__item-title--b06 { width: 183px; height: 34px; }
+.new__item-title--b07 { width: 163px; height: 34px; }
+.new__item-title--b08 { width: 230px; height: 34px; }
+.new__item-title--b09 { width: 224px; height: 34px; }
+
 .new__label-tag {
   border-radius: 10px;
   border: 1px solid #E7E7E7;
