@@ -3514,6 +3514,9 @@ body {
   line-height: 1;
   letter-spacing: -0.02em;
   text-align: center;
+  text-decoration: line-through;
+  text-decoration-thickness: 3px;
+  text-underline-offset: -2px;
   -webkit-font-smoothing: antialiased;
 }
 
