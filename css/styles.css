@@ -3230,6 +3230,7 @@ body {
 }
 
 .new-container {
+  position: relative;
   width: 900px;
   height: 2334px;
   background: #FFFFFF;
@@ -3241,25 +3242,16 @@ body {
   box-sizing: border-box;
 }
 
-.new__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.new__header-left {
-  display: flex;
-  flex-direction: column;
-}
-
 .new__header-card {
+  position: absolute;
+  top: 35px;
+  right: 35px;
   width: 223px;
   height: 124px;
   background: #FFFFFF;
   border: 1px solid #E7E7E7;
   border-radius: 10px;
   padding: 15px;
-  flex-shrink: 0;
   box-sizing: border-box;
 }
 
