@@ -3205,6 +3205,47 @@ body {
   height: 2334px;
   background: #FFFFFF;
   border: 1px solid #E7E7E7;
+  border-radius: 15px;
   overflow: hidden;
   flex-shrink: 0;
+  padding: 35px;
+  box-sizing: border-box;
+}
+
+.new__label-tag {
+  display: inline-flex;
+  width: 188px;
+  height: 43px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid #E7E7E7;
+  background: #FFF;
+  cursor: default;
+  pointer-events: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.new__label-text {
+  margin: 0;
+  color: #000;
+  font-family: 'Helvetica Neue LT Pro', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.15em;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  -webkit-font-smoothing: antialiased;
+}
+
+.new__title {
+  margin: 0;
+  color: #000;
+  font-family: 'Plantin MT Pro', serif;
+  font-size: 43px;
+  font-weight: 300;
+  line-height: 1.05em;
+  letter-spacing: -0.02em;
+  -webkit-font-smoothing: antialiased;
 }
