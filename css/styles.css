@@ -258,7 +258,7 @@ body {
   .main__badge-cta-text {
     font-size: 15px;
     width: 211px;
-    height: 38px;
+    height: auto;
     text-align: center;
   }
   .hero-cta .main__badge--cta {
