@@ -3247,6 +3247,7 @@ body {
   top: 35px;
   right: 35px;
   width: 223px;
+  height: 124px;
   background: #FFFFFF;
   border: 1px solid #E7E7E7;
   border-radius: 10px;
@@ -3256,9 +3257,11 @@ body {
 
 .new__header-inner {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
   width: 99px;
+  height: 94px;
   background: #FAFAFA;
   border: 1px solid #E7E7E7;
   border-radius: 10px;
@@ -3267,31 +3270,35 @@ body {
 }
 
 .new__inner-group {
-  --tag-pt: 0px;
-  --tag-pr: 0px;
-  --tag-pb: 0px;
-  --tag-pl: 0px;
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  width: 69px;
 }
 
 .new__inner-num {
+  margin: 0;
+  width: 100%;
+  text-align: center;
   color: #000;
   font-family: 'Plantin MT Pro', serif;
   font-size: 60px;
   font-weight: 300;
-  line-height: 1;
+  line-height: 1.05em;
   letter-spacing: -0.02em;
   -webkit-font-smoothing: antialiased;
 }
 
 .new__inner-sub {
+  margin: 0;
+  width: 100%;
+  text-align: center;
   color: #000;
   font-family: 'Helvetica Neue LT Pro', sans-serif;
   font-size: 18px;
   font-weight: 400;
-  line-height: 1;
+  line-height: 1.15em;
   letter-spacing: -0.02em;
   -webkit-font-smoothing: antialiased;
 }
