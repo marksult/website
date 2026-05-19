@@ -3324,6 +3324,15 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.new__divider {
+  width: calc(100% + 70px);
+  height: 1px;
+  background: #E7E7E7;
+  margin-top: 30px;
+  margin-left: -35px;
+  margin-right: -35px;
+}
+
 .new__label-tag {
   border-radius: 10px;
   border: 1px solid #E7E7E7;
