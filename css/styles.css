@@ -3248,10 +3248,14 @@ body {
   right: 35px;
   width: 223px;
   height: 124px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   background: #FFF;
   border: 0.75px solid #E7E7E7;
   border-radius: 10px;
-  padding: 15px;
+  padding: 15px 25px 15px 15px;
   box-sizing: border-box;
 }
 
