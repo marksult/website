@@ -521,6 +521,9 @@ body {
   .main__title {
     margin-bottom: 14px;
   }
+  .hero-cta .main__title {
+    margin-bottom: 25px;
+  }
 }
 
 @media (min-width: 768px) {
