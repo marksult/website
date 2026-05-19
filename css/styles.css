@@ -3479,6 +3479,11 @@ body {
   height: 34px;
 }
 
+.new__item-title--02 { width: 240px; height: 42px; }
+.new__item-title--03 { width: 187px; height: 42px; }
+.new__item-title--04 { width: 194px; height: 42px; }
+.new__item-title--05 { width: 213px; height: 42px; }
+
 .new__label-tag {
   border-radius: 10px;
   border: 1px solid #E7E7E7;
