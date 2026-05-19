@@ -3344,8 +3344,16 @@ body {
   border-radius: 10px;
   box-sizing: border-box;
   overflow: hidden;
-  transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.15s ease;
   cursor: pointer;
+}
+
+.new__row-card:hover {
+  background: #FAFAFA;
+}
+
+.new__row-card.is-open:hover {
+  background: #FFFFFF;
 }
 
 .new__row-card.is-open {
@@ -3395,6 +3403,12 @@ body {
   appearance: none;
   box-sizing: border-box;
   flex-shrink: 0;
+  transition: background 0.15s ease;
+}
+
+.new__row-btn:hover,
+.new__row-card:hover .new__row-btn {
+  background: #FAFAFA;
 }
 
 .new__row-btn img {
