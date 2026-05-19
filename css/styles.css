@@ -257,13 +257,23 @@ body {
   }
   .main__badge-cta-text {
     font-size: 15px;
-    width: 220px;
+    width: 211px;
     height: 38px;
-    text-align: left;
+    text-align: center;
   }
   .hero-cta .main__badge--cta {
-    margin-top: 20px;
+    width: auto;
+    height: auto;
+    max-width: none;
     padding: 15px;
+    margin-top: 20px;
+    border-radius: 15px;
+  }
+  .hero-cta .main__badge--cta::before {
+    border-radius: 15px;
+  }
+  .hero-cta .main__badge--cta::after {
+    border-radius: 15px;
   }
   .hero-cta .main__title {
     width: 299px;
