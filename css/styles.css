@@ -272,8 +272,8 @@ body {
     height: 11px;
   }
   .hero-cta .main {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
   .hero-cta .main__badge--cta {
     margin-top: 10px;
@@ -282,6 +282,9 @@ body {
     width: 285px;
     height: 66px;
     max-width: 285px;
+  }
+  .hero-cta .main__inner {
+    gap: 20px;
   }
 }
 
