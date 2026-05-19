@@ -210,6 +210,26 @@ body {
   display: block;
 }
 
+.hero-cta {
+  display: block;
+}
+
+.hero-cta .main--standalone {
+  height: 100vh;
+}
+
+@media (max-width: 767px) {
+  .hero-cta .main--standalone {
+    height: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-cta .main--standalone {
+    height: auto;
+  }
+}
+
 
 /* --- HEADER ------------------------------------------------------------ */
 
