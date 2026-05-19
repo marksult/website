@@ -214,6 +214,11 @@ body {
   display: block;
 }
 
+.hero-cta .main__social-text {
+  width: 212px;
+  height: 13px;
+}
+
 .hero-cta .main--standalone {
   height: 100vh;
 }
