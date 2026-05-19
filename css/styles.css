@@ -4273,6 +4273,7 @@ body {
 
 .guarantees__right {
   flex-shrink: 0;
+  margin-left: 107px;
 }
 
 .guarantees__card {
