@@ -3191,3 +3191,20 @@ body {
 
 .stack__cta-text--wide   { width: 335px; }
 .stack__cta-text--narrow { width: 101px; }
+
+
+/* ===================== NEW SECTION ========================= */
+.new-section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.new-container {
+  width: 900px;
+  height: 2334px;
+  background: #FFFFFF;
+  border: 1px solid #E7E7E7;
+  overflow: hidden;
+  flex-shrink: 0;
+}
