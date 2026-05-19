@@ -3544,10 +3544,11 @@ body {
   line-height: 1.2em;
   letter-spacing: -0.02em;
   -webkit-font-smoothing: antialiased;
+  white-space: nowrap;
 }
 
-.new__cta-text--wide   { width: 335px; }
-.new__cta-text--narrow { width: 101px; }
+.new__cta-text--wide   { width: 335px; height: 35px; white-space: normal; }
+.new__cta-text--narrow { width: 101px; height: 35px; white-space: normal; }
 
 .new__pill-text-wrap {
   width: 457px;
