@@ -218,6 +218,59 @@ body {
   object-fit: cover;
 }
 
+.hero-cta .main__content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .hero-cta .main__content {
+    position: absolute;
+    inset: 0;
+    padding: 50px 20px;
+  }
+  .hero-cta .main--standalone {
+    height: 100svh;
+  }
+  .hero-cta .main__container {
+    height: 100%;
+    flex: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-cta .main__content {
+    position: absolute;
+    inset: 0;
+    padding: 60px 40px;
+  }
+  .hero-cta .main--standalone {
+    height: 100svh;
+  }
+  .hero-cta .main__container {
+    height: 100%;
+    flex: 1;
+  }
+}
+
+.hero-cta .main__inner {
+  align-items: center;
+  width: 100%;
+}
+
+.hero-cta .main__title-group {
+  align-items: center;
+}
+
+.hero-cta .main__cta-group {
+  align-items: center;
+}
+
 .hero-cta .main__social-text {
   width: 212px;
   height: 13px;
