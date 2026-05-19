@@ -3441,6 +3441,20 @@ body {
   transform: rotate(45deg);
 }
 
+.new__bottom-card {
+  position: absolute;
+  left: 35px;
+  top: 428px;
+  width: 830px;
+  height: 386px;
+  background: #FFFFFF;
+  border: 0.75px solid #E7E7E7;
+  border-radius: 15px;
+  box-sizing: border-box;
+  transition: top 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
 .new__row-content {
   position: absolute;
   left: 25px;

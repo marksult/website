@@ -1064,6 +1064,7 @@
             </div>
           </div>
       </div>
+      <div class="new__bottom-card" id="new-bottom-card"></div>
       <div class="new__header-card">
         <div class="new__header-inner">
           <div class="new__inner-group">
@@ -1085,19 +1086,40 @@
   <script>
     var card1 = document.getElementById('row-card-1');
     var card2 = document.getElementById('row-card-2');
-    var CARD1_EXPANDED = 520;
+    var bottomCard = document.getElementById('new-bottom-card');
+
     var CARD1_COLLAPSED = 84;
+    var CARD1_EXPANDED  = 520;
+    var CARD2_COLLAPSED = 84;
+    var CARD2_EXPANDED  = 794;
+    var GAP = 10;
+    var BOTTOM_GAP = 30;
+    var CARD1_TOP = 220;
+    var CARD2_BASE_TOP = CARD1_TOP + CARD1_COLLAPSED + GAP;
+
+    function updatePositions() {
+      var c1Open = card1.classList.contains('is-open');
+      var c2Open = card2.classList.contains('is-open');
+      var c1h = c1Open ? CARD1_EXPANDED : CARD1_COLLAPSED;
+      var c2h = c2Open ? CARD2_EXPANDED : CARD2_COLLAPSED;
+
+      card2.style.transform = c1Open
+        ? 'translateY(' + (CARD1_EXPANDED - CARD1_COLLAPSED) + 'px)'
+        : 'translateY(0)';
+
+      bottomCard.style.top = (CARD2_BASE_TOP + (c1Open ? CARD1_EXPANDED - CARD1_COLLAPSED : 0) + c2h + BOTTOM_GAP) + 'px';
+    }
+
+    updatePositions();
 
     card1.addEventListener('click', function() {
       card1.classList.toggle('is-open');
-      var isOpen = card1.classList.contains('is-open');
-      card2.style.transform = isOpen
-        ? 'translateY(' + (CARD1_EXPANDED - CARD1_COLLAPSED) + 'px)'
-        : 'translateY(0)';
+      updatePositions();
     });
 
     card2.addEventListener('click', function() {
       card2.classList.toggle('is-open');
+      updatePositions();
     });
   </script>
 </body>
