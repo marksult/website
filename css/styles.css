@@ -4266,7 +4266,22 @@ body {
 .guarantees__container {
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
   padding-left: 270px;
+  padding-right: 270px;
+}
+
+.guarantees__right {
+  flex-shrink: 0;
+}
+
+.guarantees__card {
+  width: 450px;
+  height: 480px;
+  background: #FFFFFF;
+  border: 1px solid #E7E7E7;
+  border-radius: 15px;
+  box-sizing: border-box;
 }
 
 .guarantees__left {
