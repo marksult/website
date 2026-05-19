@@ -3879,7 +3879,7 @@ body {
   /* ── Container → flex column ── */
   .new-container {
     width: 100%;
-    padding: 20px;
+    padding: 25px;
     height: auto !important;
     overflow: hidden;
     display: flex;
@@ -3888,41 +3888,62 @@ body {
     border-radius: 12px;
   }
 
-  /* ── Header card (top-right corner, stays absolute) ── */
+  /* ── Flex order: reposition header card between title and divider ── */
+  .new__label-tag   { order: 1; }
+  .new__title       { order: 2; }
+  .new__header-card { order: 3; }
+  .new__divider     { order: 4; }
+  #row-card-1       { order: 5; }
+  #row-card-2       { order: 6; }
+  .new__bottom-card { order: 7; }
+  .new__fafafa-card { order: 8; }
+  .new__pills-wrap  { order: 9; }
+  .new__cta-wrap    { order: 10; }
+
+  /* ── Header card → in flow, full-width horizontal bar ── */
   .new__header-card {
-    top: 20px;
-    right: 20px;
-    width: 108px;
-    height: 58px;
-    padding: 10px 12px;
-    border-radius: 8px;
+    position: static !important;
+    top: auto !important;
+    right: auto !important;
+    width: 100%;
+    height: auto;
+    padding: 15px 20px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
   }
   .new__header-inner {
-    width: 44px;
-    height: 42px;
-    padding: 7px;
-    gap: 4px;
-    border-radius: 7px;
+    background: transparent;
+    border: none;
+    width: auto;
+    height: auto;
+    padding: 0;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .new__inner-group {
-    width: 30px;
-    height: 28px;
-    gap: 3px;
+    width: auto;
+    height: auto;
     transform: none;
+    align-items: center;
+    gap: 5px;
   }
-  .new__inner-num-wrap { width: 30px; height: 18px; }
-  .new__inner-num      { font-size: 26px; }
-  .new__inner-sub-wrap { width: 30px; height: 10px; }
-  .new__inner-sub      { font-size: 10px; }
+  .new__inner-num-wrap { width: auto; height: auto; }
+  .new__inner-num      { font-size: 44px; }
+  .new__inner-sub-wrap { width: auto; height: auto; }
+  .new__inner-sub      { font-size: 14px; }
 
   /* ── Label tag ── */
   .new__label-text { font-size: 15px; }
 
-  /* ── Title ── */
+  /* ── Title — full width, no header card competing ── */
   .new__title {
     font-size: 30px;
-    margin: 12px 0 0 0;
-    width: calc(100% - 118px);
+    margin: 8px 0 0 0;
+    width: 100%;
   }
 
   /* ── Divider → in flow ── */
@@ -4011,7 +4032,7 @@ body {
     width: 100%;
     height: auto;
     border-radius: 12px;
-    padding: 20px;
+    padding: 25px;
     display: block;
   }
   .new__bottom-text {
