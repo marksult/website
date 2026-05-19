@@ -4335,12 +4335,12 @@ body {
   width: 343px;
   height: 43px;
   box-sizing: border-box;
-  padding: 0 15px;
 }
 
 .guarantees__btn--fit {
   width: 296px;
   height: 43px;
+  box-sizing: border-box;
 }
 
 .guarantees__btn-text {
