@@ -3345,6 +3345,52 @@ body {
   box-sizing: border-box;
 }
 
+.new__row-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 34px;
+  position: absolute;
+  left: 25px;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.new__row-text-wrap {
+  width: 109px;
+  height: 18px;
+  transform: translateY(-1px);
+}
+
+.new__row-text {
+  margin: 0;
+  color: #000;
+  font-family: 'Plantin MT Pro', serif;
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  -webkit-font-smoothing: antialiased;
+}
+
+.new__row-btn {
+  display: flex;
+  width: 34px;
+  height: 34px;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 1.06px solid #E7E7E7;
+  background: #FFF;
+  cursor: default;
+  pointer-events: none;
+  -webkit-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+}
+
 .new__label-tag {
   border-radius: 10px;
   border: 1px solid #E7E7E7;
