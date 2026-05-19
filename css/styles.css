@@ -3263,6 +3263,35 @@ body {
   border-radius: 10px;
   padding: 15px;
   box-sizing: border-box;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+}
+
+.new__inner-num {
+  display: block;
+  margin: 0;
+  line-height: 1;
+  color: #000;
+  font-family: 'Plantin MT Pro', serif;
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 1.05em;
+  letter-spacing: -0.02em;
+  -webkit-font-smoothing: antialiased;
+}
+
+.new__inner-sub {
+  display: block;
+  margin: 0;
+  line-height: 1;
+  color: #000;
+  font-family: 'Helvetica Neue LT Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  -webkit-font-smoothing: antialiased;
 }
 
 .new__label-tag {
