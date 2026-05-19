@@ -3257,10 +3257,8 @@ body {
 
 .new__header-inner {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
   width: 99px;
   height: 94px;
   background: #FAFAFA;
@@ -3270,28 +3268,32 @@ body {
   box-sizing: border-box;
 }
 
-.new__inner-num {
+.new__inner-group {
   --tag-pt: 0px;
   --tag-pr: 0px;
   --tag-pb: 0px;
   --tag-pl: 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.new__inner-num {
   color: #000;
   font-family: 'Plantin MT Pro', serif;
   font-size: 60px;
   font-weight: 300;
+  line-height: 1;
   letter-spacing: -0.02em;
   -webkit-font-smoothing: antialiased;
 }
 
 .new__inner-sub {
-  --tag-pt: 0px;
-  --tag-pr: 0px;
-  --tag-pb: 0px;
-  --tag-pl: 0px;
   color: #000;
   font-family: 'Helvetica Neue LT Pro', sans-serif;
   font-size: 18px;
   font-weight: 400;
+  line-height: 1;
   letter-spacing: -0.02em;
   -webkit-font-smoothing: antialiased;
 }
