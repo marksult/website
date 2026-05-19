@@ -3359,8 +3359,7 @@ body {
   position: absolute;
   left: 25px;
   right: 25px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 25px;
 }
 
 .new__row-text-wrap {
