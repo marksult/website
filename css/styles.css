@@ -4276,11 +4276,12 @@ body {
   margin-left: 107px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 
 .guarantees__card {
-  position: relative;
+  position: sticky;
+  top: 80px;
+  margin-bottom: 10px;
   width: 450px;
   height: 480px;
   background: #FFFFFF;
@@ -4288,6 +4289,9 @@ body {
   border-radius: 15px;
   box-sizing: border-box;
   overflow: hidden;
+  will-change: transform;
+  transform-origin: top center;
+  transition: box-shadow 0.3s ease;
 }
 
 .guarantees__card-num {
