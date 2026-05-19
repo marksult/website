@@ -3333,17 +3333,10 @@ body {
   background: #E7E7E7;
 }
 
-.new__rows-wrapper {
+.new__row-card {
   position: absolute;
   left: 35px;
   top: 220px;
-  width: 830px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.new__row-card {
   width: 830px;
   height: 84px;
   background: #FFFFFF;
@@ -3386,6 +3379,10 @@ body {
   width: 109px;
   height: 18px;
   transform: translateY(-1px);
+}
+
+.new__row-text-wrap--bonuses {
+  width: 111px;
 }
 
 .new__row-text {

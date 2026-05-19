@@ -959,9 +959,7 @@
       <button class="new__label-tag optical-tag"><span class="new__label-text">90-Day DFY Rollout</span></button>
       <h2 class="new__title">The complete Stack System</h2>
       <div class="new__divider"></div>
-      <div class="new__rows-wrapper">
-
-        <div class="new__row-card">
+      <div class="new__row-card" id="row-card-1">
           <div class="new__row-inner">
             <div class="new__row-text-wrap"><p class="new__row-text">5 Systems</p></div>
             <button class="new__row-btn">
@@ -1002,9 +1000,9 @@
           </div>
         </div>
 
-        <div class="new__row-card new__row-card--bonuses">
+      <div class="new__row-card new__row-card--bonuses" id="row-card-2">
           <div class="new__row-inner">
-            <div class="new__row-text-wrap"><p class="new__row-text">9 Bonuses</p></div>
+            <div class="new__row-text-wrap new__row-text-wrap--bonuses"><p class="new__row-text">9 Bonuses</p></div>
             <button class="new__row-btn">
               <img src="assets/icons/plus.svg" width="10" height="10" alt="">
             </button>
@@ -1065,8 +1063,6 @@
               </div>
             </div>
           </div>
-        </div>
-
       </div>
       <div class="new__header-card">
         <div class="new__header-inner">
@@ -1087,10 +1083,28 @@
 
 
   <script>
-    document.querySelectorAll('.new__row-card').forEach(function(card) {
-      card.addEventListener('click', function() {
-        card.classList.toggle('is-open');
+    var card1 = document.getElementById('row-card-1');
+    var card2 = document.getElementById('row-card-2');
+
+    function updateCard2Position() {
+      card2.style.top = (card1.offsetTop + card1.offsetHeight + 20) + 'px';
+    }
+
+    updateCard2Position();
+
+    card1.addEventListener('click', function() {
+      card1.classList.toggle('is-open');
+      setTimeout(function() {
+        updateCard2Position();
+      }, 400);
+      card1.addEventListener('transitionend', function onEnd() {
+        updateCard2Position();
+        card1.removeEventListener('transitionend', onEnd);
       });
+    });
+
+    card2.addEventListener('click', function() {
+      card2.classList.toggle('is-open');
     });
   </script>
 </body>
