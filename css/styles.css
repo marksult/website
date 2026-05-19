@@ -3457,22 +3457,35 @@ body {
   border: 0.75px solid #E7E7E7;
   border-radius: 15px;
   box-sizing: border-box;
-  transition: top 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: top;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.new__fafafa-card,
+.new__pills-wrap,
+.new__cta-wrap {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .new__fafafa-card {
   position: absolute;
   left: 35px;
-  top: 874px;
+  top: 844px;
   width: 830px;
   height: 114px;
   background: #FAFAFA;
   border: 0.75px solid #E7E7E7;
   border-radius: 15px;
   box-sizing: border-box;
-  transition: top 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: top;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   display: flex;
   align-items: center;
   justify-content: flex-end;

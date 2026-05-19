@@ -1143,28 +1143,25 @@
     var CARD1_TOP = 220;
     var CARD2_BASE_TOP = CARD1_TOP + CARD1_COLLAPSED + GAP;
 
+    var BASE_CONTAINER_HEIGHT = 1189;
+    var C1_DELTA = CARD1_EXPANDED - CARD1_COLLAPSED;
+    var C2_DELTA = CARD2_EXPANDED - CARD2_COLLAPSED;
+
     function updatePositions() {
       var c1Open = card1.classList.contains('is-open');
       var c2Open = card2.classList.contains('is-open');
-      var c1h = c1Open ? CARD1_EXPANDED : CARD1_COLLAPSED;
-      var c2h = c2Open ? CARD2_EXPANDED : CARD2_COLLAPSED;
 
-      card2.style.transform = c1Open
-        ? 'translateY(' + (CARD1_EXPANDED - CARD1_COLLAPSED) + 'px)'
-        : 'translateY(0)';
+      var dy1 = c1Open ? C1_DELTA : 0;
+      var dy2 = c2Open ? C2_DELTA : 0;
+      var dyTotal = dy1 + dy2;
 
-      var bottomTop = CARD2_BASE_TOP + (c1Open ? CARD1_EXPANDED - CARD1_COLLAPSED : 0) + c2h + BOTTOM_GAP;
-      bottomCard.style.top = bottomTop + 'px';
-      var fafafaTop  = bottomTop + 386 + 30;
-      fafafaCard.style.top = fafafaTop + 'px';
+      card2.style.transform      = 'translateY(' + dy1 + 'px)';
+      bottomCard.style.transform = 'translateY(' + dyTotal + 'px)';
+      fafafaCard.style.transform = 'translateY(' + dyTotal + 'px)';
+      pillsWrap.style.transform  = 'translateY(' + dyTotal + 'px)';
+      ctaWrap.style.transform    = 'translateY(' + dyTotal + 'px)';
 
-      var pillsTop   = fafafaTop + 114 + 20;
-      pillsWrap.style.top = pillsTop + 'px';
-
-      var ctaTop     = pillsTop + 91 + 20;
-      ctaWrap.style.top = ctaTop + 'px';
-
-      newContainer.style.height = (ctaTop + 65 + 35) + 'px';
+      newContainer.style.height = (BASE_CONTAINER_HEIGHT + dyTotal) + 'px';
     }
 
     updatePositions();
