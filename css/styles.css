@@ -3325,12 +3325,12 @@ body {
 }
 
 .new__divider {
-  width: calc(100% + 70px);
+  position: absolute;
+  left: 35px;
+  top: 189px;
+  width: calc(100% - 70px);
   height: 1px;
   background: #E7E7E7;
-  margin-top: 30px;
-  margin-left: -35px;
-  margin-right: -35px;
 }
 
 .new__label-tag {
