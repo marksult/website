@@ -596,9 +596,6 @@ body {
 
 .main__badge {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 367px;
   height: 76px;
   padding: 5px 4px 5px 16px;
