@@ -3256,15 +3256,19 @@ body {
 }
 
 .new__header-inner {
+  --tag-pt: 15px;
+  --tag-pr: 15px;
+  --tag-pb: 15px;
+  --tag-pl: 15px;
+
   width: 99px;
   height: 94px;
   background: #FAFAFA;
   border: 1px solid #E7E7E7;
   border-radius: 10px;
-  padding: 15px;
   box-sizing: border-box;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   gap: 10px;
 }
