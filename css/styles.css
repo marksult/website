@@ -4293,7 +4293,7 @@ body {
 .guarantees__cards-wrap {
   position: relative;
   width: 450px;
-  height: auto;
+  height: 480px;
 }
 
 .guarantees__card {
@@ -4309,22 +4309,6 @@ body {
   overflow: hidden;
   will-change: transform;
   transform-origin: top center;
-}
-
-.guarantees__card:nth-child(1) {
-  top: 0;
-}
-
-.guarantees__card:nth-child(2) {
-  top: 485px;
-}
-
-.guarantees__card:nth-child(3) {
-  top: 970px;
-}
-
-.guarantees__card:nth-child(4) {
-  top: 1455px;
 }
 
 .guarantees__card-num {
