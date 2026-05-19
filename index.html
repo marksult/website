@@ -1085,22 +1085,15 @@
   <script>
     var card1 = document.getElementById('row-card-1');
     var card2 = document.getElementById('row-card-2');
-
-    function updateCard2Position() {
-      card2.style.top = (card1.offsetTop + card1.offsetHeight + 20) + 'px';
-    }
-
-    updateCard2Position();
+    var CARD1_EXPANDED = 520;
+    var CARD1_COLLAPSED = 84;
 
     card1.addEventListener('click', function() {
       card1.classList.toggle('is-open');
-      setTimeout(function() {
-        updateCard2Position();
-      }, 400);
-      card1.addEventListener('transitionend', function onEnd() {
-        updateCard2Position();
-        card1.removeEventListener('transitionend', onEnd);
-      });
+      var isOpen = card1.classList.contains('is-open');
+      card2.style.transform = isOpen
+        ? 'translateY(' + (CARD1_EXPANDED - CARD1_COLLAPSED) + 'px)'
+        : 'translateY(0)';
     });
 
     card2.addEventListener('click', function() {

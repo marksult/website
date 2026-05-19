@@ -3344,8 +3344,17 @@ body {
   border-radius: 10px;
   box-sizing: border-box;
   overflow: hidden;
-  transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.15s ease;
+  transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1), background 0.15s ease;
   cursor: pointer;
+  will-change: height;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+#row-card-2 {
+  top: 314px;
+  transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), background 0.15s ease;
+  will-change: height, transform;
 }
 
 .new__row-card:hover {
@@ -3425,7 +3434,7 @@ body {
 }
 
 .new__row-btn img {
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .new__row-card.is-open .new__row-btn img {
