@@ -247,12 +247,37 @@ body {
   margin: 0;
 }
 
+.mobile-only-br {
+  display: none;
+}
+
 @media (max-width: 767px) {
+  .mobile-only-br {
+    display: block;
+  }
   .main__badge-cta-text {
     font-size: 15px;
+    width: 220px;
+    height: 38px;
+    text-align: left;
   }
   .hero-cta .main__badge--cta {
     margin-top: 20px;
+    padding: 15px;
+  }
+  .hero-cta .main__title {
+    width: 299px;
+    height: 99px;
+    max-width: 299px;
+  }
+  .hero-cta .main__description {
+    width: 253px;
+    height: 51px;
+    max-width: 253px;
+  }
+  .hero-cta .main__social-text {
+    width: 184px;
+    height: 11px;
   }
 }
 
