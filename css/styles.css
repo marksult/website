@@ -4280,6 +4280,7 @@ body {
 }
 
 .guarantees__card {
+  position: relative;
   width: 450px;
   height: 480px;
   background: #FFFFFF;
@@ -4287,6 +4288,12 @@ body {
   border-radius: 15px;
   box-sizing: border-box;
   overflow: hidden;
+}
+
+.guarantees__card-num {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
 }
 
 .guarantees__card-image {
