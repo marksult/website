@@ -4338,7 +4338,8 @@ body {
   border-radius: 10px;
   border: 1px solid #E7E7E7;
   background: #FFF;
-  cursor: pointer;
+  cursor: default;
+  pointer-events: none;
   -webkit-appearance: none;
   appearance: none;
   display: inline-flex;
