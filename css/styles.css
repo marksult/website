@@ -3510,6 +3510,46 @@ body {
 .new__pill-dot--green { background: #00E77B; }
 .new__pill-dot--red   { background: #F43F5E; }
 
+.new__cta-wrap {
+  position: absolute;
+  left: 35px;
+  width: 830px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: top 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: top;
+}
+
+.new__cta-pill {
+  display: flex;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 0.75px solid #E7E7E7;
+  background: #FAFAFA;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.new__cta-pill--wide   { width: 365px; height: 65px; }
+.new__cta-pill--narrow { width: 131px; height: 65px; }
+
+.new__cta-text {
+  margin: 0;
+  color: #000;
+  font-family: 'Helvetica Neue LT Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2em;
+  letter-spacing: -0.02em;
+  -webkit-font-smoothing: antialiased;
+}
+
+.new__cta-text--wide   { width: 335px; height: 35px; }
+.new__cta-text--narrow { width: 101px; height: 35px; }
+
 .new__pill-text-wrap {
   width: 457px;
   height: 13px;

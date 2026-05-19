@@ -1099,6 +1099,14 @@
           <div class="new__pill-text-wrap new__pill-text-wrap--sm"><p class="new__pill-text">One firm per city</p></div>
         </div>
       </div>
+      <div class="new__cta-wrap" id="new-cta-wrap">
+        <div class="new__cta-pill new__cta-pill--wide">
+          <p class="new__cta-text new__cta-text--wide">AI is rewriting this game right now — firms<br>moving first will own their cities for 10 years</p>
+        </div>
+        <div class="new__cta-pill new__cta-pill--narrow">
+          <p class="new__cta-text new__cta-text--narrow">No retainer<br>No setup fee</p>
+        </div>
+      </div>
       <div class="new__header-card">
         <div class="new__header-inner">
           <div class="new__inner-group">
@@ -1123,6 +1131,7 @@
     var bottomCard = document.getElementById('new-bottom-card');
     var fafafaCard = document.getElementById('new-fafafa-card');
     var pillsWrap  = document.getElementById('new-pills-wrap');
+    var ctaWrap    = document.getElementById('new-cta-wrap');
 
     var CARD1_COLLAPSED = 84;
     var CARD1_EXPANDED  = 520;
@@ -1147,7 +1156,9 @@
       bottomCard.style.top = bottomTop + 'px';
       var fafafaTop = bottomTop + 386 + 30;
       fafafaCard.style.top = fafafaTop + 'px';
-      pillsWrap.style.top  = (fafafaTop + 114 + 20) + 'px';
+      var pillsTop = fafafaTop + 114 + 20;
+      pillsWrap.style.top = pillsTop + 'px';
+      ctaWrap.style.top   = (pillsTop + 91 + 20) + 'px';
     }
 
     updatePositions();
