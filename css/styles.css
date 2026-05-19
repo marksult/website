@@ -3277,7 +3277,7 @@ body {
   gap: 10px;
   width: 68px;
   height: 64px;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
 .new__inner-num-wrap {
