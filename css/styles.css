@@ -4274,6 +4274,9 @@ body {
 .guarantees__right {
   flex-shrink: 0;
   margin-left: 107px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .guarantees__card {
