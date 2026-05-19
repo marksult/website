@@ -1128,10 +1128,11 @@
   <script>
     var card1 = document.getElementById('row-card-1');
     var card2 = document.getElementById('row-card-2');
-    var bottomCard = document.getElementById('new-bottom-card');
-    var fafafaCard = document.getElementById('new-fafafa-card');
-    var pillsWrap  = document.getElementById('new-pills-wrap');
-    var ctaWrap    = document.getElementById('new-cta-wrap');
+    var newContainer = document.querySelector('.new-container');
+    var bottomCard   = document.getElementById('new-bottom-card');
+    var fafafaCard   = document.getElementById('new-fafafa-card');
+    var pillsWrap    = document.getElementById('new-pills-wrap');
+    var ctaWrap      = document.getElementById('new-cta-wrap');
 
     var CARD1_COLLAPSED = 84;
     var CARD1_EXPANDED  = 520;
@@ -1154,8 +1155,16 @@
 
       var bottomTop = CARD2_BASE_TOP + (c1Open ? CARD1_EXPANDED - CARD1_COLLAPSED : 0) + c2h + BOTTOM_GAP;
       bottomCard.style.top = bottomTop + 'px';
-      var fafafaTop = bottomTop + 386 + 30;
+      var fafafaTop  = bottomTop + 386 + 30;
       fafafaCard.style.top = fafafaTop + 'px';
+
+      var pillsTop   = fafafaTop + 114 + 20;
+      pillsWrap.style.top = pillsTop + 'px';
+
+      var ctaTop     = pillsTop + 91 + 20;
+      ctaWrap.style.top = ctaTop + 'px';
+
+      newContainer.style.height = (ctaTop + 65 + 25) + 'px';
     }
 
     updatePositions();

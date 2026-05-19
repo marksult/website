@@ -3227,12 +3227,12 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
+  padding: 60px 0;
 }
 
 .new-container {
   position: relative;
   width: 900px;
-  height: 2334px;
   background: #FFFFFF;
   border: 1px solid #E7E7E7;
   border-radius: 15px;
@@ -3240,6 +3240,7 @@ body {
   flex-shrink: 0;
   padding: 35px;
   box-sizing: border-box;
+  transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .new__header-card {
@@ -3476,7 +3477,6 @@ body {
 .new__pills-wrap {
   position: absolute;
   left: 35px;
-  top: 2123px;
   width: 830px;
   display: flex;
   flex-direction: column;
@@ -3486,7 +3486,6 @@ body {
 .new__cta-wrap {
   position: absolute;
   left: 35px;
-  top: 2234px;
   width: 830px;
   display: flex;
   justify-content: space-between;
