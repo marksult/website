@@ -3473,6 +3473,66 @@ body {
   overflow: hidden;
 }
 
+.new__pills-wrap {
+  position: absolute;
+  left: 35px;
+  width: 830px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transition: top 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: top;
+}
+
+.new__pill {
+  display: flex;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border-radius: 10px;
+  border: 0.75px solid #E7E7E7;
+  background: #FFF;
+  width: fit-content;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.new__pill--full {
+  width: 100%;
+}
+
+.new__pill-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  flex-shrink: 0;
+}
+
+.new__pill-dot--green { background: #00E77B; }
+.new__pill-dot--red   { background: #F43F5E; }
+
+.new__pill-text-wrap {
+  width: 457px;
+  height: 13px;
+}
+
+.new__pill-text-wrap--sm {
+  width: 129px;
+}
+
+.new__pill-text {
+  margin: 0;
+  color: #000;
+  font-family: 'Helvetica Neue LT Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  -webkit-font-smoothing: antialiased;
+}
+
 .new__fafafa-left {
   flex: 1;
   display: flex;
