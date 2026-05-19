@@ -4290,7 +4290,6 @@ body {
   width: 450px;
   height: 200px;
   background: #FAFAFA;
-  border-bottom: 1px solid #E7E7E7;
   border-radius: 15px 15px 0 0;
   box-sizing: border-box;
 }
@@ -4337,6 +4336,9 @@ body {
   cursor: pointer;
   -webkit-appearance: none;
   appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .guarantees__card-btn-text {
