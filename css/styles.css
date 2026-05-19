@@ -3404,6 +3404,22 @@ body {
   transform: rotate(45deg);
 }
 
+.new__row-content {
+  position: absolute;
+  left: 25px;
+  right: 25px;
+  top: 94px;
+}
+
+.new__row-item-card {
+  width: 280px;
+  height: 127px;
+  background: #FFFFFF;
+  border: 0.75px solid #E7E7E7;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+
 .new__label-tag {
   border-radius: 10px;
   border: 1px solid #E7E7E7;
