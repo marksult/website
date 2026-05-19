@@ -4283,6 +4283,16 @@ body {
   border: 1px solid #E7E7E7;
   border-radius: 15px;
   box-sizing: border-box;
+  overflow: hidden;
+}
+
+.guarantees__card-image {
+  width: 450px;
+  height: 200px;
+  background: #FAFAFA;
+  border-bottom: 1px solid #E7E7E7;
+  border-radius: 15px 15px 0 0;
+  box-sizing: border-box;
 }
 
 .guarantees__left {
