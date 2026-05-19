@@ -3345,6 +3345,7 @@ body {
   box-sizing: border-box;
   overflow: hidden;
   transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 
 .new__row-card.is-open {
@@ -3409,6 +3410,9 @@ body {
   left: 25px;
   right: 25px;
   top: 94px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .new__row-item-card {
