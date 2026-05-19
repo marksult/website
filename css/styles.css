@@ -3515,8 +3515,8 @@ body {
   flex-shrink: 0;
 }
 
-.new__pill-dot--green { background: #00E77B; }
-.new__pill-dot--red   { background: #F43F5E; }
+.new__pill-dot--green { background: #00E77B; animation: dot-pulse 2.4s ease-in-out infinite; }
+.new__pill-dot--red   { background: #F43F5E; animation: dot-pulse 2.4s ease-in-out infinite 0.4s; }
 
 
 .new__cta-pill {
