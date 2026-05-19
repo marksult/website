@@ -271,6 +271,10 @@ body {
     width: 188px;
     height: 11px;
   }
+  .hero-cta .main {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 
 .hero-cta .main--standalone {
