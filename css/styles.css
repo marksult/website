@@ -3359,8 +3359,9 @@ body {
 
 #row-card-2 {
   top: 314px;
-  transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), background 0.15s ease;
-  will-change: height, transform;
+  transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1), top 0.5s cubic-bezier(0.4, 0, 0.2, 1), background 0.15s ease;
+  transform: translateZ(0);
+  will-change: height, top;
 }
 
 .new__row-card:hover {
@@ -3457,19 +3458,23 @@ body {
   border: 0.75px solid #E7E7E7;
   border-radius: 15px;
   box-sizing: border-box;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: transform;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
+  transition: top 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateZ(0);
+  will-change: top;
 }
 
-.new__fafafa-card,
-.new__pills-wrap,
+.new__pills-wrap {
+  top: 978px;
+  transition: top 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateZ(0);
+  will-change: top;
+}
+
 .new__cta-wrap {
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: transform;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
+  top: 1089px;
+  transition: top 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateZ(0);
+  will-change: top;
 }
 
 .new__fafafa-card {
@@ -3482,10 +3487,9 @@ body {
   border: 0.75px solid #E7E7E7;
   border-radius: 15px;
   box-sizing: border-box;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: transform;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
+  transition: top 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateZ(0);
+  will-change: top;
   display: flex;
   align-items: center;
   justify-content: flex-end;
