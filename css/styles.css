@@ -3869,3 +3869,230 @@ body {
     zoom: 0.8222;
   }
 }
+
+@media (max-width: 767px) {
+  /* ── Section ── */
+  .new-section {
+    padding: 30px 15px;
+  }
+
+  /* ── Container → flex column ── */
+  .new-container {
+    width: 100%;
+    padding: 20px;
+    height: auto !important;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 12px;
+  }
+
+  /* ── Header card (top-right corner, stays absolute) ── */
+  .new__header-card {
+    top: 20px;
+    right: 20px;
+    width: 108px;
+    height: 58px;
+    padding: 10px 12px;
+    border-radius: 8px;
+  }
+  .new__header-inner {
+    width: 44px;
+    height: 42px;
+    padding: 7px;
+    gap: 4px;
+    border-radius: 7px;
+  }
+  .new__inner-group {
+    width: 30px;
+    height: 28px;
+    gap: 3px;
+    transform: none;
+  }
+  .new__inner-num-wrap { width: 30px; height: 18px; }
+  .new__inner-num      { font-size: 26px; }
+  .new__inner-sub-wrap { width: 30px; height: 10px; }
+  .new__inner-sub      { font-size: 10px; }
+
+  /* ── Label tag ── */
+  .new__label-text { font-size: 15px; }
+
+  /* ── Title ── */
+  .new__title {
+    font-size: 30px;
+    margin: 12px 0 0 0;
+    width: calc(100% - 118px);
+  }
+
+  /* ── Divider → in flow ── */
+  .new__divider {
+    position: static;
+    width: 100%;
+    left: auto;
+    top: auto;
+    flex-shrink: 0;
+  }
+
+  /* ── Accordion row cards → in flow ── */
+  .new__row-card {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+  }
+  #row-card-2 {
+    position: relative !important;
+    top: auto !important;
+    left: auto;
+  }
+  .new__row-card.is-open {
+    height: 530px !important;
+  }
+  .new__row-card--bonuses.is-open {
+    height: 870px !important;
+  }
+
+  /* ── Accordion header ── */
+  .new__row-text      { font-size: 18px; }
+  .new__row-text-wrap { width: auto; }
+  .new__row-text-wrap--bonuses { width: auto; }
+
+  /* ── Item grid: 2 per row ── */
+  .new__row-content {
+    left: 15px;
+    right: 15px;
+    top: 84px;
+  }
+  .new__row-item-card {
+    width: calc(50% - 5px);
+    height: auto;
+    min-height: 90px;
+    border-radius: 10px;
+  }
+  .new__item-inner {
+    width: 100%;
+    padding: 12px;
+    gap: 10px;
+    box-sizing: border-box;
+  }
+  .new__item-num-btn {
+    width: 24px;
+    height: 24px;
+  }
+  .new__item-title {
+    font-size: 15px;
+    width: auto;
+    height: auto;
+    line-height: 1.2em;
+  }
+  .new__item-title--02,
+  .new__item-title--03,
+  .new__item-title--04,
+  .new__item-title--05,
+  .new__item-title--b01,
+  .new__item-title--b02,
+  .new__item-title--b03,
+  .new__item-title--b04,
+  .new__item-title--b05,
+  .new__item-title--b06,
+  .new__item-title--b07,
+  .new__item-title--b08,
+  .new__item-title--b09 {
+    width: auto;
+    height: auto;
+  }
+
+  /* ── Bottom text card → in flow ── */
+  .new__bottom-card {
+    position: static !important;
+    top: auto !important;
+    left: auto;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    padding: 20px;
+    display: block;
+  }
+  .new__bottom-text {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+  }
+  .new__bottom-p { font-size: 15px; }
+
+  /* ── Fafafa pricing card → stacked ── */
+  .new__fafafa-card {
+    position: static !important;
+    top: auto !important;
+    left: auto;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+  .new__fafafa-left {
+    flex: none;
+    width: 100%;
+    height: auto;
+    padding: 20px 25px;
+    border-bottom: 0.75px solid #E7E7E7;
+    justify-content: center;
+  }
+  .new__fafafa-tv-wrap   { width: auto; height: auto; }
+  .new__fafafa-tv        { font-size: 15px; }
+  .new__fafafa-price-wrap { width: auto; height: auto; }
+  .new__fafafa-price     { font-size: 40px; }
+  .new__fafafa-inner {
+    width: 100%;
+    height: auto;
+    border: none;
+    border-radius: 0;
+  }
+  .new__fafafa-content   { padding: 20px 25px; }
+  .new__fafafa-sub-wrap  { width: auto; height: auto; }
+  .new__fafafa-sub       { font-size: 15px; }
+  .new__fafafa-num-wrap  { width: auto; height: auto; }
+  .new__fafafa-num       { font-size: 40px; }
+
+  /* ── Guarantee pills → in flow, full width ── */
+  .new__pills-wrap {
+    position: static !important;
+    top: auto !important;
+    left: auto;
+    width: 100%;
+  }
+  .new__pill--full { width: 100%; height: auto; padding: 12px 15px; }
+  .new__pill--sm   { width: 100%; height: auto; padding: 12px 15px; }
+  .new__pill-text-wrap    { width: auto; height: auto; }
+  .new__pill-text-wrap--sm { width: auto; height: auto; }
+  .new__pill-text { font-size: 15px; white-space: normal; }
+
+  /* ── CTA pills → stacked, full width ── */
+  .new__cta-wrap {
+    position: static !important;
+    top: auto !important;
+    left: auto;
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .new__cta-pill--wide,
+  .new__cta-pill--narrow {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+  }
+  .new__cta-text { font-size: 15px; }
+  .new__cta-text--wide,
+  .new__cta-text--narrow {
+    width: auto;
+    height: auto;
+    text-align: center;
+  }
+}
