@@ -55,6 +55,35 @@
 
 
 /* ================================================================
+   UTILITY — optical-tag
+   Імітує Figma "Cap height to baseline" через асиметричний padding.
+   Використовуй для будь-якої плашки з текстом 18px Helvetica Neue.
+   Щоб підлаштувати під інший шрифт/розмір — перевизнач змінні.
+   ================================================================ */
+
+.optical-tag {
+  --tag-pt: 13px;
+  --tag-pr: 15px;
+  --tag-pb: 9px;
+  --tag-pl: 15px;
+  --tag-text-y: 0px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--tag-pt) var(--tag-pr) var(--tag-pb) var(--tag-pl);
+}
+
+.optical-tag > span,
+.optical-tag > p {
+  display: block;
+  margin: 0;
+  line-height: 1;
+  transform: translateY(var(--tag-text-y));
+}
+
+
+/* ================================================================
    ВІДСТУПИ МІЖ БЛОКАМИ — змінюй тут
    Desktop  = без медіа-запиту (за замовчуванням)
    Tablet   = @media (min-width: 768px) and (max-width: 1023px)
@@ -3213,12 +3242,8 @@ body {
 }
 
 .new__label-tag {
-  display: inline-flex;
-  width: 188px;
-  height: 43px;
-  padding: 0;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
+  padding: 15px;
   border-radius: 10px;
   border: 1px solid #E7E7E7;
   background: #FFF;
@@ -3229,11 +3254,12 @@ body {
 }
 
 .new__label-text {
+  display: block;
   color: #000;
   font-family: 'Helvetica Neue LT Pro', sans-serif;
   font-size: 18px;
   font-weight: 500;
-  line-height: 0;
+  line-height: 1;
   letter-spacing: -0.02em;
   white-space: nowrap;
   -webkit-font-smoothing: antialiased;
