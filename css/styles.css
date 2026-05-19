@@ -500,6 +500,11 @@ body {
   50%       { opacity: 0.3; }
 }
 
+@keyframes pill-dot-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
 .main__social-proof {
   display: inline-flex;
   justify-content: center;
@@ -3515,8 +3520,8 @@ body {
   flex-shrink: 0;
 }
 
-.new__pill-dot--green { background: #00E77B; animation: dot-pulse 2.4s ease-in-out infinite; }
-.new__pill-dot--red   { background: #F43F5E; animation: dot-pulse 2.4s ease-in-out infinite 0.4s; }
+.new__pill-dot--green { background: #00E77B; animation: pill-dot-pulse 2.9s ease-in-out infinite; }
+.new__pill-dot--red   { background: #F43F5E; animation: pill-dot-pulse 2.9s ease-in-out infinite 0.4s; }
 
 
 .new__cta-pill {
