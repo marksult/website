@@ -4260,12 +4260,13 @@ body {
    ================================================================ */
 
 .guarantees {
-  padding: 0 15px;
+  padding: 80px 15px 80px;
 }
 
 .guarantees__container {
   display: flex;
   align-items: flex-start;
+  padding-left: 270px;
 }
 
 .guarantees__left {
