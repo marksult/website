@@ -3452,7 +3452,21 @@ body {
   border-radius: 15px;
   box-sizing: border-box;
   transition: top 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: transform;
+  will-change: top;
+}
+
+.new__fafafa-card {
+  position: absolute;
+  left: 35px;
+  top: 874px;
+  width: 830px;
+  height: 144px;
+  background: #FAFAFA;
+  border: 0.75px solid #E7E7E7;
+  border-radius: 15px;
+  box-sizing: border-box;
+  transition: top 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: top;
 }
 
 .new__bottom-card {

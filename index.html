@@ -1064,7 +1064,8 @@
             </div>
           </div>
       </div>
-      <div class="new__bottom-card" id="new-bottom-card">
+      <div class="new__bottom-card" id="new-bottom-card"></div>
+      <div class="new__fafafa-card" id="new-fafafa-card">
         <div class="new__bottom-text">
           <p class="new__bottom-p"><span class="new__bottom-medium">90 days. 5 systems. 9 bonuses.</span> One machine that signs clients while you sleep.</p>
           <p class="new__bottom-p">The highest-paying niche in your city — locked in 24 hours.<br>Qualified leads in week one, not week twelve.<br>A funnel at 18%, not 2%.<br>A pipeline that never loses a $30K case.<br>AI agents booking at 3 AM — before your competitor even sees the lead.</p>
@@ -1095,6 +1096,7 @@
     var card1 = document.getElementById('row-card-1');
     var card2 = document.getElementById('row-card-2');
     var bottomCard = document.getElementById('new-bottom-card');
+    var fafafaCard = document.getElementById('new-fafafa-card');
 
     var CARD1_COLLAPSED = 84;
     var CARD1_EXPANDED  = 520;
@@ -1115,7 +1117,9 @@
         ? 'translateY(' + (CARD1_EXPANDED - CARD1_COLLAPSED) + 'px)'
         : 'translateY(0)';
 
-      bottomCard.style.top = (CARD2_BASE_TOP + (c1Open ? CARD1_EXPANDED - CARD1_COLLAPSED : 0) + c2h + BOTTOM_GAP) + 'px';
+      var bottomTop = CARD2_BASE_TOP + (c1Open ? CARD1_EXPANDED - CARD1_COLLAPSED : 0) + c2h + BOTTOM_GAP;
+      bottomCard.style.top = bottomTop + 'px';
+      fafafaCard.style.top = (bottomTop + 386 + 30) + 'px';
     }
 
     updatePositions();
