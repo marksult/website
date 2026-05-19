@@ -4260,28 +4260,46 @@ body {
    ================================================================ */
 
 .guarantees {
-  padding: 80px 15px 80px;
+  padding: 0;
+}
+
+.guarantees__pin {
+  height: 400vh;
+}
+
+.guarantees__pin-inner {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
 .guarantees__container {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   padding-left: 270px;
   padding-right: 270px;
+  width: 100%;
 }
 
 .guarantees__right {
   flex-shrink: 0;
   margin-left: 107px;
-  display: flex;
-  flex-direction: column;
+}
+
+.guarantees__cards-wrap {
+  position: relative;
+  width: 450px;
+  height: 480px;
 }
 
 .guarantees__card {
-  position: sticky;
-  top: 80px;
-  margin-bottom: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 450px;
   height: 480px;
   background: #FFFFFF;
@@ -4291,7 +4309,6 @@ body {
   overflow: hidden;
   will-change: transform;
   transform-origin: top center;
-  transition: box-shadow 0.3s ease;
 }
 
 .guarantees__card-num {
