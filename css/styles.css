@@ -3333,6 +3333,18 @@ body {
   background: #E7E7E7;
 }
 
+.new__row-card {
+  position: absolute;
+  left: 35px;
+  top: 220px;
+  width: 830px;
+  height: 84px;
+  background: #FFFFFF;
+  border: 0.75px solid #E7E7E7;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
 .new__label-tag {
   border-radius: 10px;
   border: 1px solid #E7E7E7;
