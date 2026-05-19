@@ -3476,12 +3476,21 @@ body {
 .new__pills-wrap {
   position: absolute;
   left: 35px;
+  top: 2123px;
   width: 830px;
   display: flex;
   flex-direction: column;
   gap: 5px;
-  transition: top 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: top;
+}
+
+.new__cta-wrap {
+  position: absolute;
+  left: 35px;
+  top: 2234px;
+  width: 830px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .new__pill {
@@ -3510,16 +3519,6 @@ body {
 .new__pill-dot--green { background: #00E77B; }
 .new__pill-dot--red   { background: #F43F5E; }
 
-.new__cta-wrap {
-  position: absolute;
-  left: 35px;
-  width: 830px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: top 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: top;
-}
 
 .new__cta-pill {
   display: flex;
