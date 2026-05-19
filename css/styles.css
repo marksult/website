@@ -3260,7 +3260,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
-  width: 99px;
+  width: 98px;
   height: 94px;
   background: #FAFAFA;
   border: 1px solid #E7E7E7;
@@ -3274,11 +3274,12 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  width: 69px;
+  width: 68px;
+  height: 64px;
 }
 
 .new__inner-num-wrap {
-  width: 69px;
+  width: 68px;
   height: 41px;
   display: flex;
   align-items: flex-start;
