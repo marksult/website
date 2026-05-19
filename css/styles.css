@@ -3248,8 +3248,8 @@ body {
   right: 35px;
   width: 223px;
   height: 124px;
-  background: #FFFFFF;
-  border: 1px solid #E7E7E7;
+  background: #FFF;
+  border: 0.75px solid #E7E7E7;
   border-radius: 10px;
   padding: 15px;
   box-sizing: border-box;
