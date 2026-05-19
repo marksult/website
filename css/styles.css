@@ -3333,11 +3333,18 @@ body {
   background: #E7E7E7;
 }
 
-.new__row-card {
+.new__rows-wrapper {
   position: absolute;
   left: 35px;
   top: 220px;
   width: 830px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.new__row-card {
+  width: 100%;
   height: 84px;
   background: #FFFFFF;
   border: 0.75px solid #E7E7E7;
@@ -3358,6 +3365,10 @@ body {
 
 .new__row-card.is-open {
   height: 520px;
+}
+
+.new__row-card--bonuses.is-open {
+  height: 794px;
 }
 
 .new__row-inner {
