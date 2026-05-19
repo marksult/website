@@ -3460,13 +3460,27 @@ body {
   left: 35px;
   top: 874px;
   width: 830px;
-  height: 144px;
+  height: 114px;
   background: #FAFAFA;
   border: 0.75px solid #E7E7E7;
   border-radius: 15px;
   box-sizing: border-box;
   transition: top 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: top;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.new__fafafa-inner {
+  width: 415px;
+  height: 114px;
+  background: #FFFFFF;
+  border: 0.75px solid #E7E7E7;
+  border-radius: 15px;
+  box-sizing: border-box;
+  flex-shrink: 0;
 }
 
 .new__bottom-card {
