@@ -3277,6 +3277,13 @@ body {
   width: 69px;
 }
 
+.new__inner-num-wrap {
+  width: 69px;
+  height: 41px;
+  display: flex;
+  align-items: flex-start;
+}
+
 .new__inner-num {
   margin: 0;
   width: 100%;
@@ -3285,9 +3292,16 @@ body {
   font-family: 'Plantin MT Pro', serif;
   font-size: 60px;
   font-weight: 300;
-  line-height: 1.05em;
+  line-height: 1;
   letter-spacing: -0.02em;
   -webkit-font-smoothing: antialiased;
+}
+
+.new__inner-sub-wrap {
+  width: 68px;
+  height: 13px;
+  display: flex;
+  align-items: flex-start;
 }
 
 .new__inner-sub {
@@ -3298,7 +3312,7 @@ body {
   font-family: 'Helvetica Neue LT Pro', sans-serif;
   font-size: 18px;
   font-weight: 400;
-  line-height: 1.15em;
+  line-height: 1;
   letter-spacing: -0.02em;
   -webkit-font-smoothing: antialiased;
 }
