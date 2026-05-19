@@ -3493,14 +3493,12 @@ body {
   border-radius: 10px;
   border: 0.75px solid #E7E7E7;
   background: #FFF;
-  width: fit-content;
   overflow: hidden;
   box-sizing: border-box;
 }
 
-.new__pill--full {
-  width: 100%;
-}
+.new__pill--full { width: 500px; height: 43px; }
+.new__pill--sm   { width: 172px; height: 43px; }
 
 .new__pill-dot {
   width: 8px;
