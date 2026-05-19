@@ -4332,11 +4332,13 @@ body {
 }
 
 .guarantees__btn:first-child {
-  width: 100%;
+  width: 343px;
+  height: 43px;
 }
 
 .guarantees__btn--fit {
-  width: fit-content;
+  width: 296px;
+  height: 43px;
 }
 
 .guarantees__btn-text {
