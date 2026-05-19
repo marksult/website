@@ -3547,8 +3547,8 @@ body {
   white-space: nowrap;
 }
 
-.new__cta-text--wide   { width: 335px; height: 35px; white-space: normal; }
-.new__cta-text--narrow { width: 101px; height: 35px; white-space: normal; }
+.new__cta-text--wide   { width: 335px; height: 35px; white-space: normal; transform: translateY(-1px); }
+.new__cta-text--narrow { width: 101px; height: 35px; white-space: normal; transform: translateY(-1px); }
 
 .new__pill-text-wrap {
   width: 457px;
