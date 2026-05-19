@@ -3262,7 +3262,7 @@ body {
 }
 
 .new__title {
-  margin: 0;
+  margin: 25px 0 0 0;
   color: #000;
   font-family: 'Plantin MT Pro', serif;
   font-size: 43px;
