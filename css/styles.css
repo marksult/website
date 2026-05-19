@@ -4334,6 +4334,8 @@ body {
 .guarantees__btn:first-child {
   width: 343px;
   height: 43px;
+  box-sizing: border-box;
+  padding: 0 15px;
 }
 
 .guarantees__btn--fit {
@@ -4353,11 +4355,13 @@ body {
 }
 
 .guarantees__btn-text--long {
+  display: block;
   width: 313px;
   height: 13px;
 }
 
 .guarantees__btn-text--short {
+  display: block;
   width: 266px;
   height: 13px;
 }
