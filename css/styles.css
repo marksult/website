@@ -3411,6 +3411,11 @@ body {
   background: #FAFAFA;
 }
 
+.new__row-card.is-open .new__row-btn,
+.new__row-card.is-open:hover .new__row-btn {
+  background: #FFFFFF;
+}
+
 .new__row-btn img {
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
