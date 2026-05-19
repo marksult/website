@@ -985,5 +985,12 @@
   <!-- =================== END NEW SECTION ======================= -->
 
 
+  <script>
+    document.querySelectorAll('.new__row-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        btn.closest('.new__row-card').classList.toggle('is-open');
+      });
+    });
+  </script>
 </body>
 </html>

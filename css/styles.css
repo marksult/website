@@ -3343,6 +3343,12 @@ body {
   border: 0.75px solid #E7E7E7;
   border-radius: 10px;
   box-sizing: border-box;
+  overflow: hidden;
+  transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.new__row-card.is-open {
+  height: 520px;
 }
 
 .new__row-inner {
@@ -3384,11 +3390,19 @@ body {
   border-radius: 5px;
   border: 1.06px solid #E7E7E7;
   background: #FFF;
-  cursor: default;
-  pointer-events: none;
+  cursor: pointer;
   -webkit-appearance: none;
   appearance: none;
   box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.new__row-btn img {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.new__row-card.is-open .new__row-btn img {
+  transform: rotate(45deg);
 }
 
 .new__label-tag {
