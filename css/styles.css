@@ -214,6 +214,10 @@ body {
   display: block;
 }
 
+.main__bg-img {
+  object-fit: cover;
+}
+
 .hero-cta .main__social-text {
   width: 212px;
   height: 13px;
@@ -224,6 +228,7 @@ body {
   height: auto;
   padding: 15px;
   justify-content: center;
+  margin-top: 25px;
 }
 
 .main__badge-cta-text {
@@ -255,12 +260,15 @@ body {
 }
 
 .hero-cta .main--standalone {
-  height: 100vh;
+  height: calc(100vh - 15px);
 }
 
 @media (max-width: 767px) {
   .hero-cta .main--standalone {
     height: auto;
+  }
+  .hero-cta .main__badge--cta {
+    margin-top: 20px;
   }
 }
 
