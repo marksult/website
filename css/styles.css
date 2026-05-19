@@ -4293,13 +4293,13 @@ body {
 .guarantees__cards-wrap {
   position: relative;
   width: 450px;
-  height: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .guarantees__card {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 450px;
   height: 480px;
   background: #FFFFFF;
