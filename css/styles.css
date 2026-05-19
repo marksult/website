@@ -275,6 +275,14 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
   }
+  .hero-cta .main__badge--cta {
+    margin-top: 10px;
+  }
+  .hero-cta .main__description {
+    width: 285px;
+    height: 66px;
+    max-width: 285px;
+  }
 }
 
 .hero-cta .main--standalone {
