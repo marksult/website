@@ -3471,7 +3471,8 @@ body {
   line-height: 1.15em;
   letter-spacing: -0.02em;
   -webkit-font-smoothing: antialiased;
-  width: 100%;
+  width: 230px;
+  height: 34px;
 }
 
 .new__label-tag {
