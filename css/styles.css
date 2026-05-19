@@ -3530,7 +3530,6 @@ body {
   border: 0.75px solid #E7E7E7;
   background: #FAFAFA;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 .new__cta-pill--wide   { width: 365px; height: 65px; }
@@ -3547,8 +3546,8 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.new__cta-text--wide   { width: 335px; height: 35px; }
-.new__cta-text--narrow { width: 101px; height: 35px; }
+.new__cta-text--wide   { width: 346px; }
+.new__cta-text--narrow { width: 101px; }
 
 .new__pill-text-wrap {
   width: 457px;
