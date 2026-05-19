@@ -4341,8 +4341,8 @@ body {
   --tag-pr: 15px;
   --tag-pb: 15px;
   --tag-pl: 15px;
-  --tag-text-y: 0px;
-  width: 248px;
+  --tag-text-y: -1px;
+  width: fit-content;
   height: 43px;
   box-sizing: border-box;
   border-radius: 10px;
@@ -4359,7 +4359,7 @@ body {
 
 .guarantees__card-btn-text {
   display: block;
-  width: 218px;
+  width: auto;
   height: 13px;
   color: #000;
   font-family: 'Helvetica Neue LT Pro', sans-serif;
